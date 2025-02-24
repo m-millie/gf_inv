@@ -1,0 +1,109 @@
+﻿year,month,burn_trt,watershed,block,plot,contents,tube_mass,combined_mass,biomass
+2024,8,unburned,20B,E,2,other,1116.25,1168.12,0.05187
+2024,8,unburned,20B,E,2,orthoptera,1068.1,1202.46,0.13436
+2024,8,unburned,20B,E,5,other,1082.67,1188.47,0.1058
+2024,8,unburned,20B,E,5,orthoptera,1068.89,1140.83,0.07194
+2024,8,unburned,20B,D,4,other,1050.27,1122.19,0.07192
+2024,8,unburned,20B,D,4,orthoptera,1025.95,1026.97,0.00102
+2024,8,unburned,20B,E,6,other,1049.44,1079.45,0.03001
+2024,8,unburned,20B,E,6,orthoptera,1066.6,1196.43,0.12983
+2024,8,unburned,20B,F,1,other,1075.3,1110.64,0.03534
+2024,8,unburned,20B,E,1,other,113.87,1158.08,1.04421
+2024,8,unburned,20B,E,1,orthoptera,1075.62,1105.44,0.02982
+2024,8,unburned,20B,D,6,other,1099.07,1114.54,0.01547
+2024,8,unburned,20B,D,6,orthoptera,1065.16,1135.73,0.07057
+2024,8,unburned,20B,F,3,other,1088.06,1109.23,0.02117
+2024,8,unburned,20B,F,3,orthoptera,1099.8,1112.18,0.01238
+2024,8,annual,SpB,F,3,other,1089.57,1116,0.02643
+2024,8,annual,SpB,E,6,other,1082.08,1136.55,0.05447
+2024,8,annual,SpB,E,6,orthoptera,1101.8,1130.64,0.02884
+2024,8,unburned,20B,D,5,other,1093.34,1100.64,0.0073
+2024,8,annual,SpB,D,6,other,1033.58,1053.81,0.02023
+2024,8,annual,SpB,E,5,other,1086.09,1114.92,0.02883
+2024,8,annual,SpB,E,5,orthoptera,1071.87,1111.99,0.04012
+2024,8,annual,SpB,F,2,other,1065.81,1072.46,0.00665
+2024,8,annual,SpB,F,2,orthoptera,1031,1035.63,0.00463
+2024,8,annual,SpB,D,5,other,1027.23,1049.72,0.02249
+2024,8,annual,SpB,D,1,other,1045.01,1060.7,0.01569
+2024,8,annual,SpB,D,3,other,1129.09,1131.78,0.00269
+2024,8,annual,SpB,D,4,other,1078.16,1086.05,0.00789
+2024,8,annual,SpB,E,3,other,1066.05,1089.38,0.02333
+2024,8,annual,SpB,E,3,orthoptera,1095.01,1112.94,0.01793
+2024,8,annual,SpB,F,4,other,1066.97,1086.44,0.01947
+2024,8,annual,SpB,D,2,other,1129.23,1148.6,0.01937
+2024,8,annual,SpB,E,1,other,1103.02,1121.65,0.01863
+2024,8,unburned,20B,F,5,other,1093.53,1104.3,0.01077
+2024,8,unburned,20B,F,6,other,1091.79,1093.88,0.00209
+2024,8,annual,SpB,F,6,other,1118.99,1136.62,0.01763
+2024,8,unburned,20B,D,1,other,1075.64,1084.65,0.00901
+2024,8,annual,SpB,E,4,other,1129.61,1131.15,0.00154
+2024,8,annual,SpB,E,4,orthoptera,1083.71,1111.82,0.02811
+2024,8,annual,SpB,E,2,other,1067.47,1085.2,0.01773
+2024,8,unburned,20B,F,4,other,1068.98,1073.8,0.00482
+2024,8,annual,SpB,F,1,other,1070.86,1082.2,0.01134
+2024,8,annual,SpB,F,1,orthoptera,1130.51,1140.73,0.01022
+2024,8,unburned,20C,B,3,other,1078.18,1092.5,0.01432
+2024,8,unburned,20C,B,3,orthoptera,1081.22,1115.59,0.03437
+2024,8,annual,SpB,F,5,other,1116.11,1124.8,0.00869
+2024,8,unburned,20C,B,5,other,1059.87,1073.67,0.0138
+2024,8,unburned,20C,B ,4,other,1081.67,1090.36,0.00869
+2024,8,unburned,20C,C,2,other,1119.44,1131.62,0.01218
+2024,8,unburned,20C,C,2,orthoptera,1073.71,1103.07,0.02936
+2024,8,unburned,20C,B ,6,other,1129.12,1137.41,0.00829
+2024,8,unburned,20C,B ,6,orthoptera,1069.06,1107.59,0.03853
+2024,8,unburned,20B,D,3,other,1119.13,1126.99,0.00786
+2024,8,unburned,20B,D,2,other,1079.21,1081.8,0.00259
+2024,8,unburned,20C,A,3,other,1122.03,1128.56,0.00653
+2024,8,unburned,20C,A,3,orthoptera,1100.06,1102.46,0.0024
+2024,8,annual,1D,C,5,other,1080.55,1082.66,0.00211
+2024,8,annual,1D,C,5,orthoptera,1088.33,1107.46,0.01913
+2024,8,unburned,20C,C,3,other,1086.73,1090. 66,0.00393
+2024,8,unburned,20C,C,5,other,1091.04,1104.9,0.01386
+2024,8,unburned,20C,C,5,orthoptera,1092.67,1105.33,0.01266
+2024,8,unburned,20C,A,6,other,1059.15,1068.91,0.00976
+2024,8,unburned,20C,C,4,other,1106.8,1112.79,0.00599
+2024,8,unburned,20C,C,4,orthoptera,1096.32,1159.85,0.06353
+2024,8,unburned,20C,A,2,other,1104.35,1110.29,0.00594
+2024,8,unburned,20C,A,2,orthoptera,1110.24,1112.55,0.00231
+2024,8,unburned,20B,E,3,other,1108.29,1112.41,0.00412
+2024,8,unburned,20B,E,3,orthoptera,1083.85,1084.33,0.00048
+2024,8,annual,1D,C,4,other,1090.43,1120.22,0.02979
+2024,8,annual,1D,C,4,orthoptera,1078.55,1092.84,0.01429
+2024,8,unburned,20C,C,6,other,1099.81,1100.11,0.0003
+2024,8,unburned,20C,C,6,orthoptera,1083.8,1091.86,0.00806
+2024,8,unburned,20C,C,1,other,1088.78,1100.95,0.01217
+2024,8,unburned,20B,F,2,other,1124.28,1154.82,0.03054
+2024,8,annual,1D,C,2,other,1092.61,1105.14,0.01253
+2024,8,annual,1D,C,2,orthoptera,1069.46,1142.65,0.07319
+2024,8,unburned,20B,E,4,other,1072.77,1083.72,0.01095
+2024,8,annual,1D,C,3,other,1099.1,1101.9,0.0028
+2024,8,annual,1D,C,1,other,1119.54,1137.01,0.01747
+2024,8,unburned,20C,A,4,other,1085.61,1095.17,0.00956
+2024,8,annual,1D,B ,1,other,6936.59,6972.87,0.03628
+2024,8,annual,1D,B ,1,orthoptera,6857.76,7066.95,0.20919
+2024,8,annual,1D,A,4,other,1058.35,1082.56,0.02421
+2024,8,annual,1D,A,4,orthoptera,1108.65,1137.53,0.02888
+2024,8,unburned,20C,B ,2,other,1113.63,1123.47,0.00984
+2024,8,unburned,20C,B ,2,orthoptera,1124.78,1146.91,0.02213
+2024,8,unburned,20C,A,1,other,1119.87,1171.95,0.05208
+2024,8,unburned,20C,A,1,orthoptera,1173.5,1182.71,0.00921
+2024,8,unburned,20C,B ,1,other,1138.96,1163.53,0.02457
+2024,8,unburned,20C,A,5,other,1036.74,1048.4,0.01166
+2024,8,unburned,20C,A,5,orthoptera,1159.72,1167.1,0.00738
+2024,8,annual,1D,B ,2,oher,1096.79,1118.21,0.02142
+2024,8,annual,1D,B ,2,orthoptera,1053.68,1116.89,0.06321
+2024,8,annual,1D,A,5,other,1037.85,1062.64,0.02479
+2024,8,annual,1D,C,6,other,1120.5,1123.97,0.00347
+2024,8,annual,1D,B ,6,other,1120.51,1137.16,0.01665
+2024,8,annual,1D,A,2,other,1086.24,1094.79,0.00855
+2024,8,annual,1D,A,2,orthoptera,1125.32,1131.54,0.00622
+2024,8,annual,1D,A,3,other,1118.85,1128.32,0.00947
+2024,8,annual,1D,A,3,orthoptera,1126.23,1168.39,0.04216
+2024,8,annual,1D,A,6,other,1124.17,1133.52,0.00935
+2024,8,annual,1D,B ,5,other,1108.68,1116.8,0.00812
+2024,8,annual,1D,B ,3,other,1129.82,1142.87,0.01305
+2024,8,annual,1D,B ,3,orthoptera,1085.71,1087.75,0.00204
+2024,8,annual,1D,B ,4,other,1069.86,1088.18,0.01832
+2024,8,annual,1D,B ,4,orthoptera,1094.52,1121.22,0.0267
+2024,8,annual,1D,A,1,other,1088.61,1114.01,0.0254
+2024,8,annual,1D,A,1,orthoptera,1073.59,1107.46,0.03387

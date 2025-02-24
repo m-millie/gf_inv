@@ -1,0 +1,1104 @@
+year,month,burn_trt,watershed,block,plot,order,family,arthropod_ID,stage,collected,count,plot_trt,litter_trt
+2019,8,Unburned,20C,C,4,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,2,N,Present
+2019,8,Unburned,20C,C,4,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Nymph,Collected,3,N,Present
+2019,8,Unburned,20C,C,4,Araneae,Thomisidae,Araneae_Thomisidae,Adult,Collected,2,N,Present
+2019,8,Unburned,20C,C,4,Hymenoptera,Braconidae,Hymenoptera_Braconidae,Adult,Collected,2,N,Present
+2019,8,Unburned,20C,C,4,Coleoptera,Byrrhidae,Coleoptera_Byrrhidae,Adult,Collected,3,N,Present
+2019,8,Unburned,20C,C,4,Hymenoptera,Chalcodoidae,Hymenoptera_Chalcodoidae,Adult,Collected,1,N,Present
+2019,8,Unburned,20C,C,4,Hemiptera,Caliscelidae,Hemiptera_Cicadellidae,Nymph,Collected,1,N,Present
+2019,8,Unburned,20C,C,4,Diptera,Rhagonidae,Diptera_Rhagonidae,Adult,Collected,1,N,Present
+2019,8,Unburned,20C,C,4,Araneae,Thomisidae,Araneae_Thomisidae,Adult,Collected,2,N,Present
+2019,8,Unburned,20C,C,6,Hemiptera,Membracidae,Hemiptera_Membracidae,Nymph,Collected,2,C,Present
+2019,8,Unburned,20C,C,6,Lepidoptera,Unknown,Lepidoptera_Unknown,Nymph,Collected,1,C,Present
+2019,8,Unburned,20C,C,6,Coleoptera,Byrrhidae,Coleoptera_Byrrhidae,Adult,Collected,5,C,Present
+2019,8,Unburned,20C,C,6,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,2,C,Present
+2019,8,Unburned,20C,C,6,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,1,C,Present
+2019,8,Unburned,20C,C,6,Hemiptera,Reduviidae,Hemiptera_Reduviidae,Adult,Collected,1,C,Present
+2019,8,Unburned,20C,C,2,Hemiptera,Caliscelidae,Hemiptera_Caliscelidae,Adult,Collected,1,Control,Absent
+2019,8,Unburned,20C,C,2,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,13,Control,Absent
+2019,8,Unburned,20C,C,2,Coleoptera,Colydiinae,Coleoptera_Colydiinae,Adult,Collected,1,Control,Absent
+2019,8,Unburned,20C,C,2,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Collected,1,Control,Absent
+2019,8,Unburned,20C,C,2,Araneae,Lycosidae,Araneae_Lycosidae,Adult,Collected,1,Control,Absent
+2019,8,Unburned,20C,C,2,Araneae,Thomisidae,Araneae_Thomisidae,Adult,Collected,1,Control,Absent
+2019,8,Unburned,20C,C,2,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,5,Control,Absent
+2019,8,Unburned,20C,C,2,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,2,Control,Absent
+2019,8,Unburned,20C,C,6,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,1,C,Present
+2019,8,Unburned,20C,B ,4,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Collected,1,C ,Absent
+2019,8,Unburned,20C,B,4,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,3,C ,Absent
+2019,8,Unburned,20C,B,4,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,2,C ,Absent
+2019,8,Unburned,20C,B,4,Hemiptera,Unknown,Hemiptera_Unknown,Adult,Collected,1,C ,Absent
+2019,8,Unburned,20C,B,4,Araneae,Thomisidae,Araneae_Thomisidae,Adult,Collected,1,C ,Absent
+2019,8,Unburned,20C,B,4,Hymenoptera,Braconidae,Hymenoptera_Braconidae,Adult,Collected,1,C ,Absent
+2019,8,Unburned,20C,C,1,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,8,N,Absent
+2019,8,Unburned,20C,C,1,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,2,N,Absent
+2019,8,Unburned,20C,C,1,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,1,N,Absent
+2019,8,Unburned,20C,C,1,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,5,N,Absent
+2019,8,Unburned,20C,C,1,Hemiptera,Caliscelidae,Hemiptera_Caliscelidae,Adult,Collected,1,N,Absent
+2019,8,Unburned,20C,C,1,Hemiptera,Reduviidae,Hemiptera_Reduviidae,Adult,Collected,1,N,Absent
+2019,8,Unburned,20C,C,1,Neuroptera,Hemerobiidae,Neuroptera_Hemerobiidae,Adult,Collected,1,N,Absent
+2019,8,Unburned,20C,C,1,Hymenoptera,Braconidae,Hymenoptera_Braconidae,Adult,Collected,1,N,Absent
+2019,8,Unburned,20C,C,1,Hemiptera,Tingidae,Hemiptera_Tingidae,Adult,Collected,1,N,Absent
+2019,8,Unburned,20C,B,6,Coleoptera,Curculionidae,Coleoptera_Curculionidae,Adult,Collected,1,N,Absent
+2019,8,Unburned,20C,B,6,Coleoptera,Byrrhidae,Coleoptera_Byrrhidae,Adult,Collected,3,N,Absent
+2019,8,Unburned,20C,B,6,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,1,N,Absent
+2019,8,Unburned,20C,B,6,Hemiptera,Aphididae,Hemiptera_Aphididae,Nymph,Collected,4,N,Absent
+2019,8,Unburned,20C,B,6,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,1,N,Absent
+2019,8,Unburned,20C,B,6,Hemiptera,Reduviidae,Hemiptera_Reduviidae,Nymph,Collected,1,N,Absent
+2019,8,Unburned,20C,B,6,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,1,N,Absent
+2019,8,Unburned,20C,B,6,Hemiptera,Aphididae,Hemiptera_Aphididae,Nymph,Collected,4,N,Absent
+2019,8,Unburned,20C,B,6,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,1,N,Absent
+2019,8,Unburned,20C,B,5,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,2,Control,Absent
+2019,8,Unburned,20C,B,5,Araneae,Araneidae,Araneae_Araneidae,Adult,Collected,1,Control,Absent
+2019,8,Unburned,20C,B,5,Lepidoptera,Unknown,Lepidoptera_Unknown,Nymph,Collected,1,Control,Absent
+2019,8,Unburned,20C,B,5,Coleoptera,Byrrhidae,Coleoptera_Byrrhidae,Adult,Collected,1,Control,Absent
+2019,8,Unburned,20C,B,5,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,3,Control,Absent
+2019,8,Unburned,20C,B,5,Hemiptera,Reduviidae,Hemiptera_Reduviidae,Nymph,Collected,1,Control,Absent
+2019,8,Unburned,20C,B,5,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,2,Control,Absent
+2019,8,Unburned,20C,B,5,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,1,Control,Absent
+2019,8,Unburned,20C,B,5,Lepidoptera,Geometridae,Lepidoptera_Geometridae,Adult,Collected,1,Control,Absent
+2019,8,Unburned,20C,B,5,Lepidoptera,Erebidae,Lepidoptera_Erebidae,Nymph,Collected,1,Control,Absent
+2019,8,Unburned,20C,B,1,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,1,C,Present
+2019,8,Unburned,20C,B,1,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Collected,1,C,Present
+2019,8,Unburned,20C,B,1,Hemiptera,Reduviidae,Hemiptera_Reduviidae,Nymph,Collected,2,C,Present
+2019,8,Unburned,20C,B,1,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,5,C,Present
+2019,8,Unburned,20C,B,1,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,2,C,Present
+2019,8,Unburned,20C,B,1,Hemiptera,Caliscelidae,Hemiptera_Caliscelidae,Nymph,Collected,2,C,Present
+2019,8,Unburned,20C,B,1,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,2,C,Present
+2019,8,Unburned,20C,B,1,Hemiptera,Aphididae,Hemiptera_Aphididae,Adult,Collected,15,C,Present
+2019,8,Unburned,20C,B,1,Araneae,Thomisidae,Araneae_Thomisidae,Adult,Collected,2,C,Present
+2019,8,Unburned,20C,B,1,Hymenoptera,Platygastridae,Hymenoptera_Platygastridae,Adult,Collected,4,C,Present
+2019,8,Unburned,20C,B,1,Hemiptera,Mesoveliidae,Hemiptera_Mesoveliidae,Adult,Collected,6,C,Present
+2019,8,Unburned,20C,B,1,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,1,C,Present
+2019,8,Unburned,20C,B,1,Hymenoptera,Braconidae,Hymenoptera_Braconidae,Adult,Collected,1,C,Present
+2019,8,Unburned,20C,B,1,Diptera,Tachinidae,Diptera_Tachinidae,Adult,Collected,3,C,Present
+2019,8,Unburned,20C,B,1,Hymenoptera,Chrysididae,Hymenoptera_Chrysididae,Adult,Collected,1,C,Present
+2019,8,Unburned,20C,B,1,Hymenoptera,Pipunculidae,Hymenoptera_Pipunculidae,Adult,Collected,1,C,Present
+2019,8,Unburned,20C,B,3,Orthoptera,Tettigoniidae,Orthoptera_Tettigoniidae,Adult,Collected,1,N,Present
+2019,8,Unburned,20C,B,3,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,5,N,Present
+2019,8,Unburned,20C,B,3,Coleoptera,Byrrhidae,Coleoptera_Byrrhidae,Adult,Collected,3,N,Present
+2019,8,Unburned,20C,B,3,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,1,N,Present
+2019,8,Unburned,20C,B,3,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Nymph,Collected,1,N,Present
+2019,8,Unburned,20C,B,3,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,1,N,Present
+2019,8,Unburned,20C,B,3,Hemiptera,Lygaeidae,Hemiptera_Lygaeidae,Adult,Collected,1,N,Present
+2019,8,Unburned,20C,B,3,Hemiptera,Pleidae,Hemiptera_Pleidae,Adult,Collected,1,N,Present
+2019,8,Unburned,20C,B,3,Hemiptera,Aphididae,Hemiptera_Aphididae,Adult,Collected,109,N,Present
+2019,8,Unburned,20C,B,3,Hemiptera,Mesoveliidae,Hemiptera_Mesoveliidae,Adult,Collected,2,N,Present
+2019,8,Unburned,20C,B,3,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,1,N,Present
+2019,8,Unburned,20C,B,3,Araneae,Thomisidae,Araneae_Thomisidae,Adult,Collected,4,N,Present
+2019,8,Unburned,20C,B,3,Hymenoptera,Eurytomidae,Hymenoptera_Eurytomidae,Adult,Collected,1,N,Present
+2019,8,Unburned,20C,A,2,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,6,Control,Absent
+2019,8,Unburned,20C,A,2,Hemiptera,Caliscelidae,Hemiptera_Caliscelidae,Adult,Collected,2,Control,Absent
+2019,8,Unburned,20C,A,2,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,1,Control,Absent
+2019,8,Unburned,20C,A,2,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,10,Control,Absent
+2019,8,Unburned,20C,A,2,Lepidoptera,Unknown,Lepidoptera_Unknown,Nymph,Collected,1,Control,Absent
+2019,8,Unburned,20C,A,2,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,4,Control,Absent
+2019,8,Unburned,20C,A,2,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,1,Control,Absent
+2019,8,Unburned,20C,A,2,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,3,Control,Absent
+2019,8,Unburned,20C,A,2,Araneae,Thomisidae,Araneae_Thomisidae,Adult,Collected,1,Control,Absent
+2019,8,Unburned,20C,A,2,Hemiptera,Aphididae,Hemiptera_Aphididae,Adult,Collected,3,Control,Absent
+2019,8,Unburned,20C,A,2,Diptera,Chloropidae,Diptera_Chloropidae,Adult,Collected,4,Control,Absent
+2019,8,Unburned,20C,A,2,Coleoptera,Curculionidae,Coleoptera_Curculionidae,Adult,Collected,1,Control,Absent
+2019,8,Unburned,20C,A,2,Mantodea,Mantidae,Mantodea_Mantidae,Adult,Collected,1,Control,Absent
+2019,8,Unburned,20C,A,2,Coleoptera,Mordellidae,Coleoptera_Mordellidae,Adult,Collected,1,Control,Absent
+2019,8,Unburned,20C,A,2,Hymenoptera,Dryinidae,Hymenoptera_Dryinidae,Adult,Collected,1,Control,Absent
+2019,8,Unburned,20C,A,2,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,1,Control,Absent
+2019,8,Unburned,20C,A,2,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,1,Control,Absent
+2019,8,Unburned,20C,A,2,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Nymph,Collected,1,Control,Absent
+2019,8,Unburned,20C,A,3,Hemiptera,Aphididae,Hemiptera_Aphididae,Adult,Collected,5,N,Absent
+2019,8,Unburned,20C,A,3,Hemiptera,Mesoveliidae,Hemiptera_Mesoveliidae,Adult,Collected,1,N,Absent
+2019,8,Unburned,20C,A,3,Hemiptera,Caliscelidae,Hemiptera_Caliscelidae,Nymph,Collected,1,N,Absent
+2019,8,Unburned,20C,A,3,Hemiptera,Caliscelidae,Hemiptera_Caliscelidae,Adult,Collected,2,N,Absent
+2019,8,Unburned,20C,A,3,Araneae,Thomisidae,Araneae_Thomisidae,Adult,Collected,1,N,Absent
+2019,8,Unburned,20C,A,3,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,1,N,Absent
+2019,8,Unburned,20C,A,3,Hemiptera,Reduviidae,Hemiptera_Reduviidae,Nymph,Collected,2,N,Absent
+2019,8,Unburned,20C,A,3,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,1,N,Absent
+2019,8,Unburned,20C,A,3,Diptera,Chloropidae,Diptera_Chloropidae,Adult,Collected,1,N,Absent
+2019,8,Unburned,20C,A,3,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,1,N,Absent
+2019,8,Unburned,20C,A,3,Hemiptera,Aphididae,Hemiptera_Aphididae,Adult,Collected,1,N,Absent
+2019,8,Unburned,20C,A,3,Coleoptera,Curculionidae,Coleoptera_Curculionidae,Adult,Collected,1,N,Absent
+2019,8,Unburned,20C,A,3,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,3,N,Absent
+2019,8,Unburned,20C,A,3,Coleoptera,Curculionidae,Coleoptera_Curculionidae,Adult,Collected,1,N,Absent
+2019,8,Unburned,20C,A,3,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Nymph,Collected,1,N,Absent
+2019,8,Unburned,20C,A,3,Araneae,Araneidae,Araneae_Araneidae,Adult,Collected,1,N,Absent
+2019,8,Unburned,20C,A,6,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,15,N,Present
+2019,8,Unburned,20C,A,6,Hemiptera,Caliscelidae,Hemiptera_Caliscelidae,Adult,Collected,7,N,Present
+2019,8,Unburned,20C,A,6,Hemiptera,Caliscelidae,Hemiptera_Caliscelidae,Nymph,Collected,1,N,Present
+2019,8,Unburned,20C,A,6,Araneae,Thomisidae,Araneae_Thomisidae,Adult,Collected,2,N,Present
+2019,8,Unburned,20C,A,6,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,4,N,Present
+2019,8,Unburned,20C,A,6,Araneae,Lycosidae,Araneae_Lycosidae,Adult,Collected,1,N,Present
+2019,8,Unburned,20C,A,6,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Collected,1,N,Present
+2019,8,Unburned,20C,A,6,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,3,N,Present
+2019,8,Unburned,20C,A,6,Hymenoptera,Platygastridae,Hymenoptera_Platygastridae,Adult,Collected,3,N,Present
+2019,8,Unburned,20C,A,6,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,4,N,Present
+2019,8,Unburned,20C,A,6,Hemiptera,Tingidae,Hemiptera_Tingidae,Adult,Collected,1,N,Present
+2019,8,Unburned,20C,A,6,Hemiptera,Aphididae,Hemiptera_Aphididae,Adult,Collected,4,N,Present
+2019,8,Unburned,20C,A,6,Hymenoptera,Pergidae,Hymenoptera_Pergidae,Adult,Collected,1,N,Present
+2019,8,Unburned,20C,A,6,Araneae,Unknown,Araneae_Unknown,Adult,Collected,1,N,Present
+2019,8,Unburned,20C,A,6,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Nymph,Collected,3,N,Present
+2019,8,Unburned,20C,A,6,Hemiptera,Pleidae,Hemiptera_Pleidae,Adult,Collected,1,N,Present
+2019,8,Unburned,20C,A,6,Hymenoptera,Braconidae,Hymenoptera_Braconidae,Adult,Collected,1,N,Present
+2019,8,Unburned,20C,A,6,Araneae,Oribatida,Araneae_Oribatida,Adult,Collected,2,N,Present
+2019,8,Unburned,20C,A,1,Araneae,Thomisidae,Araneae_Thomisidae,Adult,Collected,1,C ,Absent
+2019,8,Unburned,20C,A,1,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,2,C ,Absent
+2019,8,Unburned,20C,A,1,Hemiptera,Caliscelidae,Hemiptera_Caliscelidae,Adult,Collected,5,C ,Absent
+2019,8,Unburned,20C,A,1,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,9,C ,Absent
+2019,8,Unburned,20C,A,1,Hemiptera,Aphididae,Hemiptera_Aphididae,Adult,Collected,5,C ,Absent
+2019,8,Unburned,20C,A,1,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,1,C ,Absent
+2019,8,Unburned,20C,A,1,Araneae,Thomisidae,Araneae_Thomisidae,Adult,Collected,2,C ,Absent
+2019,8,Unburned,20C,A,1,Hymenoptera,Braconidae,Hymenoptera_Braconidae,Adult,Collected,3,C ,Absent
+2019,8,Unburned,20C,A,1,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Nymph,Collected,2,C ,Absent
+2019,8,Unburned,20C,A,1,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,4,C ,Absent
+2019,8,Unburned,20C,A,1,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,5,C ,Absent
+2019,8,Unburned,20C,A,1,Hemiptera,Pentatomidae,Hemiptera_Pentatomidae,Adult,Collected,2,C ,Absent
+2019,8,Unburned,20C,A,1,Araneae,Thomisidae,Araneae_Thomisidae,Adult,Collected,2,C ,Absent
+2019,8,Unburned,20C,A,1,Dermaptera,Forficulidae,Dermaptera_Forficulidae,Adult,Collected,1,C ,Absent
+2019,8,Unburned,20C,A,1,Hemiptera,Dictyophidae,Hemiptera_Dictyopharidae,Adult,Collected,1,C ,Absent
+2019,8,Unburned,20C,A,1,Araneae,Araneidae,Araneae_Araneidae,Adult,Collected,1,C ,Absent
+2019,8,Unburned,20C,A,1,Diptera,Unknown,Diptera_Unknown,Adult,Collected,4,C ,Absent
+2019,8,Unburned,20C,A,1,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,1,C ,Absent
+2019,8,Unburned,20C,A,4,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,1,C,Present
+2019,8,Unburned,20C,A,4,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Collected,1,C,Present
+2019,8,Unburned,20C,A,4,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,2,C,Present
+2019,8,Unburned,20C,A,4,Coleoptera,Curculionidae,Coleoptera_Curculionidae,Adult,Collected,1,C,Present
+2019,8,Unburned,20C,A,4,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,4,C,Present
+2019,8,Unburned,20C,A,4,Hemiptera,Caliscelidae,Hemiptera_Caliscelidae,Adult,Collected,2,C,Present
+2019,8,Unburned,20C,A,4,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,2,C,Present
+2019,8,Unburned,20C,A,4,Hymenoptera,Braconidae,Hymenoptera_Braconidae,Adult,Collected,2,C,Present
+2019,8,Unburned,20C,A,4,Diptera,Simuliidae,Diptera_Simuliidae,Adult,Collected,1,C,Present
+2019,8,Annual,1D,C,4,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,7,N,Present
+2019,8,Annual,1D,C,4,Hemiptera,Blissidae,Hemiptera_Blissidae,Adult,Collected,4,N,Present
+2019,8,Annual,1D,C,4,Hemiptera,Delphacidae,Hemiptera_Delphacidae,Adult,Collected,3,N,Present
+2019,8,Annual,1D,C,4,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,3,N,Present
+2019,8,Annual,1D,C,4,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,1,N,Present
+2019,8,Annual,1D,C,4,Araneae,Thomisidae,Araneae_Thomisidae,Adult,Collected,1,N,Present
+2019,8,Annual,1D,C,4,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,19,N,Present
+2019,8,Annual,1D,C,4,Hymenoptera,Pompilidae,Hymenoptera_Pompilidae,Adult,Collected,1,N,Present
+2019,8,Annual,1D,C,4,Diptera,Chloropidae,Diptera_Chloropidae,Adult,Collected,1,N,Present
+2019,8,Annual,1D,C,4,Coleoptera,Coccinellidae,Coleoptera_Coccinellidae,Adult,Collected,12,N,Present
+2019,8,Annual,1D,C,1,Hemiptera,Tingidae,Hemiptera_Tingidae,Adult,Collected,2,N,Absent
+2019,8,Annual,1D,C,1,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,7,N,Absent
+2019,8,Annual,1D,C,1,Coleoptera,Coccinellidae,Coleoptera_Coccinellidae,Adult,Collected,5,N,Absent
+2019,8,Annual,1D,C,1,Araneae,Thomisidae,Araneae_Thomisidae,Adult,Collected,1,N,Absent
+2019,8,Annual,1D,C,1,Hymenoptera,Platygastridae,Hymenoptera_Platygastridae,Adult,Collected,1,N,Absent
+2019,8,Annual,1D,C,1,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,7,N,Absent
+2019,8,Annual,1D,C,1,Hemiptera,Reduviidae,Hemiptera_Reduviidae,Adult,Collected,1,N,Absent
+2019,8,Annual,1D,C,1,Hemiptera,Aphididae,Hemiptera_Aphididae,Adult,Collected,45,N,Absent
+2019,8,Annual,1D,C,3,Lepidoptera,Unknown,Lepidoptera_Unknown,Nymph,Collected,1,C ,Absent
+2019,8,Annual,1D,C,3,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,13,C ,Absent
+2019,8,Annual,1D,C,3,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,3,C ,Absent
+2019,8,Annual,1D,C,3,Araneae,Thomisidae,Araneae_Thomisidae,Adult,Collected,2,C ,Absent
+2019,8,Annual,1D,C,3,Hymenoptera,Platygastridae,Hymenoptera_Platygastridae,Adult,Collected,2,C ,Absent
+2019,8,Annual,1D,C,3,Coleoptera,Coccinellidae,Coleoptera_Coccinellidae,Adult,Collected,19,C ,Absent
+2019,8,Annual,1D,C,3,Coleoptera,Dermestidae,Coleoptera_Dermestidae,Nymph,Collected,14,C ,Absent
+2019,8,Annual,1D,C,3,Acari,Trombidiidae,Acari_Trombidiidae,Adult,Collected,2,C ,Absent
+2019,8,Annual,1D,C,3,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,3,C ,Absent
+2019,8,Annual,1D,C,3,Hymenoptera,Braconidae,Hymenoptera_Braconidae,Adult,Collected,1,C ,Absent
+2019,8,Annual,1D,C,3,Hemiptera,Lygaeidae,Hemiptera_Lygaeidae,Adult,Collected,2,C ,Absent
+2019,8,Annual,1D,B,6,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,8,C ,Absent
+2019,8,Annual,1D,B,6,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,5,C ,Absent
+2019,8,Annual,1D,B,6,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Nymph,Collected,2,C ,Absent
+2019,8,Annual,1D,B,6,Hemiptera,Aphididae,Hemiptera_Aphididae,Adult,Collected,6,C ,Absent
+2019,8,Annual,1D,B,6,Hemiptera,Caliscelidae,Hemiptera_Caliscelidae,Adult,Collected,6,C ,Absent
+2019,8,Annual,1D,B,6,Coleoptera,Coccinellidae,Coleoptera_Coccinellidae,Adult,Collected,2,C ,Absent
+2019,8,Annual,1D,B,6,Hemiptera,Lygaeidae,Hemiptera_Lygaeidae,Adult,Collected,2,C ,Absent
+2019,8,Annual,1D,B,6,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,2,C ,Absent
+2019,8,Annual,1D,B,6,Araneae,Thomisidae,Araneae_Thomisidae,Adult,Collected,1,C ,Absent
+2019,8,Annual,1D,B,6,Hemiptera,Tingidae,Hemiptera_Tingidae,Adult,Collected,1,C ,Absent
+2019,8,Annual,1D,B,6,Hymenoptera,Eurytomidae,Hymenoptera_Formicidae,Adult,Collected,1,C ,Absent
+2019,8,Annual,1D,B,5,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,2,Control,Absent
+2019,8,Annual,1D,B,5,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,3,Control,Absent
+2019,8,Annual,1D,B,5,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,1,Control,Absent
+2019,8,Annual,1D,B,5,Hemiptera,Aphididae,Hemiptera_Aphididae,Adult,Collected,4,Control,Absent
+2019,8,Annual,1D,B,5,Coleoptera,Coccinellidae,Coleoptera_Coccinellidae,Adult,Collected,5,Control,Absent
+2019,8,Annual,1D,B,5,Araneae,Thomisidae,Araneae_Thomisidae,Adult,Collected,1,Control,Absent
+2019,8,Annual,1D,B,5,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Nymph,Collected,1,Control,Absent
+2019,8,Annual,1D,B,5,Hymenoptera,Orussidae,Hymenoptera_Orussidae,Nymph,Collected,1,Control,Absent
+2019,8,Annual,1D,B,5,Araneae,Thomisidae,Araneae_Thomisidae,Adult,Collected,2,Control,Absent
+2019,8,Annual,1D,B,5,Hemiptera,Caliscelidae,Hemiptera_Caliscelidae,Adult,Collected,3,Control,Absent
+2019,8,Annual,1D,B,5,Hemiptera,Lygaeidae,Hemiptera_Lygaeidae,Adult,Collected,3,Control,Absent
+2019,8,Annual,1D,B,5,Hymenoptera,Chalcodoidea,Hymenoptera_Chalcodoidae,Adult,Collected,1,Control,Absent
+2019,8,Annual,1D,B,5,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Nymph,Collected,2,Control,Absent
+2019,8,Annual,1D,B,4,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,4,N,Absent
+2019,8,Annual,1D,B,4,Hemiptera,Lygaeidae,Hemiptera_Lygaeidae,Adult,Collected,1,N,Absent
+2019,8,Annual,1D,B,4,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,30,N,Absent
+2019,8,Annual,1D,B,4,Hemiptera,Caliscelidae,Hemiptera_Caliscelidae,Nymph,Collected,3,N,Absent
+2019,8,Annual,1D,B,4,Hemiptera,Caliscelidae,Hemiptera_Caliscelidae,Adult,Collected,1,N,Absent
+2019,8,Annual,1D,B,4,Lepidoptera,Unknown,Lepidoptera_Unknown,Nymph,Collected,1,N,Absent
+2019,8,Annual,1D,B,4,Hemiptera,Aphididae,Hemiptera_Aphididae,Adult,Collected,3,N,Absent
+2019,8,Annual,1D,B,4,Coleoptera,Coccinellidae,Coleoptera_Coccinellidae,Adult,Collected,12,N,Absent
+2019,8,Annual,1D,B,4,Hymenoptera,Platygastridae,Hymenoptera_Platygastridae,Adult,Collected,2,N,Absent
+2019,8,Annual,1D,B,4,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,1,N,Absent
+2019,8,Annual,1D,B,4,Hymenoptera,Braconidae,Hymenoptera_Braconidae,Adult,Collected,1,N,Absent
+2019,8,Annual,1D,B,4,Hymenoptera,Cynipoidae,Hymenoptera_Cynipoidae,Adult,Collected,1,N,Absent
+2019,8,Annual,1D,B,4,Hemiptera,Reduviidae,Hemiptera_Reduviidae,Nymph,Collected,1,N,Absent
+2019,8,Annual,1D,B,4,Araneae,Thomisidae,Araneae_Thomisidae,Adult,Collected,1,N,Absent
+2019,8,Annual,1D,B,4,Diptera,Chloropidae,Diptera_Chloropidae,Adult,Collected,3,N,Absent
+2019,8,Annual,1D,B,2,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,14,Control,Present
+2019,8,Annual,1D,B,2,Hemiptera,Caliscelidae,Hemiptera_Caliscelidae,Adult,Collected,6,Control,Present
+2019,8,Annual,1D,B,2,Hemiptera,Lygaeidae,Hemiptera_Lygaeidae,Adult,Collected,2,Control,Present
+2019,8,Annual,1D,B,2,Araneae,Thomisidae,Araneae_Thomisidae,Adult,Collected,3,Control,Present
+2019,8,Annual,1D,B,2,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,1,Control,Present
+2019,8,Annual,1D,B,2,Coleoptera,Coccinellidae,Coleoptera_Coccinellidae,Adult,Collected,21,Control,Present
+2019,8,Annual,1D,B,2,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,18,Control,Present
+2019,8,Annual,1D,B,2,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Nymph,Collected,11,Control,Present
+2019,8,Annual,1D,B,2,Coleoptera,Curculionidae,Coleoptera_Curculionidae,Adult,Collected,1,Control,Present
+2019,8,Annual,1D,B,2,Hymenoptera,Platygastridae,Hymenoptera_Platygastridae,Adult,Collected,2,Control,Present
+2019,8,Annual,1D,B,2,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,1,Control,Present
+2019,8,Annual,1D,B,2,Hymenoptera,Cynipoidae,Hymenoptera_Cynipoidae,Adult,Collected,1,Control,Present
+2019,8,Annual,1D,B,2,Araneae,Linyphiidae,Araneae_Linyphiidae,Adult,Collected,1,Control,Present
+2019,8,Annual,1D,B,2,Hemiptera,Aphididae,Hemiptera_Aphididae,Adult,Collected,5,Control,Present
+2019,8,Annual,1D,B,2,Hemiptera,Culicidae,Hemiptera_Culicidae,Adult,Collected,1,Control,Present
+2019,8,Annual,1D,A,6,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,1,C,Absent
+2019,8,Annual,1D,A,6,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,11,C,Absent
+2019,8,Annual,1D,A,6,Hemiptera,Delphacidae,Hemiptera_Delphacidae,Adult,Collected,1,C,Absent
+2019,8,Annual,1D,A,6,Diptera,Cecidomyiidae,Diptera_Chloropidae,Adult,Collected,2,C,Absent
+2019,8,Annual,1D,A,6,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,2,C,Absent
+2019,8,Annual,1D,A,6,Hymenoptera,Braconidae,Hymenoptera_Braconidae,Adult,Collected,2,C,Absent
+2019,8,Annual,1D,A,5,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,5,Control,Absent
+2019,8,Annual,1D,A,5,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,4,Control,Absent
+2019,8,Annual,1D,A,5,Hemiptera,Delphacidae,Hemiptera_Delphacidae,Adult,Collected,3,Control,Absent
+2019,8,Annual,1D,A,5,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,2,Control,Absent
+2019,8,Annual,1D,A,5,Lepidoptera,Crambidae,Lepidoptera_crambidae,Adult,Collected,1,Control,Absent
+2019,8,Annual,1D,A,5,Hemiptera,Caliscelidae,Hemiptera_Caliscelidae,Adult,Collected,1,Control,Absent
+2019,8,Annual,1D,A,5,Hymenoptera,Unknown,Hymenoptera_Unknown,Adult,Collected,1,Control,Absent
+2019,8,Annual,1D,A,5,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,1,Control,Absent
+2019,8,Annual,1D,A,5,Hemiptera,Aphididae,Hemiptera_Aphididae,Adult,Collected,3,Control,Absent
+2019,8,Annual,1D,A,5,Coleoptera,Curculionidae,Coleoptera_Curculionidae,Adult,Collected,3,Control,Absent
+2019,8,Annual,1D,A,5,Hymenoptera,Chrysididae,Hymenoptera_Chrysididae,Adult,Collected,1,Control,Absent
+2019,8,Annual,1D,A,5,Diptera,Stratiomyidae,Diptera_Stratiomyidae,Adult,Collected,1,Control,Absent
+2019,8,Annual,1D,A,4,Hemiptera,Tingidae,Hemiptera_Tingidae,Adult,Collected,2,N,Absent
+2019,8,Annual,1D,A,4,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,2,N,Absent
+2019,8,Annual,1D,A,4,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Collected,2,N,Absent
+2019,8,Annual,1D,A,4,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,16,N,Absent
+2019,8,Annual,1D,A,4,Hemiptera,Blissidae,Hemiptera_Blissidae,Adult,Collected,1,N,Absent
+2019,8,Annual,1D,A,4,Diptera,Cecidomyiidae,Diptera_Cecidomyiidae,Adult,Collected,3,N,Absent
+2019,8,Annual,1D,A,4,Coleoptera,Coccinellidae,Coleoptera_Coccinellidae,Adult,Collected,8,N,Absent
+2019,8,Annual,1D,A,4,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,4,N,Absent
+2019,8,Annual,1D,A,4,Hemiptera,Caliscelidae,Hemiptera_Caliscelidae,Adult,Collected,4,N,Absent
+2019,8,Annual,1D,A,4,Araneae,Thomisidae,Araneae_Thomisidae,Adult,Collected,1,N,Absent
+2019,8,Annual,1D,A,4,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,1,N,Absent
+2019,8,Annual,1D,A,4,Hymenoptera,Bethylidae,Hemiptera_Bethylidae,Adult,Collected,2,N,Absent
+2019,8,Annual,1D,A,4,Hemiptera,Cixiidae,Hemiptera_Cixiidae,Adult,Collected,1,N,Absent
+2019,8,Annual,1D,A,4,Coleoptera,Dermestidae,Coleoptera_Dermestidae,Adult,Collected,2,N,Absent
+2019,8,Annual,1D,A,4,Hymenoptera,Chrysididae,Hymenoptera_Chrysididae,Adult,Collected,1,N,Absent
+2019,8,Annual,1D,A,4,Hemiptera,Aphididae,Hemiptera_Aphididae,Adult,Collected,4,N,Absent
+2019,8,Annual,1D,A,3,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,3,C ,Present
+2019,8,Annual,1D,A,3,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,6,C ,Present
+2019,8,Annual,1D,A,3,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Nymph,Collected,8,C ,Present
+2019,8,Annual,1D,A,3,Hemiptera,Caliscelidae,Hemiptera_Caliscelidae,Nymph,Collected,2,C ,Present
+2019,8,Annual,1D,A,3,Hemiptera,Aphididae,Hemiptera_Aphididae,Adult,Collected,6,C ,Present
+2019,8,Annual,1D,A,3,Coleoptera,Coccinellidae,Coleoptera_Coccinellidae,Adult,Collected,11,C ,Present
+2019,8,Annual,1D,A,3,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Nymph,Collected,13,C ,Present
+2019,8,Annual,1D,A,3,Araneae,Thomisidae,Araneae_Thomisidae,Adult,Collected,1,C ,Present
+2019,8,Annual,1D,A,3,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,1,C ,Present
+2019,8,Annual,1D,A,1,Hemiptera,Caliscelidae,Hemiptera_Caliscelidae,Adult,Collected,11,N,Present
+2019,8,Annual,1D,A,1,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,16,N,Present
+2019,8,Annual,1D,A,1,Araneae,Thomisidae,Araneae_Thomisidae,Adult,Collected,1,N,Present
+2019,8,Annual,1D,A,1,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,2,N,Present
+2019,8,Annual,1D,A,1,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,1,N,Present
+2019,8,Annual,1D,A,1,Diptera,Tephritidae,Diptera_Tephritidae,Adult,Collected,8,N,Present
+2019,8,Annual,1D,A,1,Hymenoptera,Chloropidae,Hymenoptera_Cholorpidae,Adult,Collected,1,N,Present
+2019,8,Annual,1D,A,1,Hymenoptera,Platygastridae,Hymenoptera_Platygastridae,Adult,Collected,2,N,Present
+2019,8,Annual,1D,A,1,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,7,N,Present
+2019,8,Annual,1D,A,1,Araneae,Lycosidae,Araneae_Lyscosidae,Adult,Collected,1,N,Present
+2019,8,Annual,1D,A,1,Acari,Trombiculidae,Acari_Trombiculidae,Adult,Collected,6,N,Present
+2019,8,Annual,1D,A,1,Coleoptera,Coccinellidae,Coleoptera_Coccinellidae,Adult,Collected,28,N,Present
+2019,8,Annual,1D,A,1,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Nymph,Collected,26,N,Present
+2019,8,Annual,1D,A,2,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,1,Control,Present
+2019,8,Annual,1D,A,2,Hemiptera,Dictyopharidae,Hemiptera_Dictyopharidae,Adult,Collected,1,Control,Present
+2019,8,Annual,1D,A,2,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,2,Control,Present
+2019,8,Annual,1D,A,2,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,12,Control,Present
+2019,8,Annual,1D,A,2,Coleoptera,Coccinellidae,Coleoptera_Coccinellidae,Adult,Collected,11,Control,Present
+2019,8,Annual,1D,A,2,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,12,Control,Present
+2019,8,Annual,1D,A,2,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,1,Control,Present
+2019,8,Annual,1D,A,2,Hemiptera,Aphididae,Hemiptera_Aphididae,Adult,Collected,5,Control,Present
+2019,8,Annual,1D,A,2,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Nymph,Collected,18,Control,Present
+2019,8,Annual,1D,A,2,Acari,Trombiculidae,Acari_Trombiculidae,Adult,Collected,3,Control,Present
+2019,8,Annual,1D,A,2,Hymenoptera,Platygastridae,Hymenoptera_Platygastridae,Adult,Collected,2,Control,Present
+2019,8,Annual,1D,A,2,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,1,Control,Present
+2019,8,Annual,SpB,F,4,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,15,N,Absent
+2019,8,Annual,SpB,F,4,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,18,N,Absent
+2019,8,Annual,SpB,F,4,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,3,N,Absent
+2019,8,Annual,SpB,F,4,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,5,N,Absent
+2019,8,Annual,SpB,F,4,Araneae,Thomisidae,Araneae_Thomisidae,Adult,Collected,1,N,Absent
+2019,8,Annual,SpB,F,4,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,4,N,Absent
+2019,8,Annual,SpB,F,4,Diptera,Stratiomyidae,Diptera_Stratiomyidae,Adult,Collected,1,N,Absent
+2019,8,Annual,SpB,F,4,Coleoptera,Coccinellidae,Coleoptera_Coccinellidae,Adult,Collected,9,N,Absent
+2019,8,Annual,SpB,F,4,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Nymph,Collected,40,N,Absent
+2019,8,Annual,SpB,F,4,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,7,N,Absent
+2019,8,Annual,SpB,F,4,Acari,Trombiculidae,Acari_Trombiculidae,Adult,Collected,2,N,Absent
+2019,8,Annual,SpB,F,4,Hemiptera,Aphididae,Hemiptera_Aphididae,Adult,Collected,3,N,Absent
+2019,8,Annual,SpB,F,4,Hymenoptera,Platygastridae,Hymenoptera_Platygastridae,Adult,Collected,7,N,Absent
+2019,8,Annual,SpB,F,4,Hemiptera,Caliscelidae,Hemiptera_Caliscelidae,Adult,Collected,2,N,Absent
+2019,8,Annual,SpB,F,4,Hemiptera,Lygaeidae,Hemiptera_Lygaeidae,Adult,Collected,3,N,Absent
+2019,8,Annual,SpB,F,4,Hemiptera,Mesoveliidae,Hemiptera_Mesoveliidae,Adult,Collected,1,N,Absent
+2019,8,Annual,SpB,F,4,Diptera,Tephritidae,Diptera_Tephritidae,Adult,Collected,4,N,Absent
+2019,8,Annual,SpB,F,4,Hymenoptera,Bethylidae,Hymenoptera_Bethylidae,Adult,Collected,1,N,Absent
+2019,8,Annual,SpB,F,4,Hymenoptera,Braconidae,Hymenoptera_Braconidae,Adult,Collected,2,N,Absent
+2019,8,Annual,SpB,F,4,Hymenoptera,Cephidae,Hymenoptera_Cephidae,Adult,Collected,1,N,Absent
+2019,8,Annual,SpB,E,3,Hemiptera,Reduviidae,Hemiptera_Reduviidae,Nymph,Collected,1,N,Present
+2019,8,Annual,SpB,E,3,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,12,N,Present
+2019,8,Annual,SpB,E,3,Araneae,Thomisidae,Araneae_Thomisidae,Adult,Collected,4,N,Present
+2019,8,Annual,SpB,E,3,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,2,N,Present
+2019,8,Annual,SpB,E,3,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Collected,2,N,Present
+2019,8,Annual,SpB,E,3,Coleoptera,Byrrhidae,Coleoptera_Byrrhidae,Adult,Collected,6,N,Present
+2019,8,Annual,SpB,E,3,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Nymph,Collected,8,N,Present
+2019,8,Annual,SpB,E,3,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Nymph,Collected,2,N,Present
+2019,8,Annual,SpB,E,3,Coleoptera,Coccinellidae,Coleoptera_Coccinellidae,Adult,Collected,9,N,Present
+2019,8,Annual,SpB,E,3,Hymenoptera,Platygastridae,Hymenoptera_Platygastridae,Adult,Collected,1,N,Present
+2019,8,Annual,SpB,E,3,Hemiptera,Caliscelidae,Hemiptera_Caliscelidae,Nymph,Collected,3,N,Present
+2019,8,Annual,SpB,E,3,Araneae,Lycosidae,Araneae_Lycosidae,Adult,Collected,1,N,Present
+2019,8,Annual,SpB,E,3,Hemiptera,Lygaeidae,Hemiptera_Lygaeidae,Adult,Collected,3,N,Present
+2019,8,Annual,SpB,E,3,Diptera,Tephritidae,Diptera_Tephritidae,Adult,Collected,1,N,Present
+2019,8,Annual,SpB,E,3,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,3,N,Present
+2019,8,Annual,SpB,E,3,Hymenoptera,Braconidae,Hymenoptera_Braconidae,Adult,Collected,2,N,Present
+2019,8,Annual,SpB,E,3,Hymenoptera,Platygastridae,Hymenoptera_Platygastridae,Adult,Collected,1,N,Present
+2019,8,Annual,SpB,E,3,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,1,N,Present
+2019,8,Annual,SpB,E,3,Hemiptera,Aphididae,Hemiptera_Aphididae,Adult,Collected,1,N,Present
+2019,8,Annual,SpB,E,6,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,7,N,Absent
+2019,8,Annual,SpB,E,6,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,22,N,Absent
+2019,8,Annual,SpB,E,6,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,17,N,Absent
+2019,8,Annual,SpB,E,6,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Nymph,Collected,16,N,Absent
+2019,8,Annual,SpB,E,6,Hemiptera,Aphididae,Hemiptera_Aphididae,Adult,Collected,5,N,Absent
+2019,8,Annual,SpB,E,6,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,1,N,Absent
+2019,8,Annual,SpB,E,6,Araneae,Thomisidae,Araneae_Thomisidae,Adult,Collected,4,N,Absent
+2019,8,Annual,SpB,E,6,Hymenoptera,Platygastridae,Hymenoptera_Platygastridae,Adult,Collected,4,N,Absent
+2019,8,Annual,SpB,E,6,Coleoptera,Byrrhidae,Coleoptera_Byrrhidae,Adult,Collected,1,N,Absent
+2019,8,Annual,SpB,E,6,Coleoptera,Coccinellidae,Coleoptera_Coccinellidae,Adult,Collected,16,N,Absent
+2019,8,Annual,SpB,E,6,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Nymph,Collected,22,N,Absent
+2019,8,Annual,SpB,E,6,Hymenoptera,Eurytomidae,Hymenoptera_Eurytomidae,Adult,Collected,1,N,Absent
+2019,8,Annual,SpB,E,6,Diptera,Scathophagidae,Diptera_Scathophagidae,Adult,Collected,1,N,Absent
+2019,8,Annual,SpB,E,6,Hemiptera,Caliscelidae,Hemiptera_Caliscelidae,Adult,Collected,4,N,Absent
+2019,8,Annual,SpB,E,6,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,1,N,Absent
+2019,8,Annual,SpB,E,6,Hemiptera,Blissidae,Hemiptera_Blissidae,Adult,Collected,1,N,Absent
+2019,8,Annual,SpB,E,6,Acari,Trombiculidae,Acari_Trombiculidae,Adult,Collected,6,N,Absent
+2019,8,Annual,SpB,E,6,Diptera,Unknown,Diptera_Unknown,Adult,Collected,1,N,Absent
+2019,8,Annual,SpB,E,5,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,13,Control,Absent
+2019,8,Annual,SpB,E,5,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Collected,2,Control,Absent
+2019,8,Annual,SpB,E,5,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,2,Control,Absent
+2019,8,Annual,SpB,E,5,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,2,Control,Absent
+2019,8,Annual,SpB,E,5,Hemiptera,Lygaeidae,Hemiptera_Lygaeidae,Adult,Collected,3,Control,Absent
+2019,8,Annual,SpB,E,5,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,20,Control,Absent
+2019,8,Annual,SpB,E,5,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,3,Control,Absent
+2019,8,Annual,SpB,E,5,Hemiptera,Caliscelidae,Hemiptera_Caliscelidae,Adult,Collected,8,Control,Absent
+2019,8,Annual,SpB,E,5,Araneae,Thomisidae,Araneae_Thomisidae,Adult,Collected,1,Control,Absent
+2019,8,Annual,SpB,E,5,Hymenoptera,Platygastridae,Hymenoptera_Platygastridae,Adult,Collected,1,Control,Absent
+2019,8,Annual,SpB,E,5,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Nymph,Collected,16,Control,Absent
+2019,8,Annual,SpB,E,5,Coleoptera,Coccinellidae,Coleoptera_Coccinellidae,Adult,Collected,20,Control,Absent
+2019,8,Annual,SpB,E,5,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,8,Control,Absent
+2019,8,Annual,SpB,E,5,Acari,Trombiculidae,Acari_Trombiculidae,Adult,Collected,2,Control,Absent
+2019,8,Annual,SpB,E,2,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,3,Control,Present
+2019,8,Annual,SpB,E,2,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,3,Control,Present
+2019,8,Annual,SpB,E,2,Coleoptera,Coccinellidae,Coleoptera_Coccinellidae,Adult,Collected,10,Control,Present
+2019,8,Annual,SpB,E,2,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,10,Control,Present
+2019,8,Annual,SpB,E,2,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Nymph,Collected,5,Control,Present
+2019,8,Annual,SpB,E,2,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,23,Control,Present
+2019,8,Annual,SpB,E,2,Hymenoptera,Platygastridae,Hymenoptera_Platygastridae,Adult,Collected,3,Control,Present
+2019,8,Annual,SpB,E,2,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Nymph,Collected,12,Control,Present
+2019,8,Annual,SpB,E,2,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,2,Control,Present
+2019,8,Annual,SpB,E,2,Acari,Trombiculidae,Acari_Trombiculidae,Adult,Collected,2,Control,Present
+2019,8,Annual,SpB,E,2,Hemiptera,Blissidae,Hemiptera_Blissidae,Adult,Collected,10,Control,Present
+2019,8,Annual,SpB,E,2,Coleoptera,Byrrhidae,Coleoptera_Byrrhidae,Adult,Collected,10,Control,Present
+2019,8,Annual,SpB,E,2,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,2,Control,Present
+2019,8,Annual,SpB,E,2,Araneae,Thomisidae,Araneae_Thomisidae,Adult,Collected,1,Control,Present
+2019,8,Annual,SpB,E,2,Diptera,Psilidae,Diptera_Psilidae,Adult,Collected,2,Control,Present
+2019,8,Annual,SpB,E,1,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,2,C ,Present
+2019,8,Annual,SpB,E,1,Hemiptera,Blissidae,Hemiptera_Blissidae,Adult,Collected,14,C ,Present
+2019,8,Annual,SpB,E,1,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,4,C ,Present
+2019,8,Annual,SpB,E,1,Hemiptera,Caliscelidae,Hemiptera_Caliscelidae,Adult,Collected,2,C ,Present
+2019,8,Annual,SpB,E,1,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,2,C ,Present
+2019,8,Annual,SpB,E,1,Araneae,Thomisidae,Araneae_Thomisidae,Adult,Collected,3,C ,Present
+2019,8,Annual,SpB,E,1,Diptera,Psilidae,Diptera_Psilidae,Adult,Collected,1,C ,Present
+2019,8,Annual,SpB,E,1,Hymenoptera,Chalcididae,Hymenoptera_Chalcididae,Adult,Collected,1,C ,Present
+2019,8,Annual,SpB,E,1,Coleoptera,Mordellidae,Coleoptera_Mordellidae,Adult,Collected,1,C ,Present
+2019,8,Annual,SpB,E,4,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,4,C ,Absent
+2019,8,Annual,SpB,E,4,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Collected,1,C ,Absent
+2019,8,Annual,SpB,E,4,Hemiptera,Blissidae,Hemiptera_Blissidae,Adult,Collected,2,C ,Absent
+2019,8,Annual,SpB,E,4,Hemiptera,Blissidae,Hemiptera_Blissidae,Nymph,Collected,6,C ,Absent
+2019,8,Annual,SpB,E,4,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,3,C ,Absent
+2019,8,Annual,SpB,E,4,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,4,C ,Absent
+2019,8,Annual,SpB,E,4,Lepidoptera,Crambidae,Lepidoptera_Crambidae,Adult,Collected,1,C ,Absent
+2019,8,Annual,SpB,E,4,Araneae,Thomisidae,Araneae_Thomisidae,Adult,Collected,1,C ,Absent
+2019,8,Annual,SpB,E,4,Hemiptera,Cixiidae,Hemiptera_Cixiidae,Adult,Collected,1,C ,Absent
+2019,8,Annual,SpB,E,4,Hymenoptera,Eurytomidae,Hymenoptera_Eurytomidae,Adult,Collected,1,C ,Absent
+2019,8,Annual,SpB,E,4,Hymenoptera,Chalcididae,Hymenoptera_Chalcididae,Adult,Collected,1,C ,Absent
+2019,8,Annual,SpB,E,4,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,2,C ,Absent
+2019,8,Annual,SpB,E,4,Araneae,Lycosidae,Araneae_Lycosidae,Adult,Collected,1,C ,Absent
+2019,8,Annual,SpB,E,4,Hymenoptera,Braconidae,Hymenoptera_Braconidae,Adult,Collected,1,C ,Absent
+2019,8,Annual,SpB,D,1,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,5,C ,Present
+2019,8,Annual,SpB,D,1,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Collected,1,C ,Present
+2019,8,Annual,SpB,D,1,Araneae,Thomisidae,Araneae_Thomisidae,Adult,Collected,4,C ,Present
+2019,8,Annual,SpB,D,1,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,2,C ,Present
+2019,8,Annual,SpB,D,1,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,16,C ,Present
+2019,8,Annual,SpB,D,1,Hemiptera,Cixiidae,Hemiptera_Cixiidae,Adult,Collected,1,C ,Present
+2019,8,Annual,SpB,D,1,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,3,C ,Present
+2019,8,Annual,SpB,D,1,Coleoptera,Curculionidae,Coleoptera_Curculionidae,Adult,Collected,1,C ,Present
+2019,8,Annual,SpB,D,1,Hemiptera,Blissidae,Hemiptera_Blissidae,Adult,Collected,2,C ,Present
+2019,8,Unburned,20B,F,3,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,1,C,Present
+2019,8,Unburned,20B,F,3,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,3,C,Present
+2019,8,Unburned,20B,F,3,Lepidoptera,Unknown,Lepidoptera_Unknown,Nymph,Collected,1,C,Present
+2019,8,Unburned,20B,F,3,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,3,C,Present
+2019,8,Unburned,20B,F,3,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,1,C,Present
+2019,8,Unburned,20B,F,3,Thysanoptera,Aeolothripidae,Thysanoptera_Aeolothripidae,Adult,Collected,2,C,Present
+2019,8,Unburned,20B,F,3,Hymenoptera,Bethylidae,Hymenoptera_Bethylidae,Adult,Collected,1,C,Present
+2019,8,Unburned,20B,F,3,Hymenoptera,Proctotrupidae,Hymenoptera_Proctotrupidae,Adult,Collected,1,C,Present
+2019,8,Unburned,20B,F,3,Hymenoptera,Chrysididae,Hymenoptera_Chrysididae,Adult,Collected,2,C,Present
+2019,8,Unburned,20B,F,2,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,1,Control,Present
+2019,8,Unburned,20B,F,2,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,8,Control,Present
+2019,8,Unburned,20B,F,2,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,6,Control,Present
+2019,8,Unburned,20B,F,2,Araneae,Thomisidae,Araneae_Thomisidae,Adult,Collected,4,Control,Present
+2019,8,Unburned,20B,F,2,Diptera,Cecidomyiidae,Diptera_Cecidomyiidae,Adult,Collected,2,Control,Present
+2019,8,Unburned,20B,F,2,Hymenoptera,Unknown,Hymenoptera_Unknown,Adult,Collected,1,Control,Present
+2019,8,Unburned,20B,F,2,Thysanoptera,Aeolothripidae,Thysanoptera_Aeolothripidae,Adult,Collected,1,Control,Present
+2019,8,Unburned,20B,F,2,Acari,Unknown,Acari_Unknown,Adult,Collected,8,Control,Present
+2019,8,Unburned,20B,E,4,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,3,N,Present
+2019,8,Unburned,20B,E,4,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Collected,1,N,Present
+2019,8,Unburned,20B,E,4,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,8,N,Present
+2019,8,Unburned,20B,E,4,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,2,N,Present
+2019,8,Unburned,20B,E,4,Araneae,Thomisidae,Araneae_Thomisidae,Adult,Collected,1,N,Present
+2019,8,Unburned,20B,E,4,Ixodida,Ixodidae,Ixodida_Ixodidae,Adult,Collected,2,N,Present
+2019,8,Unburned,20B,E,4,Hemiptera,Caliscelidae,Hemiptera_Caliscelidae,Adult,Collected,1,N,Present
+2019,8,Unburned,20B,E,4,Diptera,Cecidomyiidae,Diptera_Cecidomyiidae,Adult,Collected,2,N,Present
+2019,8,Unburned,20B,E,4,Hymenoptera,Chalcididae,Hymenoptera_Chalcididae,Adult,Collected,2,N,Present
+2019,8,Unburned,20B,E,4,Thysanoptera,Aeolothripidae,Thysanoptera_Aeolothripidae,Adult,Collected,1,N,Present
+2019,8,Unburned,20B,E,1,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,2,N,Absent
+2019,8,Unburned,20B,E,1,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,8,N,Absent
+2019,8,Unburned,20B,E,1,Thysanoptera,Aeolothripidae,Thysanoptera_Aeolothripidae,Adult,Collected,4,N,Absent
+2019,8,Unburned,20B,E,1,Coleoptera,Curculionidae,Coleoptera_Curculionidae,Adult,Collected,1,N,Absent
+2019,8,Unburned,20B,E,1,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,3,N,Absent
+2019,8,Unburned,20B,E,1,Hymenoptera,Eurytomidae,Hymenoptera_Eurytomidae,Adult,Collected,2,N,Absent
+2019,8,Unburned,20B,E,1,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,1,N,Absent
+2019,8,Unburned,20B,E,1,Hymenoptera,Chalcididae,Hymenoptera_Chalcididae,Adult,Collected,1,N,Absent
+2019,8,Unburned,20B,D,1,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,2,C ,Present
+2019,8,Unburned,20B,D,1,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,11,C ,Present
+2019,8,Unburned,20B,D,1,Hemiptera,Caliscelidae,Hemiptera_Caliscelidae,Nymph,Collected,3,C ,Present
+2019,8,Unburned,20B,D,1,Coleoptera,Curculionidae,Coleoptera_Curculionidae,Adult,Collected,1,C ,Present
+2019,8,Unburned,20B,D,1,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,6,C ,Present
+2019,8,Unburned,20B,D,1,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,1,C ,Present
+2019,8,Unburned,20B,D,1,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,1,C ,Present
+2019,8,Unburned,20B,D,1,Araneae,Thomisidae,Araneae_Thomisidae,Adult,Collected,2,C ,Present
+2019,8,Unburned,20B,D,1,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Nymph,Collected,3,C ,Present
+2019,8,Unburned,20B,D,1,Hymenoptera,Platygastridae,Hymenoptera_Platygastridae,Adult,Collected,3,C ,Present
+2019,8,Unburned,20B,D,1,Diptera,Tephritidae,Diptera_Tephritidae,Adult,Collected,3,C ,Present
+2019,8,Unburned,20B,D,1,Hemiptera,Aphididae,Hemiptera_Aphididae,Adult,Collected,5,C ,Present
+2019,8,Unburned,20B,D,1,Acari,Trombiculidae,Acari_Trombiculidae,Adult,Collected,31,C ,Present
+2019,8,Unburned,20B,D,1,Diptera,Chloropidae,Diptera_Chloropidae,Adult,Collected,2,C ,Present
+2019,8,Unburned,20B,D,3,Araneae,Thomisidae,Araneae_Thomisidae,Adult,Collected,9,N,Present
+2019,8,Unburned,20B,D,3,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,15,N,Present
+2019,8,Unburned,20B,D,3,Hemiptera,Aphididae,Hemiptera_Aphididae,Adult,Collected,4,N,Present
+2019,8,Unburned,20B,D,3,Hymenoptera,Platygastridae,Hymenoptera_Platygastridae,Adult,Collected,6,N,Present
+2019,8,Unburned,20B,D,3,Coleoptera,Coccinellidae,Coleoptera_Coccinellidae,Adult,Collected,1,N,Present
+2019,8,Unburned,20B,D,3,Diptera,Thaumaleidae,Diptera_Thaumaleidae,Adult,Collected,4,N,Present
+2019,8,Unburned,20B,D,3,Diptera,Psychodidae,Diptera_Psychodidae,Adult,Collected,2,N,Present
+2019,8,Unburned,20B,D,3,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,6,N,Present
+2019,8,Unburned,20B,D,3,Hemiptera,Caliscelidae,Hemiptera_Caliscelidae,Adult,Collected,10,N,Present
+2019,8,Unburned,20B,D,3,Hymenoptera,Formicidae,Hymenoptera_formicidae,Adult,Collected,1,N,Present
+2019,8,Unburned,20B,D,3,Diptera,Tephritidae,Diptera_Tephritidae,Adult,Collected,2,N,Present
+2019,8,Unburned,20B,D,3,Lepidoptera,Crambidae,Lepidoptera_Crambidae,Adult,Collected,1,N,Present
+2019,8,Unburned,20B,D,3,Hemiptera,Tingidae,Hemiptera_Tingidae,Adult,Collected,1,N,Present
+2019,8,Unburned,20B,D,3,Acari,Trombiculidae,Acari_Trombiculidae,Adult,Collected,1,N,Present
+2019,8,Unburned,20B,D,3,Diptera,Chironomidae,Diptera_Chironomidae,Adult,Collected,1,N,Present
+2019,8,Unburned,20B,D,2,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Collected,1,Control,Present
+2019,8,Unburned,20B,D,2,Hemiptera,Lygaeidae,Hemiptera_Lygaeidae,Adult,Collected,2,Control,Present
+2019,8,Unburned,20B,D,2,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,1,Control,Present
+2019,8,Unburned,20B,D,2,Araneae,Lycosidae,Araneae_Lycosidae,Adult,Collected,1,Control,Present
+2019,8,Unburned,20B,D,2,Hemiptera,Caliscelidae,Hemiptera_Caliscelidae,Adult,Collected,12,Control,Present
+2019,8,Unburned,20B,D,2,Araneae,Thomisidae,Araneae_Thomisidae,Adult,Collected,3,Control,Present
+2019,8,Unburned,20B,D,2,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,2,Control,Present
+2019,8,Unburned,20B,D,2,Hymenoptera,Lygaeidae,Hymenoptera_Lygaeidae,Adult,Collected,3,Control,Present
+2019,8,Unburned,20B,D,2,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,5,Control,Present
+2019,8,Unburned,20B,D,2,Coleoptera,Coccinellidae,Coleoptera_Coccinellidae,Adult,Collected,1,Control,Present
+2019,8,Unburned,20B,D,2,Hemiptera,Aphididae,Hemiptera_Aphididae,Adult,Collected,1,Control,Present
+2019,8,Unburned,20C,C,5,Lepidoptera,Unknown,Lepidoptera_Unknown,Adult,Collected,1,Control,Present
+2019,8,Unburned,20C,C,5,Coleoptera,Coccinellidae,Coleoptera_Coccinellidae,Adult,Collected,1,Control,Present
+2019,8,Unburned,20C,C,5,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,4,Control,Present
+2019,8,Unburned,20C,C,5,Araneae,Araneidae,Araneae_Araneidae,Adult,Collected,4,Control,Present
+2019,8,Unburned,20C,C,5,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,8,Control,Present
+2019,8,Unburned,20C,C,5,Diptera,Chloropidae,Diptera_Chloropidae,Adult,Collected,2,Control,Present
+2019,8,Unburned,20C,C,5,Diptera,Cecidomyiidae,Diptera_Cecidomyiidae,Adult,Collected,1,Control,Present
+2019,8,Unburned,20C,C,5,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,10,Control,Present
+2019,8,Unburned,20C,C,5,Coleoptera,Unknown,Coleoptera_Unknown,Adult,Collected,1,Control,Present
+2019,8,Unburned,20C,C,5,Araneae,Linyphiidae,Araneae_Linyphiidae,Adult,Collected,1,Control,Present
+2019,8,Annual,1D,B,1,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,2,N,Present
+2019,8,Annual,1D,B,1,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,23,N,Present
+2019,8,Annual,1D,B,1,Ixodida,Ixodidae,Ixodida_Ixodidae,Adult,Collected,1,N,Present
+2019,8,Annual,1D,B,1,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,2,N,Present
+2019,8,Annual,1D,B,1,Diptera,Chloropidae,Diptera_Chloropidae,Adult,Collected,3,N,Present
+2019,8,Annual,1D,B,1,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,2,N,Present
+2019,8,Annual,1D,B,1,Lepidoptera,Crambidae,Lepidoptera_Crambidae,Adult,Collected,1,N,Present
+2019,8,Annual,1D,B,1,Hemiptera,Miridae,Hemiptera_Miridae,Nymph,Collected,2,N,Present
+2019,8,Annual,1D,B,1,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,38,N,Present
+2019,8,Annual,1D,B,1,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,21,N,Present
+2019,8,Annual,1D,B,1,Hymenoptera,Mymaridae,Hymenoptera_Mymaridae,Adult,Collected,4,N,Present
+2019,8,Annual,1D,B,1,Hymenoptera,Eupelmidae,Hymenoptera_Eupelmidae,Adult,Collected,1,N,Present
+2019,8,Annual,1D,B,1,Diptera,Cecidomyiidae,Diptera_Cecidomyiidae,Adult,Collected,4,N,Present
+2019,8,Annual,1D,B,1,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Nymph,Collected,7,N,Present
+2019,8,Annual,1D,B,1,Araneae,Linyphiidae,Araneae_Linyphiidae,Adult,Collected,2,N,Present
+2019,8,Annual,1D,B,1,Hemiptera,Coccidae,Hemiptera_Coccidae,Adult,Collected,3,N,Present
+2019,8,Annual,1D,B,1,Araneae,Philodromidae,Araneae_Philodromidae,Adult,Collected,1,N,Present
+2019,8,Annual,1D,B,1,Hemiptera,Aphididae,Hemiptera_Aphididae,Adult,Collected,1,N,Present
+2019,8,Annual,1D,B,1,Collembola,Sminthuridae,Collembola_Sminthuridae,Adult,Collected,15,N,Present
+2019,8,Annual,1D,B,1,Diptera,Unknown,Diptera_Unknown,Adult,Collected,5,N,Present
+2019,8,Annual,1D,B,1,Hemiptera,Unknown,Hemiptera_Unknown,Adult,Collected,1,N,Present
+2019,8,Annual,SpB,E,6,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,8,N,Absent
+2019,8,Annual,SpB,E,6,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,9,N,Absent
+2019,8,Annual,SpB,F,6,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,3,C ,Absent
+2019,8,Annual,SpB,F,6,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,5,C ,Absent
+2019,8,Annual,SpB,F,6,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Nymph,Collected,21,C ,Absent
+2019,8,Annual,SpB,F,6,Hymenoptera,Mymaridae,Hymenoptera_Mymaridae,Adult,Collected,1,C ,Absent
+2019,8,Annual,SpB,F,6,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,1,C ,Absent
+2019,8,Annual,SpB,F,6,Hemiptera,Miridae,Hemiptera_Miridae,Nymph,Collected,2,C ,Absent
+2019,8,Annual,SpB,F,6,Ixodida,Ixodidae,Ixodida_Ixodidae,Adult,Collected,1,C ,Absent
+2019,8,Annual,SpB,F,6,Araneae,Linyphiidae,Araneae_Linyphiidae,Adult,Collected,2,C ,Absent
+2019,8,Annual,SpB,F,6,Unknown,Unknown,Unknown_Unknown,Adult,Collected,6,C ,Absent
+2019,8,Annual,SpB,F,6,Diptera,Cecidomyiidae,Diptera_Cecidomyiidae,Adult,Collected,2,C ,Absent
+2019,8,Unburned,20B,F,4,Hemiptera,Dictyopharidae,Hemiptera_Dictyopharidae,Adult,Collected,1,N,Absent
+2019,8,Unburned,20B,F,4,Diptera,Unknown,Diptera_Unknown,Adult,Collected,3,N,Absent
+2019,8,Unburned,20B,F,4,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,9,N,Absent
+2019,8,Unburned,20B,F,4,Collembola,Sminthuridae,Collembola_Sminthuridae,Adult,Collected,10,N,Absent
+2019,8,Unburned,20B,F,4,Hymenoptera,Mymaridae,Hymenoptera_Mymaridae,Adult,Collected,1,N,Absent
+2019,8,Unburned,20B,F,4,Ixodida,Ixodidae,Ixodida_Ixodidae,Adult,Collected,1,N,Absent
+2019,8,Unburned,20B,F,4,Diptera,Chloropidae,Diptera_Chloropidae,Adult,Collected,1,N,Absent
+2019,8,Unburned,20B,F,4,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,15,N,Absent
+2019,8,Unburned,20B,F,4,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Nymph,Collected,4,N,Absent
+2019,8,Unburned,20B,F,4,Hymenoptera,Trichogrammatidae,Hymenoptera_Trichogrammatidae,Adult,Collected,4,N,Absent
+2019,8,Unburned,20B,F,4,Hymenoptera,Eurytomidae,Hymenoptera_Eurytomidae,Adult,Collected,2,N,Absent
+2019,8,Unburned,20B,F,4,Araneae,Philodromidae,Araneae_Philodromidae,Adult,Collected,3,N,Absent
+2019,8,Unburned,20B,F,4,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,2,N,Absent
+2019,8,Unburned,20B,F,4,Hymenoptera,Encrytidae,Hymenoptera_Encrytidae,Adult,Collected,2,N,Absent
+2019,8,Unburned,20B,F,4,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Nymph,Collected,10,N,Absent
+2019,8,Unburned,20B,F,4,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,1,N,Absent
+2019,8,Unburned,20B,E,2,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,1,Control,Absent
+2019,8,Unburned,20B,E,2,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Nymph,Collected,7,Control,Absent
+2019,8,Unburned,20B,E,2,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,1,Control,Absent
+2019,8,Unburned,20B,E,2,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,5,Control,Absent
+2019,8,Unburned,20B,E,2,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,2,Control,Absent
+2019,8,Unburned,20B,E,2,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Nymph,Collected,6,Control,Absent
+2019,8,Unburned,20B,E,2,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,10,Control,Absent
+2019,8,Unburned,20B,E,2,Lepidoptera,Crambidae,Lepidoptera_Crambidae,Adult,Collected,1,Control,Absent
+2019,8,Unburned,20B,E,2,Lepidoptera,Unknown,Lepidoptera_Unknown,Nymph,Collected,1,Control,Absent
+2019,8,Unburned,20B,E,2,Collembola,Sminthuridae,Collembola_Sminthuridae,Adult,Collected,6,Control,Absent
+2019,8,Unburned,20B,E,2,Coleoptera,Curculionidae,Coleoptera_Curculionidae,Adult,Collected,1,Control,Absent
+2019,8,Unburned,20B,E,2,Diptera,Cecidomyiidae,Diptera_Cecidomyiidae,Adult,Collected,3,Control,Absent
+2019,8,Unburned,20B,E,2,Hymenoptera,Ichneumonidae,Hymenoptera_Ichneumonidae,Adult,Collected,2,Control,Absent
+2019,8,Unburned,20B,E,2,Acari,Unknown,Acari_Unknown,Adult,Collected,6,Control,Absent
+2019,8,Unburned,20B,E,2,Araneae,Araneidae,Araneae_Araneidae,Adult,Collected,1,Control,Absent
+2019,8,Unburned,20B,E,2,Hymenoptera,Trichogrammatidae,Hymenoptera_Trichogrammatidae,Adult,Collected,6,Control,Absent
+2019,8,Unburned,20B,E,2,Hemiptera,Coccidae,Hemiptera_Coccidae,Adult,Collected,1,Control,Absent
+2019,8,Unburned,20B,E,2,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,2,Control,Absent
+2019,8,Unburned,20B,E,2,Hymenoptera,Encrytidae,Hymenoptera_Encrytidae,Adult,Collected,2,Control,Absent
+2019,8,Unburned,20B,E,2,Unknown,Unknown,Unknown_Unknown,Adult,Collected,1,Control,Absent
+2019,8,Unburned,20B,E,2,Hymenoptera,Eupelmidae,Hymenoptera_Eupelmidae,Adult,Collected,1,Control,Absent
+2019,8,Unburned,20B,F,5,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,1,Control,Absent
+2019,8,Unburned,20B,F,5,Orthoptera,Tettigoniidae,Orthoptera_Tettigonidae,Adult,Collected,1,Control,Absent
+2019,8,Unburned,20B,F,5,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,6,Control,Absent
+2019,8,Unburned,20B,F,5,Hemiptera,Membracidae,Hemiptera_Membracidae,Adult,Collected,1,Control,Absent
+2019,8,Unburned,20B,F,5,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,1,Control,Absent
+2019,8,Unburned,20B,F,5,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,3,Control,Absent
+2019,8,Unburned,20B,F,5,Araneae,Linyphiidae,Araneae_Linyphiidae,Adult,Collected,4,Control,Absent
+2019,8,Unburned,20B,F,5,Diptera,Chloropidae,Diptera_Chloropidae,Adult,Collected,3,Control,Absent
+2019,8,Unburned,20B,F,5,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,1,Control,Absent
+2019,8,Unburned,20B,F,5,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Nymph,Collected,1,Control,Absent
+2019,8,Unburned,20B,F,5,Diptera,Cecidomyiidae,Diptera_Cecidomyiidae,Adult,Collected,1,Control,Absent
+2019,8,Unburned,20B,F,5,Hemiptera,Miridae,Hemiptera_Miridae,Nymph,Collected,3,Control,Absent
+2019,8,Unburned,20B,F,5,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Larvae,Collected,4,Control,Absent
+2019,8,Unburned,20B,F,5,Thysanoptera,Aeolothripidae,Thysanoptera_Aeolothripidae,Adult,Collected,1,Control,Absent
+2019,8,Unburned,20B,F,5,Collembola,Sminthuridae,Collembola_Sminthuridae,Adult,Collected,7,Control,Absent
+2019,8,Unburned,20B,F,5,Hymenoptera,Encrytidae,Hymenoptera_Encrytidae,Adult,Collected,2,Control,Absent
+2019,8,Unburned,20B,F,5,Ixodida,Ixodidae,Ixodida_Ixodidae,Adult,Collected,1,Control,Absent
+2019,8,Unburned,20B,F,6,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,3,C ,Absent
+2019,8,Unburned,20B,F,6,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,4,C ,Absent
+2019,8,Unburned,20B,F,6,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,3,C ,Absent
+2019,8,Unburned,20B,F,6,Hymenoptera,Trichogrammatidae,Hymenoptera_Trichogrammatidae,Adult,Collected,5,C ,Absent
+2019,8,Unburned,20B,F,6,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,9,C ,Absent
+2019,8,Unburned,20B,F,6,Collembola,Sminthuridae,Collembola_Sminthuridae,Adult,Collected,39,C ,Absent
+2019,8,Unburned,20B,F,6,Hemiptera,Miridae,Hemiptera_Miridae,Nymph,Collected,7,C ,Absent
+2019,8,Unburned,20B,F,6,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Larvae,Collected,4,C ,Absent
+2019,8,Unburned,20B,F,6,Hemiptera,Coccidae,Hemiptera_Coccidae,Adult,Collected,1,C ,Absent
+2019,8,Unburned,20B,F,6,Diptera,Chloropidae,Diptera_Chloropidae,Adult,Collected,5,C ,Absent
+2019,8,Unburned,20B,F,6,Acari,Acari,Acari_Acari,Adult,Collected,4,C ,Absent
+2019,8,Unburned,20B,F,6,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Nymph,Collected,5,C ,Absent
+2019,8,Unburned,20B,F,6,Hemiptera,Cicadidae,Hemiptera_Cicadidae,Adult,Collected,1,C ,Absent
+2019,8,Unburned,20B,F,6,Araneae,Linyphiidae,Araneae_Linyphiidae,Adult,Collected,2,C ,Absent
+2019,8,Unburned,20B,F,6,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,1,C ,Absent
+2019,8,Unburned,20B,F,6,Araneae,Philodromidae,Araneae_Philodromidae,Adult,Collected,1,C ,Absent
+2019,8,Unburned,20B,F,6,Lepidoptera,Crambidae,Lepidoptera_Crambidae,Adult,Collected,1,C ,Absent
+2019,8,Unburned,20B,F,6,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,2,C ,Absent
+2019,8,Unburned,20B,F,6,Hymenoptera,Eulophidae,Hymenoptera_Eulophidae,Adult,Collected,1,C ,Absent
+2019,8,Unburned,20B,F,6,Hymenoptera,Encrytidae,Hymenoptera_Encrytidae,Adult,Collected,2,C ,Absent
+2019,8,Unburned,20B,F,6,Hymenoptera,Chalcididae,Hymenoptera_Chalcididae,Adult,Collected,2,C ,Absent
+2019,8,Unburned,20B,E,6,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,2,C ,Present
+2019,8,Unburned,20B,E,6,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,4,C ,Present
+2019,8,Unburned,20B,E,6,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Nymph,Collected,24,C ,Present
+2019,8,Unburned,20B,E,6,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,4,C ,Present
+2019,8,Unburned,20B,E,6,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,8,C ,Present
+2019,8,Unburned,20B,E,6,Hemiptera,Miridae,Hemiptera_Miridae,Nymph,Collected,9,C ,Present
+2019,8,Unburned,20B,E,6,Acari,Unknown,Acari_Unknown,Adult,Collected,5,C ,Present
+2019,8,Unburned,20B,E,6,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,2,C ,Present
+2019,8,Unburned,20B,E,6,Diptera,Chloropidae,Diptera_Chloropidae,Adult,Collected,7,C ,Present
+2019,8,Unburned,20B,E,6,Thysanoptera,Aeolothripidae,Thysanoptera_Aeolothripidae,Adult,Collected,1,C ,Present
+2019,8,Unburned,20B,E,6,Phasmatodea,Heteronemiidae,Phasmatodea_Heteronemiidae,Adult,Collected,1,C ,Present
+2019,8,Unburned,20B,E,6,Hymenoptera,Braconidae,hymenoptera_braconidae,Adult,Collected,2,C ,Present
+2019,8,Unburned,20B,E,6,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Larvae,Collected,1,C ,Present
+2019,8,Unburned,20B,E,6,Hymenoptera,Encrytidae,Hymenoptera_Encrytidae,Adult,Collected,10,C ,Present
+2019,8,Unburned,20B,E,6,Diptera,Cecidomyiidae,Diptera_Cecidomyiidae,Adult,Collected,6,C ,Present
+2019,8,Unburned,20B,E,6,Araneae,Philodromidae,Araneae_Philodromidae,Adult,Collected,3,C ,Present
+2019,8,Unburned,20B,E,6,Hymenoptera,Eurytomidae,Hymenoptera_Eurytomidae,Adult,Collected,2,C ,Present
+2019,8,Unburned,20B,E,6,Araneae,Linyphiidae,Araneae_Linyphiidae,Adult,Collected,4,C ,Present
+2019,8,Unburned,20B,E,6,Hymenoptera,Eulophidae,Hymenoptera_Eulophidae,Adult,Collected,9,C ,Present
+2019,8,Unburned,20B,E,6,Collembola,Sminthuridae,Collembola_Sminthuridae,Adult,Collected,25,C ,Present
+2019,8,Unburned,20B,E,6,Collembola,Entomobryidae,Collembola_Entomobryidae,Adult,Collected,8,C ,Present
+2019,8,Unburned,20B,E,6,Unknown,Unknown,Unknown_Unknown,Larvae,Collected,2,C ,Present
+2019,8,Unburned,20B,E,6,Hemiptera,Acanthosomatidae,Hempitera_Acanthosomatidae,Nymph,Collected,1,C ,Present
+2019,8,Unburned,20B,E,6,Hymenoptera,Mymaridae,Hymenoptera_Mymaridae,Adult,Collected,1,C ,Present
+2019,8,Unburned,20B,E,5,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,1,Control,Present
+2019,8,Unburned,20B,E,5,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,4,Control,Present
+2019,8,Unburned,20B,E,5,Diptera,Cecidomyiidae,Diptera_Cecidomyiidae,Adult,Collected,5,Control,Present
+2019,8,Unburned,20B,E,5,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Larvae,Collected,7,Control,Present
+2019,8,Unburned,20B,E,5,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Nymph,Collected,13,Control,Present
+2019,8,Unburned,20B,E,5,Collembola,Sminthuridae,Collembola_Sminthuridae,Adult,Collected,12,Control,Present
+2019,8,Unburned,20B,E,5,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,2,Control,Present
+2019,8,Unburned,20B,E,5,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,10,Control,Present
+2019,8,Unburned,20B,E,5,Hemiptera,Miridae,Hemiptera_Miridae,Nymph,Collected,2,Control,Present
+2019,8,Unburned,20B,E,5,Diptera,Chloropidae,Diptera_Chloropidae,Adult,Collected,1,Control,Present
+2019,8,Unburned,20B,E,5,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,84,Control,Present
+2019,8,Unburned,20B,E,5,Collembola,Entomobryidae,Collembola_Entomobryidae,Adult,Collected,2,Control,Present
+2019,8,Unburned,20B,E,5,Acari,Unknown,Acari_Unknown,Adult,Collected,11,Control,Present
+2019,8,Unburned,20B,E,5,Hymenoptera,Eulophidae,Hymenoptera_Eulophidae,Adult,Collected,5,Control,Present
+2019,8,Unburned,20B,E,5,Hymenoptera,Encrytidae,Hymenoptera_Encrytidae,Adult,Collected,10,Control,Present
+2019,8,Unburned,20B,E,5,Hemiptera,Membracidae,Hemiptera_Membracidae,Adult,Collected,1,Control,Present
+2019,8,Unburned,20B,E,5,Araneae,Linyphiidae,Araneae_Linyphiidae,Adult,Collected,2,Control,Present
+2019,8,Unburned,20B,E,5,Hymenoptera,Ichneumonidae,Hymenoptera_Ichneumonidae,Adult,Collected,1,Control,Present
+2019,8,Unburned,20B,D,4,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,1,C,Absent
+2019,8,Unburned,20B,D,4,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,8,C,Absent
+2019,8,Unburned,20B,D,4,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Nymph,Collected,6,C,Absent
+2019,8,Unburned,20B,D,4,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,40,C,Absent
+2019,8,Unburned,20B,D,4,Araneae,Araneidae,Araneae_Araneidae,Adult,Collected,4,C,Absent
+2019,8,Unburned,20B,D,4,Collembola,Sminthuridae,Collembola_Sminthuridae,Adult,Collected,13,C,Absent
+2019,8,Unburned,20B,D,4,Araneae,Philodromidae,Araneae_Philodromidae,Adult,Collected,1,C,Absent
+2019,8,Unburned,20B,D,4,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,8,C,Absent
+2019,8,Unburned,20B,D,4,Acari,Unknown,Acari_Unknown,Adult,Collected,5,C,Absent
+2019,8,Unburned,20B,D,4,Hymenoptera,Encrytidae,Hymenoptera_Encrytidae,Adult,Collected,5,C,Absent
+2019,8,Unburned,20B,D,4,Hymenoptera,Eulophidae,Hymenoptera_Eulophidae,Adult,Collected,1,C,Absent
+2019,8,Unburned,20B,D,4,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,3,C,Absent
+2019,8,Unburned,20B,D,4,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,1,C,Absent
+2019,8,Unburned,20B,D,4,Collembola,Entomobryidae,Collembola_Entomobryidae,Adult,Collected,3,C,Absent
+2019,8,Unburned,20B,D,4,Hemiptera,Miridae,Hemiptera_Miridae,Adult,Collected,2,C,Absent
+2019,8,Unburned,20B,D,4,Diptera,Chloropidae,Diptera_Chloropidae,Adult,Collected,1,C,Absent
+2019,8,Unburned,20B,E,3,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,1,C,Absent
+2019,8,Unburned,20B,E,3,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,24,C,Absent
+2019,8,Unburned,20B,E,3,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Nymph,Collected,8,C,Absent
+2019,8,Unburned,20B,E,3,Acari,Unknown,Acari_Unknown,Adult,Collected,6,C,Absent
+2019,8,Unburned,20B,E,3,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,3,C,Absent
+2019,8,Unburned,20B,E,3,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,7,C,Absent
+2019,8,Unburned,20B,E,3,Collembola,Sminthuridae,Collembola_Sminthuridae,Adult,Collected,31,C,Absent
+2019,8,Unburned,20B,E,3,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,7,C,Absent
+2019,8,Unburned,20B,E,3,Diptera,Chloropidae,Diptera_Chloropidae,Adult,Collected,5,C,Absent
+2019,8,Unburned,20B,E,3,Diptera,Cecidomyiidae,Diptera_Cecidomyiidae,Adult,Collected,1,C,Absent
+2019,8,Unburned,20B,E,3,Hemiptera,Miridae,Hemiptera_Miridae,Nymph,Collected,9,C,Absent
+2019,8,Unburned,20B,E,3,Hymenoptera,Eupelmidae,Hymenoptera_Eupelmidae,Adult,Collected,1,C,Absent
+2019,8,Unburned,20B,E,3,Hymenoptera,Encrytidae,Hymenoptera_Encrytidae,Adult,Collected,4,C,Absent
+2019,8,Unburned,20B,E,3,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,2,C,Absent
+2019,8,Unburned,20B,E,3,Hymenoptera,Trichogrammatidae,Hymenoptera_Trichogrammatidae,Adult,Collected,2,C,Absent
+2019,8,Unburned,20B,E,3,Unknown,Unknown,Unknown_Unknown,Adult,Collected,3,C,Absent
+2019,8,Unburned,20B,E,3,Hymenoptera,Ichneumonidae,Hymenoptera_Ichneumonidae,Adult,Collected,1,C,Absent
+2019,8,Unburned,20B,E,3,Hymenoptera,Mymaridae,Hymenoptera_Mymaridae,Adult,Collected,2,C,Absent
+2019,8,Unburned,20B,E,3,Collembola,Entomobryidae,Collembola_Entomobryidae,Adult,Collected,1,C,Absent
+2019,8,Unburned,20B,E,3,Araneae,Linyphiidae,Araneae_Linyphiidae,Adult,Collected,1,C,Absent
+2019,8,Unburned,20B,E,3,Coleoptera,Curculionidae,Coleoptera_Curculionidae,Adult,Collected,1,C,Absent
+2019,8,Unburned,20B,D,5,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,1,Control,Absent
+2019,8,Unburned,20B,D,5,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,6,Control,Absent
+2019,8,Unburned,20B,D,5,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,10,Control,Absent
+2019,8,Unburned,20B,D,5,Collembola,Sminthuridae,Collembola_Sminthuridae,Adult,Collected,11,Control,Absent
+2019,8,Unburned,20B,D,5,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,8,Control,Absent
+2019,8,Unburned,20B,D,5,Acari,Unknown,Acari_Unknown,Adult,Collected,5,Control,Absent
+2019,8,Unburned,20B,D,5,Lepidoptera,Crambidae,Lepidoptera_Crambidae,Adult,Collected,1,Control,Absent
+2019,8,Unburned,20B,D,5,Hymenoptera,Mymaridae,Hymenoptera_Mymaridae,Adult,Collected,4,Control,Absent
+2019,8,Unburned,20B,D,5,Hymenoptera,Encrytidae,Hymenoptera_Encrytidae,Adult,Collected,5,Control,Absent
+2019,8,Unburned,20B,D,5,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,3,Control,Absent
+2019,8,Unburned,20B,D,5,Thysanoptera,Aeolothripidae,Thysanoptera_Aeolothripidae,Adult,Collected,3,Control,Absent
+2019,8,Unburned,20B,D,5,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Nymph,Collected,7,Control,Absent
+2019,8,Unburned,20B,D,5,Hymenoptera,Eulophidae,Hymenoptera_Eulophidae,Adult,Collected,9,Control,Absent
+2019,8,Unburned,20B,D,5,Araneae,Linyphiidae,Araneae_Linyphiidae,Adult,Collected,4,Control,Absent
+2019,8,Unburned,20B,D,5,Hemiptera,Miridae,Hemiptera_Miridae,Adult,Collected,1,Control,Absent
+2019,8,Unburned,20B,D,5,Araneae,Philodromidae,Araneae_Philodromidae,Adult,Collected,1,Control,Absent
+2019,8,Unburned,20B,D,5,Hemiptera,Miridae,Hemiptera_Miridae,Nymph,Collected,1,Control,Absent
+2019,8,Unburned,20B,D,5,Diptera,Cecidomyiidae,Diptera_Cecidomyiidae,Adult,Collected,2,Control,Absent
+2019,8,Unburned,20B,D,5,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Nymph,Collected,1,Control,Absent
+2019,8,Unburned,20B,D,5,Hymenoptera,Chalcididae,Hymenoptera_chalcididae,Adult,Collected,1,Control,Absent
+2019,8,Unburned,20B,D,5,Araneae,Araneidae,Araneae_Araneidae,Adult,Collected,2,Control,Absent
+2019,8,Unburned,20B,D,5,Diptera,Dolichopodidae,Diptera_Dolichopodidae,Adult,Collected,1,Control,Absent
+2019,8,Unburned,20B,D,5,Hymenoptera,Trichogrammatidae,Hymenoptera_Trichogrammatidae,Adult,Collected,1,Control,Absent
+2019,8,Unburned,20B,D,6,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,1,N,Absent
+2019,8,Unburned,20B,D,6,Collembola,Sminthuridae,Collembola_Sminthuridae,Adult,Collected,38,N,Absent
+2019,8,Unburned,20B,D,6,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,7,N,Absent
+2019,8,Unburned,20B,D,6,Thysanoptera,Aeolothripidae,Thysanoptera_Aeolothripidae,Adult,Collected,10,N,Absent
+2019,8,Unburned,20B,D,6,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Nymph,Collected,10,N,Absent
+2019,8,Unburned,20B,D,6,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,16,N,Absent
+2019,8,Unburned,20B,D,6,Diptera,Cecidomyiidae,Diptera_Cecidomyiidae,Adult,Collected,1,N,Absent
+2019,8,Unburned,20B,D,6,Hymenoptera,Encrytidae,Hymenoptera_Encrytidae,Adult,Collected,8,N,Absent
+2019,8,Unburned,20B,D,6,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,25,N,Absent
+2019,8,Unburned,20B,D,6,Hymenoptera,Platygastridae,Hymenoptera_Platygastridae,Adult,Collected,4,N,Absent
+2019,8,Unburned,20B,D,6,Collembola,Entomobryidae,Collembola_Entomobryidae,Adult,Collected,2,N,Absent
+2019,8,Unburned,20B,D,6,Araneae,Linyphiidae,Araneae_Linyphiidae,Adult,Collected,10,N,Absent
+2019,8,Unburned,20B,D,6,Acari,Unknown,Acari_Unknown,Adult,Collected,4,N,Absent
+2019,8,Unburned,20B,D,6,Diptera,Chloropidae,Diptera_Chloropidae,Adult,Collected,2,N,Absent
+2019,8,Unburned,20B,D,6,Unknown,Unknown,Unknown_Unknown,Larvae,Collected,3,N,Absent
+2019,8,Unburned,20B,D,6,Hemiptera,Membracidae,Hemiptera_Membracidae,Adult,Collected,1,N,Absent
+2019,8,Unburned,20B,D,6,Hemiptera,Miridae,Hemiptera_Miridae,Nymph,Collected,1,N,Absent
+2019,8,Unburned,20B,D,6,Hymenoptera,Eulophidae,Hymenoptera_Eulophidae,Adult,Collected,2,N,Absent
+2019,8,Unburned,20B,D,6,Hemiptera,pseudococcidae,Hemiptera_Pseudococcidae,Adult,Collected,1,N,Absent
+2019,8,Unburned,20B,D,6,Phasmatodea,phylliidae,Phasmatodea_Phylliidae,Adult,Collected,1,N,Absent
+2019,8,Unburned,20B,D,6,Hymenoptera,Trichogrammatidae,Hymenoptera_Trichogrammatidae,Adult,Collected,1,N,Absent
+2019,8,Unburned,20B,D,6,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Nymph,Collected,7,N,Absent
+2019,8,Unburned,20B,D,6,Hymenoptera,Ichneumonidae,Hymenoptera_Ichneumonidae,Adult,Collected,2,N,Absent
+2019,8,Unburned,20B,D,6,Hemiptera,Reduviidae,Hemiptera_Reduviidae,Adult,Collected,1,N,Absent
+2019,8,Unburned,20B,F,1,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,1,N,Present
+2019,8,Unburned,20B,F,1,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Nymph,Collected,13,N,Present
+2019,8,Unburned,20B,F,1,Diptera,Cecidomyiidae,Diptera_Cecidomyiidae,Adult,Collected,5,N,Present
+2019,8,Unburned,20B,F,1,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,27,N,Present
+2019,8,Unburned,20B,F,1,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,16,N,Present
+2019,8,Unburned,20B,F,1,Collembola,Sminthuridae,Collembola_Sminthuridae,Adult,Collected,47,N,Present
+2019,8,Unburned,20B,F,1,Hemiptera,Tingidae,Hemiptera_Tingidae,Adult,Collected,1,N,Present
+2019,8,Unburned,20B,F,1,Hymenoptera,Mymaridae,Hymenoptera_Mymaridae,Adult,Collected,1,N,Present
+2019,8,Unburned,20B,F,1,Acari,Unknown,Acari_Unknown,Adult,Collected,11,N,Present
+2019,8,Unburned,20B,F,1,Thysanoptera,Aeolothripidae,Thysanoptera_Aeolothripidae,Adult,Collected,3,N,Present
+2019,8,Unburned,20B,F,1,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,5,N,Present
+2019,8,Unburned,20B,F,1,Diptera,Chloropidae,Diptera_Chloropidae,Adult,Collected,1,N,Present
+2019,8,Unburned,20B,F,1,Hemiptera,Aphididae,Hemiptera_Aphididae,Adult,Collected,10,N,Present
+2019,8,Unburned,20B,F,1,Hymenoptera,Platygastridae,Hymenoptera_Platygastridae,Adult,Collected,1,N,Present
+2019,8,Unburned,20B,F,1,Araneae,Linyphiidae,Araneae_Linyphiidae,Adult,Collected,5,N,Present
+2019,8,Unburned,20B,F,1,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,3,N,Present
+2019,8,Unburned,20B,F,1,Hymenoptera,Encrytidae,Hymenoptera_Encrytidae,Adult,Collected,5,N,Present
+2019,8,Unburned,20B,F,1,Hymenoptera,Eulophidae,Hymenoptera_Eulophidae,Adult,Collected,1,N,Present
+2019,8,Unburned,20B,F,1,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Nymph,Collected,4,N,Present
+2019,8,Unburned,20B,F,1,Unknown,Unknown,Unknown_Unknown,Larvae,Collected,3,N,Present
+2019,8,Unburned,20B,F,1,Collembola,Entomobryidae,Collembola_Entomobryidae,Adult,Collected,2,N,Present
+2019,8,Annual,SpB,F,5,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,5,Control,Absent
+2019,8,Annual,SpB,F,5,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,5,Control,Absent
+2019,8,Annual,SpB,F,5,Hymenoptera,Mymaridae,Hymenoptera_Mymaridae,Adult,Collected,3,Control,Absent
+2019,8,Annual,SpB,F,5,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,14,Control,Absent
+2019,8,Annual,SpB,F,5,Unknown,Unknown,Unknown_Unknown,Adult,Collected,7,Control,Absent
+2019,8,Annual,SpB,F,5,Collembola,Sminthuridae,Collembola_Sminthuridae,Adult,Collected,8,Control,Absent
+2019,8,Annual,SpB,F,5,Hymenoptera,Eulophidae,Hymenoptera_Eulophidae,Adult,Collected,2,Control,Absent
+2019,8,Annual,SpB,F,5,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Nymph,Collected,7,Control,Absent
+2019,8,Annual,SpB,F,5,Acari,Unknown,Acari_Unknown,Adult,Collected,2,Control,Absent
+2019,8,Annual,SpB,F,5,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,2,Control,Absent
+2019,8,Annual,SpB,F,5,Hymenoptera,Trichogrammatidae,Hymenoptera_Trichogrammatidae,Adult,Collected,1,Control,Absent
+2019,8,Annual,SpB,F,5,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,1,Control,Absent
+2019,8,Annual,SpB,F,5,Hemiptera,Reduviidae,Hemiptera_Reduviidae,Adult,Collected,1,Control,Absent
+2019,8,Annual,SpB,F,5,Diptera,Chloropidae,Diptera_Chloropidae,Adult,Collected,1,Control,Absent
+2019,8,Annual,SpB,F,5,Hymenoptera,Unknown,Hymenoptera_Unknown,Adult,Collected,1,Control,Absent
+2019,8,Annual,SpB,F,2,Hymenoptera,Eulophidae,Hymenoptera_Eulophidae,Adult,Collected,1,Control,Present
+2019,8,Annual,SpB,F,2,Unknown,Unknown,Unknown_Unknown,Larvae,Collected,8,Control,Present
+2019,8,Annual,SpB,F,2,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,3,Control,Present
+2019,8,Annual,SpB,F,2,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,27,Control,Present
+2019,8,Annual,SpB,F,2,Collembola,Sminthuridae,Collembola_Sminthuridae,Adult,Collected,1,Control,Present
+2019,8,Annual,SpB,F,2,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,3,Control,Present
+2019,8,Annual,SpB,F,2,Hemiptera,Miridae,Hemiptera_Miridae,Nymph,Collected,1,Control,Present
+2019,8,Annual,SpB,D,4,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,8,C ,Absent
+2019,8,Annual,SpB,D,4,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Collected,1,C ,Absent
+2019,8,Annual,SpB,D,4,Orthoptera,Acrididae,Orthoptera_Acrididae,Nymph,Collected,4,C ,Absent
+2019,8,Annual,SpB,D,4,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,2,C ,Absent
+2019,8,Annual,SpB,D,4,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Nymph,Collected,40,C ,Absent
+2019,8,Annual,SpB,D,4,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,17,C ,Absent
+2019,8,Annual,SpB,D,4,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,18,C ,Absent
+2019,8,Annual,SpB,D,4,Hemiptera,Acanthosomatidae,Hemiptera_Acanthosomatidae,Nymph,Collected,1,C ,Absent
+2019,8,Annual,SpB,D,4,Acari,Unknown,Acari_Unknown,Adult,Collected,15,C ,Absent
+2019,8,Annual,SpB,D,4,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,32,C ,Absent
+2019,8,Annual,SpB,D,4,Collembola,Sminthuridae,Collembola_Sminthuridae,Adult,Collected,14,C ,Absent
+2019,8,Annual,SpB,D,4,Hymenoptera,Mymaridae,Hymenoptera_Mymaridae,Adult,Collected,10,C ,Absent
+2019,8,Annual,SpB,D,4,Diptera,Chloropidae,Diptera_Chloropidae,Adult,Collected,2,C ,Absent
+2019,8,Annual,SpB,D,4,Hemiptera,Miridae,Hemiptera_Miridae,Nymph,Collected,8,C ,Absent
+2019,8,Annual,SpB,D,4,Hemiptera,Miridae,Hemiptera_Miridae,Adult,Collected,7,C ,Absent
+2019,8,Annual,SpB,D,4,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,3,C ,Absent
+2019,8,Annual,SpB,D,4,Collembola,Entomobryidae,Collembola_Entomobryidae,Adult,Collected,7,C ,Absent
+2019,8,Annual,SpB,D,4,Coleoptera,Curculionidae,Coleoptera_Curculionidae,Adult,Collected,1,C ,Absent
+2019,8,Annual,SpB,D,4,Lepidoptera,Crambidae,Lepidoptera_Crambidae,Adult,Collected,1,C ,Absent
+2019,8,Annual,SpB,D,4,Hymenoptera,Halictidae,Hymenoptera_Halictidae,Adult,Collected,1,C ,Absent
+2019,8,Annual,SpB,D,4,Araneae,Philodromidae,Araneae_Philodromidae,Adult,Collected,1,C ,Absent
+2019,8,Annual,SpB,D,4,Hemiptera,Membracidae,Hemiptera_Membracidae,Adult,Collected,2,C ,Absent
+2019,8,Annual,SpB,D,4,Hymenoptera,Trichogrammatidae,Hymenoptera_Trichogrammatidae,Adult,Collected,2,C ,Absent
+2019,8,Annual,SpB,D,4,Hymenoptera,Encrytidae,Hymenoptera_Encrytidae,Adult,Collected,2,C ,Absent
+2019,8,Annual,SpB,D,4,Araneae,Linyphiidae,Araneae_Linyphiidae,Adult,Collected,3,C ,Absent
+2019,8,Annual,SpB,D,4,Hymenoptera,Platygastridae,Hymenoptera_Platygastridae,Adult,Collected,1,C ,Absent
+2019,8,Annual,SpB,D,4,Unknown,Unknown,Unknown_Unknown,Larvae,Collected,1,C ,Absent
+2019,8,Annual,SpB,D,4,Phasmatodea,Heteronemiidae,Phasmatodea_Heteronemiidae,Adult,Collected,1,C ,Absent
+2019,8,Annual,SpB,D,2,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,2,Control,Present
+2019,8,Annual,SpB,D,2,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Collected,2,Control,Present
+2019,8,Annual,SpB,D,2,Acari,Unknown,Acari_Unknown,Adult,Collected,9,Control,Present
+2019,8,Annual,SpB,D,2,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,21,Control,Present
+2019,8,Annual,SpB,D,2,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,12,Control,Present
+2019,8,Annual,SpB,D,2,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Nymph,Collected,32,Control,Present
+2019,8,Annual,SpB,D,2,Unknown,Unknown,Unknown_Unknown,Larvae,Collected,11,Control,Present
+2019,8,Annual,SpB,D,2,Collembola,Entomobryidae,Collembola_Entomobryidae,Adult,Collected,8,Control,Present
+2019,8,Annual,SpB,D,2,Collembola,Sminthuridae,Collembola_Sminthuridae,Adult,Collected,4,Control,Present
+2019,8,Annual,SpB,D,2,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,10,Control,Present
+2019,8,Annual,SpB,D,2,Hymenoptera,Mymaridae,Hymenoptera_Mymaridae,Adult,Collected,4,Control,Present
+2019,8,Annual,SpB,D,2,Thysanoptera,Aeolothripidae,Thysanoptera_Aeolothripidae,Adult,Collected,8,Control,Present
+2019,8,Annual,SpB,D,2,Hemiptera,Miridae,Hemiptera_Miridae,Nymph,Collected,3,Control,Present
+2019,8,Annual,SpB,D,2,Hemiptera,Miridae,Hemiptera_Miridae,Adult,Collected,5,Control,Present
+2019,8,Annual,SpB,D,2,Hemiptera,Membracidae,Hemiptera_Membracidae,Adult,Collected,2,Control,Present
+2019,8,Annual,SpB,D,2,Araneae,Linyphiidae,Araneae_Linyphiidae,Adult,Collected,4,Control,Present
+2019,8,Annual,SpB,D,2,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,1,Control,Present
+2019,8,Annual,SpB,D,2,Diptera,Chloropidae,Diptera_Chloropidae,Adult,Collected,2,Control,Present
+2019,8,Annual,SpB,D,2,Hymenoptera,Eulophidae,Hymenoptera_Eulophidae,Adult,Collected,1,Control,Present
+2019,8,Annual,SpB,D,2,Hymenoptera,Eulophidae,Hymenoptera_Eulophidae,Adult,Collected,1,Control,Present
+2019,8,Annual,SpB,D,2,Araneae,Philodromidae,Araneae_Philodromidae,Adult,Collected,2,Control,Present
+2019,8,Unburned,20C,C,3,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,4,C,Absent
+2019,8,Unburned,20C,C,3,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,15,C,Absent
+2019,8,Unburned,20C,C,3,Collembola,Sminthuridae,Collembola_Sminthuridae,Adult,Collected,38,C,Absent
+2019,8,Unburned,20C,C,3,Araneae,Linyphiidae,Araneae_Linyphiidae,Adult,Collected,8,C,Absent
+2019,8,Unburned,20C,C,3,Araneae,Philodromidae,Araneae_Philodromidae,Adult,Collected,3,C,Absent
+2019,8,Unburned,20C,C,3,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Nymph,Collected,2,C,Absent
+2019,8,Unburned,20C,C,3,Thysanoptera,Aeolothripidae,Thysanoptera_Aeolothripidae,Adult,Collected,2,C,Absent
+2019,8,Unburned,20C,C,3,Hemiptera,Miridae,Hemiptera_Miridae,Nymph,Collected,7,C,Absent
+2019,8,Unburned,20C,C,3,Unknown,Unknown,Unknown_Unknown,Larvae,Collected,2,C,Absent
+2019,8,Unburned,20C,C,3,Diptera,Chloropidae,Diptera_Chloropidae,Adult,Collected,2,C,Absent
+2019,8,Unburned,20C,C,3,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,2,C,Absent
+2019,8,Unburned,20C,C,3,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,2,C,Absent
+2019,8,Unburned,20C,C,3,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,2,C,Absent
+2019,8,Unburned,20C,C,3,Hymenoptera,Encrytidae,Hymenoptera_Encrytidae,Adult,Collected,8,C,Absent
+2019,8,Unburned,20C,C,3,Hymenoptera,Eulophidae,Hymenoptera_Eulophidae,Adult,Collected,2,C,Absent
+2019,8,Unburned,20C,C,3,Hymenoptera,Mymaridae,Hymenoptera_Mymaridae,Adult,Collected,26,C,Absent
+2019,8,Unburned,20C,C,3,Acari,Unknown,Acari_Unknown,Adult,Collected,1,C,Absent
+2019,8,Annual,SpB,D,3,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,3,N,Present
+2019,8,Annual,SpB,D,3,Coleoptera,Curculionidae,Coleoptera_Curculionidae,Adult,Collected,10,N,Present
+2019,8,Annual,SpB,D,3,Araneae,Oxyopidae,Araneae_Oxyopidae,Adult,Collected,4,N,Present
+2019,8,Annual,SpB,D,3,Araneae,Linyphiidae,Araneae_Linyphiidae,Adult,Collected,8,N,Present
+2019,8,Annual,SpB,D,3,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,39,N,Present
+2019,8,Annual,SpB,D,3,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,156,N,Present
+2019,8,Annual,SpB,D,3,Collembola,Entomobryidae,Collembola_Entomobryidae,Adult,Collected,38,N,Present
+2019,8,Annual,SpB,D,3,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Nymph,Collected,72,N,Present
+2019,8,Annual,SpB,D,3,Collembola,Sminthuridae,Collembola_Sminthuridae,Adult,Collected,35,N,Present
+2019,8,Annual,SpB,D,3,Hemiptera,Miridae,Hemiptera_Miridae,Nymph,Collected,7,N,Present
+2019,8,Annual,SpB,D,3,Hymenoptera,Eulophidae,Hymenoptera_Eulophidae,Adult,Collected,5,N,Present
+2019,8,Annual,SpB,D,3,Hemiptera,Pentatomidae,Hemiptera_Pentatomidae,Adult,Collected,1,N,Present
+2019,8,Annual,SpB,D,3,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,7,N,Present
+2019,8,Annual,SpB,D,3,Acari,Unknown,Acari_Unknown,Adult,Collected,12,N,Present
+2019,8,Annual,SpB,D,3,Lepidoptera,Crambidae,Lepidoptera_Crambidae,Adult,Collected,1,N,Present
+2019,8,Annual,SpB,D,3,Unknown,Unknown,Unknown_Unknown,Larvae,Collected,51,N,Present
+2019,8,Annual,SpB,D,3,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,1,N,Present
+2019,8,Annual,SpB,D,3,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,11,N,Present
+2019,8,Annual,SpB,D,3,Araneae,Araneidae,Araneae_Araneidae,Adult,Collected,2,N,Present
+2019,8,Annual,SpB,D,3,Araneae,Clubionidae,Araneae_Clubionidae,Adult,Collected,1,N,Present
+2019,8,Annual,SpB,D,3,Hymenoptera,Mymaridae,Hymenoptera_Mymaridae,Adult,Collected,11,N,Present
+2019,8,Annual,SpB,D,3,Hymenoptera,Encrytidae,Hymenoptera_Encrytidae,Adult,Collected,6,N,Present
+2019,8,Annual,SpB,D,3,Hemiptera,Reduviidae,Hemiptera_Reduviidae,Nymph,Collected,1,N,Present
+2019,8,Annual,SpB,D,3,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Nymph,Collected,24,N,Present
+2019,8,Annual,SpB,D,3,Araneae,Philodromidae,Araneae_Philodromidae,Adult,Collected,10,N,Present
+2019,8,Annual,SpB,D,3,Diptera,Chloropidae,Diptera_Chloropidae,Adult,Collected,13,N,Present
+2019,8,Annual,SpB,D,3,Hymenoptera,Eupelmidae,Hymenoptera_Eulophidae,Adult,Collected,2,N,Present
+2019,8,Annual,SpB,D,3,Thysanoptera,Aeolothripidae,Thysanoptera_Aeolothripidae,Adult,Collected,3,N,Present
+2019,8,Annual,SpB,D,3,Hymenoptera,Ichneumonidae,Hymenoptera_Ichneumonidae,Adult,Collected,2,N,Present
+2019,8,Annual,SpB,D,3,Hymenoptera,Platygastridae,Hymenoptera_Platygastridae,Adult,Collected,4,N,Present
+2019,8,Annual,SpB,D,3,Hemiptera,Psilidae,Hemiptera_Psilidae,Adult,Collected,5,N,Present
+2019,8,Annual,SpB,D,3,Hemiptera,Miridae,Hemiptera_Miridae,Adult,Collected,5,N,Present
+2019,8,Annual,SpB,D,3,Diptera,Cecidomyiidae,Diptera_Cecidomyiidae,Adult,Collected,4,N,Present
+2019,8,Annual,SpB,D,3,Diptera,Chamaemyiidae,Diptera_Chamaemyiidae,Adult,Collected,1,N,Present
+2019,8,Annual,SpB,D,3,Millipede,Diplopoda,Millipede_Diplopoda,Adult,Collected,1,N,Present
+2019,8,Annual,SpB,D,3,Diptera,Phoridae,Diptera_Phoridae,Adult,Collected,2,N,Present
+2019,8,Annual,SpB,D,3,Lepidoptera,Unknown,Lepidoptera_unknown,Larvae,Collected,1,N,Present
+2019,8,Annual,SpB,D,3,Unknown,Unknown,Unknown_Unknown,Adult,Collected,1,N,Present
+2019,8,Annual,SpB,D,6,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,4,N,Absent
+2019,8,Annual,SpB,D,6,Hymenoptera,Ichneumonidae,Hymenoptera_Ichneumonidae,Adult,Collected,1,N,Absent
+2019,8,Annual,SpB,D,6,Diptera,Chloropidae,Diptera_Chloropidae,Adult,Collected,2,N,Absent
+2019,8,Annual,SpB,D,6,Acari,Unknown,Acari_Unknown,Adult,Collected,4,N,Absent
+2019,8,Annual,SpB,D,6,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,2,N,Absent
+2019,8,Annual,SpB,D,6,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,2,N,Absent
+2019,8,Annual,SpB,D,6,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Nymph,Collected,13,N,Absent
+2019,8,Annual,SpB,D,6,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Nymph,Collected,6,N,Absent
+2019,8,Annual,SpB,D,6,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,3,N,Absent
+2019,8,Annual,SpB,D,6,Collembola,Sminthuridae,Collembola_Sminthuridae,Adult,Collected,4,N,Absent
+2019,8,Annual,SpB,D,6,Unknown,Unknown,Unknown_Unknown,Larvae,Collected,6,N,Absent
+2019,8,Annual,SpB,D,6,Collembola,Entomobryidae,Collembola_Entomobryidae,Adult,Collected,2,N,Absent
+2019,8,Annual,SpB,D,6,Hymenoptera,Mymaridae,Hymenoptera_Mymaridae,Adult,Collected,7,N,Absent
+2019,8,Annual,SpB,D,6,Araneae,Clubionidae,Araneae_Clubionidae,Adult,Collected,4,N,Absent
+2019,8,Annual,SpB,D,6,Hymenoptera,Eulophidae,Hymenoptera_Eulophidae,Adult,Collected,2,N,Absent
+2019,8,Annual,SpB,D,6,Diptera,Cecidomyiidae,Diptera_Cecidomyiidae,Adult,Collected,1,N,Absent
+2019,8,Annual,SpB,D,5,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,8,Control,Absent
+2019,8,Annual,SpB,D,5,Orthoptera,Acrididae,Orthoptera_Acrididae,Nymph,Collected,1,Control,Absent
+2019,8,Annual,SpB,D,5,Phasmatodea,Heteronemiidae,Phasmatodae_Heteronemiidae,Adult,Collected,1,Control,Absent
+2019,8,Annual,SpB,D,5,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,17,Control,Absent
+2019,8,Annual,SpB,D,5,Thysanoptera,Aeolothripidae,Thysanoptera_Aeolothripidae,Adult,Collected,5,Control,Absent
+2019,8,Annual,SpB,D,5,Acari,Unknown,Acari_Unknown,Adult,Collected,26,Control,Absent
+2019,8,Annual,SpB,D,5,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Nymph,Collected,63,Control,Absent
+2019,8,Annual,SpB,D,5,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,38,Control,Absent
+2019,8,Annual,SpB,D,5,Collembola,Sminthuridae,Collembola_Sminthuridae,Adult,Collected,68,Control,Absent
+2019,8,Annual,SpB,D,5,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Nymph,Collected,28,Control,Absent
+2019,8,Annual,SpB,D,5,Unknown,Unknown,Unknown_Unknown,Larvae,Collected,43,Control,Absent
+2019,8,Annual,SpB,D,5,Collembola,Entomobryidae,Collembola_Entomobryidae,Adult,Collected,4,Control,Absent
+2019,8,Annual,SpB,D,5,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,5,Control,Absent
+2019,8,Annual,SpB,D,5,Hymenoptera,Braconidae,Hymenoptera_Braconidae,Adult,Collected,2,Control,Absent
+2019,8,Annual,SpB,D,5,Hemiptera,Miridae,Hemiptera_Miridae,Nymph,Collected,13,Control,Absent
+2019,8,Annual,SpB,D,5,Araneae,Araneidae,Araneae_Araneidae,Adult,Collected,1,Control,Absent
+2019,8,Annual,SpB,D,5,Diptera,Cecidomyiidae,Diptera_Cecidomyiidae,Adult,Collected,3,Control,Absent
+2019,8,Annual,SpB,D,5,Hymenoptera,Mymaridae,Hymenoptera_Mymaridae,Adult,Collected,10,Control,Absent
+2019,8,Annual,SpB,D,5,Hymenoptera,Eulophidae,Hymenoptera_Eulophidae,Adult,Collected,4,Control,Absent
+2019,8,Annual,SpB,D,5,Diptera,Phoridae,Diptera_Phoridae,Adult,Collected,1,Control,Absent
+2019,8,Annual,SpB,D,5,Hymenoptera,Chalcididae,Hymenoptera_Chalcididae,Adult,Collected,1,Control,Absent
+2019,8,Annual,SpB,D,5,Hemiptera,Miridae,Hemiptera_Miridae,Adult,Collected,3,Control,Absent
+2019,8,Annual,SpB,D,5,Hymenoptera,Platygastridae,Hymenoptera_Platygastridae,Adult,Collected,1,Control,Absent
+2019,8,Annual,SpB,D,5,Diptera,Chloropidae,Diptera_Chloropidae,Adult,Collected,1,Control,Absent
+2019,8,Annual,SpB,D,5,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,2,Control,Absent
+2019,8,Annual,SpB,D,5,Hemiptera,Encrytidae,Hemiptera_Encrytidae,Adult,Collected,1,Control,Absent
+2019,8,Annual,SpB,E,1,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,5,C ,Present
+2019,8,Annual,SpB,E,1,Orthoptera,Acrididae,Orthoptera_Acrididae,Nymph,Collected,1,C ,Present
+2019,8,Annual,SpB,E,1,Hemiptera,Miridae,Hemiptera_Miridae,Nymph,Collected,2,C ,Present
+2019,8,Annual,SpB,E,1,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,3,C ,Present
+2019,8,Annual,SpB,E,1,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Nymph,Collected,17,C ,Present
+2019,8,Annual,SpB,E,1,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,13,C ,Present
+2019,8,Annual,SpB,E,1,Collembola,Sminthuridae,Collembola_Sminthuridae,Adult,Collected,17,C ,Present
+2019,8,Annual,SpB,E,1,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Nymph,Collected,6,C ,Present
+2019,8,Annual,SpB,E,1,Diptera,Cecidomyiidae,Diptera_Cecidomyiidae,Adult,Collected,3,C ,Present
+2019,8,Annual,SpB,E,1,Unknown,Unknown,Unknown_Unknown,Larvae,Collected,16,C ,Present
+2019,8,Annual,SpB,E,1,Hymenoptera,Trichogrammatidae,Hymenoptera_Trichogrammatiade,Adult,Collected,3,C ,Present
+2019,8,Annual,SpB,E,1,Hymenoptera,Mymaridae,Hymenoptera_Mymaridae,Adult,Collected,4,C ,Present
+2019,8,Annual,SpB,E,1,Araneae,Lycosidae,Araneae_Lycosidae,Adult,Collected,1,C ,Present
+2019,8,Annual,SpB,E,1,Araneae,Philodromidae,Araneae_Philodromidae,Adult,Collected,1,C ,Present
+2019,8,Annual,SpB,E,1,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,4,C ,Present
+2019,8,Annual,SpB,E,1,Hymenoptera,Encrytidae,Hymenoptera_Encrytidae,Adult,Collected,1,C ,Present
+2019,8,Annual,SpB,E,1,Araneae,Linyphiidae,Araneae_Linyphiidae,Adult,Collected,1,C ,Present
+2019,8,Annual,SpB,E,1,Thysanoptera,Aeolothripidae,Thysanoptera_Aeolothripidae,Adult,Collected,1,C ,Present
+2019,8,Annual,SpB,E,1,Acari,Unknown,Acari_Unknown,Adult,Collected,3,C ,Present
+2019,8,Annual,SpB,E,3,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,2,N,Present
+2019,8,Annual,SpB,E,3,Orthoptera,Tettigoniidae,Orthoptera_Tettigoniidae,Nymph,Collected,1,N,Present
+2019,8,Annual,SpB,E,3,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,9,N,Present
+2019,8,Annual,SpB,E,3,Hemiptera,Miridae,Hemiptera_Miridae,Adult,Collected,4,N,Present
+2019,8,Annual,SpB,E,3,Acari,Unknown,Acari_Unknown,Adult,Collected,16,N,Present
+2019,8,Annual,SpB,E,3,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Nymph,Collected,18,N,Present
+2019,8,Annual,SpB,E,3,Collembola,Sminthuridae,Collembola_Sminthuridae,Adult,Collected,35,N,Present
+2019,8,Annual,SpB,E,3,Unknown,Unknown,Unknown_Unknown,Larvae,Collected,41,N,Present
+2019,8,Annual,SpB,E,3,Hymenoptera,Mymaridae,Hymenoptera_Mymaridae,Adult,Collected,1,N,Present
+2019,8,Annual,SpB,E,3,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Nymph,Collected,8,N,Present
+2019,8,Annual,SpB,E,3,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,17,N,Present
+2019,8,Annual,SpB,E,3,Diptera,Cecidomyiidae,Diptera_Cecidomyiidae,Adult,Collected,2,N,Present
+2019,8,Annual,SpB,E,3,Hymenoptera,Mymaridae,Hymenoptera_Mymaridae,Adult,Collected,5,N,Present
+2019,8,Annual,SpB,E,3,Hymenoptera,Trichogrammatidae,Hymenoptera_Trichogrammatiade,Adult,Collected,4,N,Present
+2019,8,Annual,SpB,E,3,Diptera,Chloropidae,Diptera_Chloropidae,Adult,Collected,1,N,Present
+2019,8,Annual,SpB,E,3,Coleoptera,Scathophagidae,Coleoptera_Scathophagidae,Adult,Collected,1,N,Present
+2019,8,Annual,SpB,E,3,Araneae,Linyphiidae,Araneae_Linyphiidae,Adult,Collected,3,N,Present
+2019,8,Annual,SpB,E,3,Hemiptera,Miridae,Hemiptera_Miridae,Nymph,Collected,4,N,Present
+2019,8,Annual,SpB,E,3,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,2,N,Present
+2019,8,Annual,SpB,E,3,Hymenoptera,Eulophidae,Hymenoptera_Eulophidae,Adult,Collected,1,N,Present
+2019,8,Annual,SpB,E,3,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,1,N,Present
+2019,8,Annual,SpB,E,3,Collembola,Entomobryidae,Collembola_Entomobryidae,Adult,Collected,1,N,Present
+2019,8,Annual,SpB,E,3,Phasmatodea,Phylliidae,Phasmatodae_Phylliidae,Adult,Collected,1,N,Present
+2019,8,Annual,SpB,E,3,Hymenoptera,Encrytidae,Hemiptera_Encrytidae,Adult,Collected,1,N,Present
+2019,8,Annual,1D,C,5,Coleoptera,Curculionidae,Coleoptera_Curculionidae,Adult,Collected,1,Control,Present
+2019,8,Annual,1D,C,5,Acari,Unknown,Acari_Unknown,Adult,Collected,127,Control,Present
+2019,8,Annual,1D,C,5,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Nymph,Collected,16,Control,Present
+2019,8,Annual,1D,C,5,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,25,Control,Present
+2019,8,Annual,1D,C,5,Hemiptera,Miridae,Hemiptera_Miridae,Adult,Collected,6,Control,Present
+2019,8,Annual,1D,C,5,Lepidoptera,Unknown,Lepidoptera_Unknown,Larvae,Collected,1,Control,Present
+2019,8,Annual,1D,C,5,Collembola,Sminthuridae,Collembola_Sminthuridae,Adult,Collected,6,Control,Present
+2019,8,Annual,1D,C,5,Unknown,Unknown,Unknown_Unknown,Larvae,Collected,83,Control,Present
+2019,8,Annual,1D,C,5,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Nymph,Collected,19,Control,Present
+2019,8,Annual,1D,C,5,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,9,Control,Present
+2019,8,Annual,1D,C,5,Hymenoptera,Mymaridae,Hymenoptera_Mymaridae,Adult,Collected,5,Control,Present
+2019,8,Annual,1D,C,5,Collembola,Entomobryidae,Collembola_Entomobryidae,Adult,Collected,10,Control,Present
+2019,8,Annual,1D,C,5,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,3,Control,Present
+2019,8,Annual,1D,C,5,Araneae,Philodromidae,Araneae_Philodromidae,Adult,Collected,3,Control,Present
+2019,8,Annual,1D,C,5,Araneae,Linyphiidae,Araneae_Linyphiidae,Adult,Collected,2,Control,Present
+2019,8,Annual,1D,C,5,Diptera,Cecidomyiidae,Diptera_Cecidomyiidae,Adult,Collected,4,Control,Present
+2019,8,Annual,1D,C,5,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,8,Control,Present
+2019,8,Annual,1D,C,5,Araneae,Araneidae,Araneae_Araneidae,Adult,Collected,1,Control,Present
+2019,8,Annual,1D,C,5,Thysanoptera,Aeolothripidae,Thysanoptera_Aeolothripidae,Adult,Collected,2,Control,Present
+2019,8,Annual,1D,C,5,Hemiptera,Miridae,Hemiptera_Miridae,Nymph,Collected,12,Control,Present
+2019,8,Annual,1D,C,5,Hymenoptera,Eulophidae,Hymenoptera_Eulophidae,Adult,Collected,5,Control,Present
+2019,8,Annual,1D,C,5,Unknown,Unknown,Unknown_Unknown,Adult,Collected,1,Control,Present
+2019,8,Annual,1D,C,5,Hemiptera,Unknown,Hemiptera_Unknown,Adult,Collected,1,Control,Present
+2019,8,Annual,1D,C,5,Psocoptera,Unknown,Psocoptera_Unknown,Nymph,Collected,3,Control,Present
+2019,8,Annual,1D,B,3,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Observed,6,C ,Present
+2019,8,Annual,1D,B,3,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,15,C ,Present
+2019,8,Annual,1D,B,3,Araneae,Lycosidae,Araneae_Lycoside,Adult,Collected,1,C ,Present
+2019,8,Annual,1D,B,3,Diptera,Chloropidae,Diptera_Chloropidae,Adult,Collected,5,C ,Present
+2019,8,Annual,1D,B,3,Collembola,Entomobryidae,Collembola_Entomobryidae,Adult,Collected,33,C ,Present
+2019,8,Annual,1D,B,3,Collembola,Sminthuridae,Collembola_Sminthuridae,Adult,Collected,38,C ,Present
+2019,8,Annual,1D,B,3,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,12,C ,Present
+2019,8,Annual,1D,B,3,Unknown,Unknown,Unknown_Unknown,Larvae,Collected,42,C ,Present
+2019,8,Annual,1D,B,3,Hymenoptera,Mymaridae,Hymenoptera_Mymaridae,Adult,Collected,12,C ,Present
+2019,8,Annual,1D,B,3,Acari,Unknown,Acari_Unknown,Adult,Collected,29,C ,Present
+2019,8,Annual,1D,B,3,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Nymph,Collected,12,C ,Present
+2019,8,Annual,1D,B,3,Hemiptera,Miridae,Hemiptera_Miridae,Nymph,Collected,9,C ,Present
+2019,8,Annual,1D,B,3,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,10,C ,Present
+2019,8,Annual,1D,B,3,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,2,C ,Present
+2019,8,Annual,1D,B,3,Thysanoptera,Aeolothripidae,Thysanoptera_Aeolothripidae,Adult,Collected,2,C ,Present
+2019,8,Annual,1D,B,3,Araneae,Linyphiidae,Araneae_Linyphiidae,Adult,Collected,1,C ,Present
+2019,8,Annual,1D,B,3,Diptera,Cecidomyiidae,Diptera_Cecidomyiidae,Adult,Collected,5,C ,Present
+2019,8,Annual,1D,B,3,Hymenoptera,Eulophidae,Hymenoptera_Eulophidae,Adult,Collected,1,C ,Present
+2019,8,Annual,1D,B,3,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Nymph,Collected,12,C ,Present
+2019,8,Annual,1D,B,3,Araneae,Philodromidae,Araneae_Philodromidae,Adult,Collected,1,C ,Present
+2019,8,Annual,1D,B,3,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,1,C ,Present
+2019,8,Annual,1D,C,2,Unknown,Unknown,Unknown_Unknown,Larvae,Collected,111,Control,Absent
+2019,8,Annual,1D,C,2,Collembola,Sminthuridae,Collembola_Sminthuridae,Adult,Collected,38,Control,Absent
+2019,8,Annual,1D,C,2,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Nymph,Collected,22,Control,Absent
+2019,8,Annual,1D,C,2,Hymenoptera,Encrytidae,Hymenoptera_Encrytidae,Adult,Collected,4,Control,Absent
+2019,8,Annual,1D,C,2,Diptera,Cecidomyiidae,Diptera_Cecidomyiidae,Adult,Collected,2,Control,Absent
+2019,8,Annual,1D,C,2,Collembola,Entomobryidae,Collembola_Entomobryidae,Adult,Collected,9,Control,Absent
+2019,8,Annual,1D,C,2,Acari,Unknown,Acari_Unknown,Adult,Collected,51,Control,Absent
+2019,8,Annual,1D,C,2,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,9,Control,Absent
+2019,8,Annual,1D,C,2,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,18,Control,Absent
+2019,8,Annual,1D,C,2,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,32,Control,Absent
+2019,8,Annual,1D,C,2,Hymenoptera,Trichogrammatidae,Hymenoptera_Trichogrammatidae,Adult,Collected,9,Control,Absent
+2019,8,Annual,1D,C,2,Hemiptera,Miridae,Hemiptera_Miridae,Nymph,Collected,10,Control,Absent
+2019,8,Annual,1D,C,2,Hymenoptera,Mymaridae,Hymenoptera_Mymaridae,Adult,Collected,4,Control,Absent
+2019,8,Annual,1D,C,2,Thysanoptera,Aeolothripidae,Thysanoptera_Aeolothripidae,Adult,Collected,7,Control,Absent
+2019,8,Annual,1D,C,2,Araneae,Linyphiidae,Araneae_Linyphiidae,Adult,Collected,2,Control,Absent
+2019,8,Annual,1D,C,2,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,3,Control,Absent
+2019,8,Annual,1D,C,2,Araneae,Philodromidae,Araneae_Philodromidae,Adult,Collected,1,Control,Absent
+2019,8,Annual,1D,C,2,Hymenoptera,Platygastridae,Hymenoptera_Platygastridae,Adult,Collected,2,Control,Absent
+2019,8,Annual,1D,C,2,Hymenoptera,Eulophidae,Hymenoptera_Eulophidae,Adult,Collected,2,Control,Absent
+2019,8,Annual,1D,C,2,Lepidoptera,Unknown,Unknown_Unknown,Larvae,Collected,1,Control,Absent
+2019,8,Annual,1D,C,2,Hymenoptera,Ichneumonidae,Hymenoptera_Ichneumonidae,Adult,Collected,1,Control,Absent
+2019,8,Annual,1D,C,2,Hemiptera,Tingidae,Hemiptera_Tingidae,Adult,Collected,1,Control,Absent
+2019,8,Annual,1D,C,2,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,2,Control,Absent
+2019,8,Annual,1D,C,2,Diptera,Phoridae,Diptera_Phoridae,Adult,Collected,1,Control,Absent
+2019,8,Annual,1D,C,2,Diptera,Chrysomelidae,Diptera_Chrysomelidae,Adult,Collected,1,Control,Absent
+2019,8,Unburned,20C,B,2,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,2,Control,Present
+2019,8,Unburned,20C,B,2,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,6,Control,Present
+2019,8,Unburned,20C,B,2,Acari,Unknown,Acari_Unknown,Adult,Collected,49,Control,Present
+2019,8,Unburned,20C,B,2,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,16,Control,Present
+2019,8,Unburned,20C,B,2,Collembola,Sminthuridae,Collembola_Sminthuridae,Adult,Collected,19,Control,Present
+2019,8,Unburned,20C,B,2,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Nymph,Collected,9,Control,Present
+2019,8,Unburned,20C,B,2,Collembola,Entomobryidae,Collembola_Entomobryidae,Adult,Collected,4,Control,Present
+2019,8,Unburned,20C,B,2,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,1,Control,Present
+2019,8,Unburned,20C,B,2,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,5,Control,Present
+2019,8,Unburned,20C,B,2,Araneae,Philodromidae,Araneae_Philodromidae,Adult,Collected,1,Control,Present
+2019,8,Unburned,20C,B,2,Araneae,Linyphiidae,Araneae_Linyphiidae,Adult,Collected,1,Control,Present
+2019,8,Unburned,20C,B,2,Hymenoptera,Chalcididae,Hymenoptera_Chalcidae,Adult,Collected,1,Control,Present
+2019,8,Unburned,20C,B,2,Hymenoptera,Braconidae,Hymenoptera_Braconidae,Adult,Collected,1,Control,Present
+2019,8,Unburned,20C,B,2,Hymenoptera,Eupelmidae,Hymenoptera_Eupelmidae,Adult,Collected,1,Control,Present
+2019,8,Unburned,20C,B,2,Hymenoptera,Eulophidae,Hymenoptera_Eulophidae,Adult,Collected,6,Control,Present
+2019,8,Unburned,20C,B,2,Hymenoptera,Encrytidae,Hymenoptera_Encrytidae,Adult,Collected,3,Control,Present
+2019,8,Unburned,20C,B,2,Hymenoptera,Trichogrammatidae,Hymenoptera_Trichogrammatidae,Adult,Collected,2,Control,Present
+2019,8,Unburned,20C,B,2,Hymenoptera,Platygastridae,Hymenoptera_Platygastridae,Adult,Collected,1,Control,Present
+2019,8,Unburned,20C,B,2,Hymenoptera,Mymaridae,Hymenoptera_Mymaridae,Adult,Collected,2,Control,Present
+2019,8,Unburned,20C,B,2,Unknown,Unknown,Unknown_Unknown,Larvae,Collected,1,Control,Present
+2019,8,Unburned,20C,B,2,Unknown,Unknown,Unknown_Unknown,Larvae,Collected,1,Control,Present
+2019,8,Unburned,20C,B,2,Unknown,Unknown,Unknown_Unknown,Larvae,Collected,1,Control,Present
+2019,8,Unburned,20C,C,4,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Collected,2,N,Present
+2019,8,Unburned,20C,C,4,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,5,N,Present
+2019,8,Unburned,20C,C,4,Hemiptera,Miridae,Hemiptera_Miridae,Nymph,Collected,66,N,Present
+2019,8,Unburned,20C,C,4,Coleoptera,Mordellidae,Coleoptera_Mordellidae,Adult,Collected,1,N,Present
+2019,8,Unburned,20C,C,4,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,6,N,Present
+2019,8,Unburned,20C,C,4,Hemiptera,Miridae,Hemiptera_Miridae,Adult,Collected,4,N,Present
+2019,8,Unburned,20C,C,4,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Larvae,Collected,1,N,Present
+2019,8,Unburned,20C,C,4,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Nymph,Collected,4,N,Present
+2019,8,Unburned,20C,C,4,Acari,Unknown,Acari_Unknown,Adult,Collected,11,N,Present
+2019,8,Unburned,20C,C,4,Collembola,Sminthuridae,Collembola_Sminthuridae,Adult,Collected,3,N,Present
+2019,8,Unburned,20C,C,4,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,8,N,Present
+2019,8,Unburned,20C,C,4,Collembola,Entomobryidae,Collembola_Entomobryidae,Adult,Collected,4,N,Present
+2019,8,Unburned,20C,C,4,Araneae,Anyphaenidae,Araneae_Anyphaenidae,Adult,Collected,1,N,Present
+2019,8,Unburned,20C,C,4,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,3,N,Present
+2019,8,Unburned,20C,A,5,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,3,Control,Present
+2019,8,Unburned,20C,A,5,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,2,Control,Present
+2019,8,Unburned,20C,A,5,Hymenoptera,Braconidae,Hymenoptera_Braconidae,Adult,Collected,3,Control,Present
+2019,8,Unburned,20C,A,5,Thysanoptera,Thripidae,Thysanoptera_Thripidae,Adult,Collected,2,Control,Present
+2019,8,Unburned,20C,A,5,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,3,Control,Present
+2019,8,Unburned,20C,A,5,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Nymph,Collected,7,Control,Present
+2019,8,Unburned,20C,A,5,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,2,Control,Present
+2019,8,Unburned,20C,A,5,Hymenoptera,Platygastridae,Hymenoptera_Platygastridae,Adult,Collected,2,Control,Present
+2019,8,Unburned,20C,A,5,Hemiptera,Geocoridae,Hemiptera_Geocoridae,Nymph,Collected,2,Control,Present
+2019,8,Unburned,20C,A,5,Hemiptera,Reduviidae,Hemiptera_Reduviidae,Nymph,Collected,1,Control,Present
+2019,8,Unburned,20C,A,5,Hemiptera,Pentatomidae,Hemiptera_Pentomidae,Nymph,Collected,1,Control,Present
