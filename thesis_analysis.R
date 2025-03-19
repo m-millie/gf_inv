@@ -135,6 +135,124 @@ anova_evenness_watershed <- aov(shannon ~ watershed, data = re_24)
 summary(anova_evenness_watershed)
 
 
+richness_data <- comm_24 %>%
+  group_by(litter, plot) %>%
+  summarise(family_richness = n_distinct(family)) %>%
+  ungroup()
+
+# Perform ANOVA to analyze family richness based on litter
+anova_result <- aov(family_richness ~ litter, data = richness_data)
+
+# Display ANOVA results
+summary(anova_result)
+
+richness_dat <- comm_24 %>%
+  group_by(nutrient, plot) %>%
+  summarise(family_richness = n_distinct(family)) %>%
+  ungroup()
+
+# Perform ANOVA to analyze family richness based on nutrient
+anova_res <- aov(family_richness ~ nutrient, data = richness_dat)
+
+# Display ANOVA results
+summary(anova_res)
+
+# Create a boxplot to visualize family richness by nutrient
+ggplot(richness_dat, aes(x = nutrient, y = family_richness, fill = nutrient)) +
+  geom_boxplot() +
+  labs(title = "Family Richness by Nutrient",
+       x = "Nutrient",
+       y = "Family Richness") +
+  theme_minimal()
+
+
+evenness_24 <- comm_24 %>%
+  group_by(plot, litter, nutrient) %>%
+  summarise(family_count = n_distinct(family),
+            total_count = sum(count)) %>%
+  mutate(evenness = family_count / total_count)
+
+# Perform ANOVA to analyze family evenness based on litter
+anova_litter <- aov(evenness ~ litter, data = evenness_24)
+
+# Perform ANOVA to analyze family evenness based on nutrient
+anova_nutrient <- aov(evenness ~ nutrient, data = evenness_24)
+
+# Display ANOVA summaries
+summary(anova_litter)
+summary(anova_nutrient)
+
+
+
+
+## 2014 data mixed model
+gml_14 <- lmer(count ~ burn_trt + (1 | watershed), data = comm_14)
+glm_14_results <- Anova(model, type = "III")
+
+
+df_richness_evenness_14 <- comm_14 %>%
+  group_by(plot, burn_trt, watershed) %>%
+  summarise(
+    richness = n_distinct(family),
+    evenness = diversity(count) / log(richness)
+  )
+
+# Fit the mixed effects model for richness
+model_richness_14 <- lmer(richness ~ burn_trt + (1 | watershed), data = df_richness_evenness_14)
+
+# Perform ANOVA for richness
+anova_richness_14 <- Anova(model_richness_14, type = "III")
+
+# Fit the mixed effects model for evenness
+model_evenness_14 <- lmer(evenness ~ burn_trt + (1 | watershed), data = df_richness_evenness_14)
+
+# Perform ANOVA for evenness
+anova_evenness_14 <- Anova(model_evenness_14, type = "III")
+
+# Display the results
+list(richness_anova_14 = anova_richness_14, evenness_anova_14 = anova_evenness_14)
+
+
+df_richness_evenness <- comm_14 %>% 
+  group_by(plot, burn_trt, watershed) %>% 
+  summarise( richness = n_distinct(family), 
+             evenness = diversity(count) / log(n_distinct(family)) )
+
+plot_data <- df_richness_evenness_14 %>%
+  pivot_longer(cols = c(richness, evenness), names_to = "metric", values_to = "value")
+
+ggplot(plot_data, aes(x = burn_trt, y = value, fill = burn_trt)) +
+  geom_boxplot() +
+  facet_wrap(~ metric, scales = "free_y") +
+  theme_minimal() +
+  labs(title = "Family Richness and Evenness by Burn Treatment",
+       x = "Burn Treatment",
+       y = "Value") +
+  theme(legend.position = "none")
+
+
+## Same thing but to get f values? 
+# Fit the mixed effects model for richness 
+model_richness <- lmer(richness ~ burn_trt + (1 | watershed), data = df_richness_evenness)
+
+# Perform ANOVA for richness 
+anova_richness <- anova(model_richness)
+
+# Fit the mixed effects model for evenness 
+model_evenness <- lmer(evenness ~ burn_trt + (1 | watershed), data = df_richness_evenness)
+
+# Perform ANOVA for evenness 
+anova_evenness <- anova(model_evenness)
+
+# Extract F values 
+f_values_richness <- anova_richness$`F value` 
+f_values_evenness <- anova_evenness$`F value`
+
+# Display the results with F values 
+list( richness_anova = anova_richness, richness_f_values = f_values_richness, evenness_anova = anova_evenness, evenness_f_values = f_values_evenness )
+
+
+
 
 # Figures? ----------------------------------------------------------------
 
