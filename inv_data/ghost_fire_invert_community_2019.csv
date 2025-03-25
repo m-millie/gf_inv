@@ -23,12 +23,12 @@ year,month,burn_trt,watershed,block,plot,order,family,arthropod_ID,stage,collect
 2019,8,Unburned,20C,C,2,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,5,Control,Absent
 2019,8,Unburned,20C,C,2,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,2,Control,Absent
 2019,8,Unburned,20C,C,6,Hymenoptera,Formicidae,Hymenoptera_Formicidae,Adult,Collected,1,C,Present
-2019,8,Unburned,20C,B ,4,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Collected,1,C ,Absent
-2019,8,Unburned,20C,B,4,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,3,C ,Absent
-2019,8,Unburned,20C,B,4,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,2,C ,Absent
-2019,8,Unburned,20C,B,4,Hemiptera,Unknown,Hemiptera_Unknown,Adult,Collected,1,C ,Absent
-2019,8,Unburned,20C,B,4,Araneae,Thomisidae,Araneae_Thomisidae,Adult,Collected,1,C ,Absent
-2019,8,Unburned,20C,B,4,Hymenoptera,Braconidae,Hymenoptera_Braconidae,Adult,Collected,1,C ,Absent
+2019,8,Unburned,20C,B ,4,Orthoptera,Acrididae,Orthoptera_Acrididae,Adult,Collected,1,C,Absent
+2019,8,Unburned,20C,B,4,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,3,C,Absent
+2019,8,Unburned,20C,B,4,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,2,C,Absent
+2019,8,Unburned,20C,B,4,Hemiptera,Unknown,Hemiptera_Unknown,Adult,Collected,1,C,Absent
+2019,8,Unburned,20C,B,4,Araneae,Thomisidae,Araneae_Thomisidae,Adult,Collected,1,C,Absent
+2019,8,Unburned,20C,B,4,Hymenoptera,Braconidae,Hymenoptera_Braconidae,Adult,Collected,1,C,Absent
 2019,8,Unburned,20C,C,1,Coleoptera,Chrysomelidae,Coleoptera_Chrysomelidae,Adult,Collected,8,N,Absent
 2019,8,Unburned,20C,C,1,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,2,N,Absent
 2019,8,Unburned,20C,C,1,Araneae,Salticidae,Araneae_Salticidae,Adult,Collected,1,N,Absent

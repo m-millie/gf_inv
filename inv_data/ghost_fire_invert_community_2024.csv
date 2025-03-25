@@ -1,4 +1,4 @@
-﻿year,month,burn_trt,watershed,block,plot,order,family,arthropod_ID,stage,collected,count,litter,nutrient
+﻿year,month,burn_trt,watershed,block,plot,order,family,arthropod_ID,stage,collected,count,litter_trt,plot_trt
 2024,8,Unburned,20B,E,2,Hemiptera,Cicadellidae,Hemiptera_Cicadellidae,Adult,Collected,6,absent,control
 2024,8,Unburned,20B,E,2,Hymenoptera,Chrysididae,Hymenoptera_Chrysididae,Adult,Collected,1,absent,control
 2024,8,Unburned,20B,E,2,Acari,Tetranychidae,Acari_Tetranychidae,Adult,Collected,2,absent,control
