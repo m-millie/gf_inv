@@ -22,6 +22,7 @@ comm2024 <- read.csv('GhostFire2024_Data\\SpeciesComp\\GhostFire_SpComp_2024.csv
 
 commAll <- rbind(comm2014, comm2019, comm2024) %>% 
   pivot_longer(cols=c(June, August), names_to='month', values_to='cover') %>% 
+  filter(!is.na(cover)) %>% 
   group_by(Year, Experiment, Site, Burn.Trt, Block, Plot, spnum) %>% 
   summarise(max_cover=max(cover)) %>% 
   ungroup()
