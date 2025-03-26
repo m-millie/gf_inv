@@ -72,11 +72,12 @@ bioAll <- rbind(bio2014, bio2019, bio2024) %>%
   # select(-Watershed) %>% 
   rename(year=Year, 
          block=Block, 
-         plot=Plot)
+         plot=Plot, 
+         watershed=Watershed)
 
 
 ##### merge plant diversity and biomass data #####
 
 plantData <- full_join(bioAll, richnessAll)
 
-# write.csv(plantData, 'C:\\Users\\kjkomatsu\\Desktop\\R files\\gf_inv\\inv_data\\ghost_fire_plant_data.csv')
+# write.csv(plantData, 'C:\\Users\\kjkomatsu\\Desktop\\R files\\gf_inv\\inv_data\\ghost_fire_plant_data.csv', row.names=F)
