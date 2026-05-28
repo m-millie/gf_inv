@@ -26,8 +26,11 @@ abundance2024 <- read.csv("inv_data/ghost_fire_invert_community_2024.csv") %>%
   select(year, month, watershed, block, plot, burn_trt, order, family, arthropod_ID, stage, collected, count)
 
 abundance <- rbind(abundance2014, abundance2019, abundance2024) %>% 
-  mutate(collected=str_to_lower(collected), 
-         burn_trt=str_to_lower(burn_trt))
+  mutate(order=str_to_lower(order),
+         family=str_to_lower(family),
+         collected=str_to_lower(collected), 
+         burn_trt=str_to_sentence(burn_trt)) %>% 
+  mutate(order=ifelse(order %in% c('hemiptera:heteroptera', 'hemiptera:auchenorrhyncha', 'hemiptera:sternorrhyncha'), 'hemiptera', order))
 
 
 ### biomass data (only 2014 and 2024; missing samples from 2019 prevent analysis)
@@ -47,14 +50,14 @@ biomass2024 <- read.csv("inv_data/ghost_fire_invert_biomass_2024.csv") %>%
   mutate(contents=ifelse(contents=='oher', 'other', contents)) #fix spelling error
 
 biomass <- rbind(biomass2014, biomass2024) %>% 
-  mutate(burn_trt=str_to_lower(burn_trt))
+  mutate(burn_trt=str_to_sentence(burn_trt))
 
 ggplot(biomass, aes(x=biomass, fill=as.factor(year))) + geom_histogram()
 
 # Orthoptera only, generating estimates of biomass of observed but not collected individuals (hopped away too fast)
 
 orthopteraCollected <- abundance %>% 
-  filter(order %in% c('Orthoptera', 'orthoptera'), collected=='collected') %>% 
+  filter(order=='orthoptera', collected=='collected') %>% 
   select(year, watershed, block, plot, order, family, count) %>% 
   group_by(year, watershed, block, plot, order) %>% 
   summarise(count=sum(count), .groups='drop')
@@ -69,7 +72,7 @@ orthopteraBiomass <- biomass %>%
 
 observedBiomass <- abundance %>% 
   filter(collected=='observed',
-         order=='Orthoptera',
+         order=='orthoptera',
          year!=2019) %>% 
   left_join(orthopteraBiomass) %>% 
   mutate(biomass=count*orthoptera_biomass) %>% 
