@@ -30,7 +30,13 @@ abundance <- rbind(abundance2014, abundance2019, abundance2024) %>%
          family=str_to_lower(family),
          collected=str_to_lower(collected), 
          burn_trt=str_to_sentence(burn_trt)) %>% 
-  mutate(order=ifelse(order %in% c('hemiptera:heteroptera', 'hemiptera:auchenorrhyncha', 'hemiptera:sternorrhyncha'), 'hemiptera', order))
+  mutate(order=ifelse(order %in% c('hemiptera:heteroptera', 'hemiptera:auchenorrhyncha', 'hemiptera:sternorrhyncha'), 'hemiptera', 
+               ifelse(family %in% c('scathophagidae', 'culicidae', 'psilidae', 'chloropidae', 'pipunculidae'), 'diptera', 
+               ifelse(family=='chrysomelidae', 'coleoptera', 
+               ifelse(family %in% c('encrytidae', 'formicidae'), 'hymenoptera', 
+               ifelse(family %in% c('blissidae', 'lygaeidae', 'tingidae'), 'hemiptera', order))))),
+         family=ifelse(family=='tettigoniidae', 'tettigonidae', family)) %>% 
+  select(-arthropod_ID)
 
 
 ### biomass data (only 2014 and 2024; missing samples from 2019 prevent analysis)
