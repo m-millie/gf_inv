@@ -1,5 +1,5 @@
 ################################################################################
-##  ghost_fire_plantCommunityBiomass.R: Getting plant community diversity and biomass for each plot.
+##  0_plantData.R: Getting plant community diversity and biomass for each plot.
 ##
 ##  Authors: Kim Komatsu
 ##  Date created: March 26, 2025
@@ -15,8 +15,10 @@ setwd('C:\\Users\\kjkomatsu\\Smithsonian Dropbox\\Kimberly Komatsu\\konza projec
 
 comm2014 <- read.csv('GhostFire2014_Data\\Species Comp\\GhostFire_SpComp_2014.csv') %>% 
   select(-Watershed, -Species)
+
 comm2019 <- read.csv('GhostFire2019_Data\\SpeciesComp\\GhostFire_SpComp_2019.csv') %>% 
   select(-Comments)
+
 comm2024 <- read.csv('GhostFire2024_Data\\SpeciesComp\\GhostFire_SpComp_2024.csv') %>% 
   select(-Watershed, -Comments)
 
@@ -48,11 +50,13 @@ bio2014 <- read.csv('GhostFire2014_Data\\Biomass\\GhostFire_Biomass_2014.csv') %
   mutate(Year=2014) %>% 
   rename(burn_trt=BurnFreq) %>% 
   select(Year, burn_trt, Watershed, Block, Plot, Replicate, Grass, Forb, Woody, P.Dead) 
+
 bio2019 <- read.csv('GhostFire2019_Data\\Biomass\\GhostFire_Biomass_DataEntry2019.csv') %>% 
   rename(Watershed=Wateshed) %>% 
   mutate(Year=2019,
          burn_trt=ifelse(BurnFreq==20, 'Annual', 'Unburned')) %>% 
   select(Year, burn_trt, Watershed, Block, Plot, Replicate, Grass, Forb, Woody, P.Dead) 
+
 bio2024 <- read.csv('GhostFire2024_Data\\Biomass\\GhostFire_ANPP_2024.csv') %>% 
   rename(Replicate=Rep,
          P.Dead=Pdead) %>% 
