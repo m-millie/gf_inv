@@ -54,14 +54,14 @@ bio2014 <- read.csv('GhostFire2014_Data\\Biomass\\GhostFire_Biomass_2014.csv') %
 bio2019 <- read.csv('GhostFire2019_Data\\Biomass\\GhostFire_Biomass_DataEntry2019.csv') %>% 
   rename(Watershed=Wateshed) %>% 
   mutate(Year=2019,
-         burn_trt=ifelse(BurnFreq==20, 'Annual', 'Unburned')) %>% 
+         burn_trt=ifelse(BurnFreq==20, 'Unburned', 'Annual')) %>% 
   select(Year, burn_trt, Watershed, Block, Plot, Replicate, Grass, Forb, Woody, P.Dead) 
 
 bio2024 <- read.csv('GhostFire2024_Data\\Biomass\\GhostFire_ANPP_2024.csv') %>% 
   rename(Replicate=Rep,
          P.Dead=Pdead) %>% 
   mutate(Year=2024,
-         burn_trt=ifelse(BurnFreq==20, 'Annual', 'Unburned')) %>% 
+         burn_trt=ifelse(BurnFreq==20, 'Unburned', 'Annual')) %>% 
   select(Year, burn_trt, Watershed, Block, Plot, Replicate, Grass, Forb, Woody, P.Dead) 
 
 

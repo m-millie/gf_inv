@@ -104,7 +104,7 @@ CN <- rbind(CN2019, CN2024) %>%
          block=Block,
          plot=Plot,
          growth_form=Type) %>% 
-  mutate(burn_trt=ifelse(watershed %in% c('1D', 'SpB'), 'annual', 'unburned'))
+  mutate(burn_trt=ifelse(watershed %in% c('1D', 'SpB'), 'Annual', 'Unburned'))
 
 
 # Write Data for EDI Project ---------------------------------------------------------------
