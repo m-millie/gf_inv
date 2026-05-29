@@ -450,13 +450,17 @@ summary(div_sem)
 
 # invertebrate abundance
 count_sem <- psem(
-  lm(total_count ~ burn_trt + litter_biomass + live_biomass + avg_CN, data = allData),
+  lm(total_count ~ burn_trt + litter_biomass + live_biomass + avg_CN + plant_richness, data = allData),
   lm(litter_biomass ~ burn_trt + litter + nutrient, data = allData),
   lm(live_biomass ~ burn_trt + litter + nutrient, data = allData),
   lm(avg_CN ~ burn_trt + litter + nutrient, data = allData),
+  lm(plant_richness ~ burn_trt + litter + nutrient, data = allData),
   avg_CN %~~% live_biomass,
   avg_CN %~~% litter_biomass,
+  avg_CN %~~% plant_richness,
   live_biomass %~~% litter_biomass,
+  live_biomass %~~% plant_richness,
+  litter_biomass %~~% plant_richness,
   data = allData 
 )
 summary(count_sem)
