@@ -433,13 +433,17 @@ allData <- communityStructure %>%
 
 # invertebreate richness
 div_sem <- psem(
-  lm(richness ~ burn_trt + litter_biomass + live_biomass + avg_CN, data = allData),
+  lm(richness ~ burn_trt + litter_biomass + live_biomass + avg_CN + plant_richness, data = allData),
   lm(litter_biomass ~ burn_trt + litter + nutrient, data = allData),
   lm(live_biomass ~ burn_trt + litter + nutrient, data = allData),
   lm(avg_CN ~ burn_trt + litter + nutrient, data = allData),
+  lm(plant_richness ~ burn_trt + litter + nutrient, data = allData),
   avg_CN %~~% live_biomass,
   avg_CN %~~% litter_biomass,
+  avg_CN %~~% plant_richness,
   live_biomass %~~% litter_biomass,
+  live_biomass %~~% plant_richness,
+  litter_biomass %~~% plant_richness,
   data = allData 
 )
 summary(div_sem)
