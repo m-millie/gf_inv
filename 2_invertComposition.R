@@ -12,6 +12,7 @@ library(lme4)
 library(lmerTest)
 library(codyn)
 library(vegan)
+library(cowplot)
 library(tidyverse)
 
 theme_set(theme_bw())
@@ -45,11 +46,28 @@ barGraphStats <- function(data, variable, byFactorNames) {
 
 # Read Data ---------------------------------------------------------------
 
+trt <- read.csv('inv_data/GF_PlotList.csv') %>% 
+  mutate(plot=as.integer(str_extract(Plot, "\\d+"))) %>% 
+  select(-plot_id, -Plot, -Burn.Trt2) %>% 
+  rename(watershed=Watershed,
+         burn_trt=Burn.Trt,
+         block=Block,
+         litter=Litter,
+         nutrient=Nutrient)
+
 abundance <- readRDS('abundance.RDS') %>% # invertebrate counts
-  mutate(replicate=paste(burn_trt, watershed, block, plot, sep='::'))
-biomass <- readRDS('biomassAll.RDS') # invertebrate biomass
+  mutate(replicate=paste(burn_trt, watershed, block, plot, sep='::')) %>% 
+  group_by(replicate, year, watershed, block, plot, burn_trt, order, family) %>% 
+  summarise(count = sum(count), .groups='drop') %>%  # combine collected and observed counts
+  left_join(trt)
+
+biomass <- readRDS('biomassAll.RDS') %>%  # invertebrate biomass
+  left_join(trt)
+
 CN <- readRDS('CN.RDS') # plant %C and %N
+
 plant <- read.csv('inv_data/ghost_fire_plant_data.csv') # plant biomass and richness
+
 functionalGroups <- read.csv('inv_data/gf_funct_groups.csv')
 
 # Community Metrics ---------------------------------------------------------------
@@ -71,96 +89,121 @@ functionalStructure <- abundance %>%
 
 # Pre-Treatment (2014) Analysis -----------------------------------------------------------
 
-# Composition
+# Composition - PERMANOVA
 
-fam_abun_14 <- comm_14 %>% 
-  group_by(year, watershed, block, plot, burn_trt, arthropod_ID) %>% 
-  summarise(total_count = sum(count)) %>% 
-  ungroup() %>% 
-  #mutate(trt = paste(burn_trt, litter_trt, plot_trt, sep = "_")) %>% #you have to make your dataframe wide form for this
-  select(year, watershed, block, plot, burn_trt, arthropod_ID, total_count) %>% #you want some replicate variable, treatment variable, and your taxonomic identifier and count columns
-  pivot_wider(names_from='arthropod_ID', values_from = 'total_count', values_fill = 0)  
-#pivot_wider so that species are the column names and the counts are filled in, with 0's put in if a species wasn't found in a plot
-
-permanova <- adonis(formula = fam_abun_14[,6:47] ~ burn_trt, data=fam_abun, permutations=999, method="bray") #this runs the PERMANOVA test on the relCover2021 data with only the columns related to the species as the response variable, the trt as the dependent variable, 999 permutations of the test using bray curtis dissimilarity as your distance metric
-
-print(permanova) #print the permanova output
-
-results_table <- as.data.frame(permanova$aov.tab)
+abundance2014 <- abundance %>% 
+  mutate(taxa=paste(order, family, sep='_')) %>% 
+  select(year, watershed, block, plot, burn_trt, taxa, count) %>% 
+  filter(year==2014) %>% 
+  pivot_wider(names_from='taxa', values_from = 'count', values_fill = 0)  
+  
+permanova2014 <- adonis2(formula = abundance2014[,6:46] ~ burn_trt, data=abundance2014[,1:5], permutations=999, method='bray')
+print(permanova2014)
 
 
-#all the code below is for plotting the NMDS (a non-metric dimensional scaling plot) that shows differences between treatments in terms of their community composition
-sppBC <- metaMDS(fam_abun_14[,6:47])
+# SIMPER and bar graph
 
-plotData <- fam_abun_14[,1:5]
+summary(simper2014 <- simper(abundance2014[, 6:46], abundance2014$burn_trt, permutations = 999))
 
-#Use the vegan ellipse function to make ellipses
-veganCovEllipse<-function (cov, center = c(0, 0), scale = 1, npoints = 100)
-{
-  theta <- (0:npoints) * 2 * pi/npoints
-  Circle <- cbind(cos(theta), sin(theta))
-  t(center + scale * t(Circle %*% chol(cov)))
+simper2014Table <- summary(simper2014)$Annual_Unburned %>%
+  as.data.frame() %>%
+  arrange(desc(average)) %>%
+  rownames_to_column(var='species')
+
+ggplot(simper2014Table, aes(x=reorder(species, average), y=average)) +
+  geom_col() +
+  coord_flip() +
+  labs(x='Species', y='Contribution to Dissimilarity')
+
+sppBC <- metaMDS(abundance2014[,6:46])
+
+nmds_df <- data.frame(
+  scores(sppBC, display = "sites"),
+  burn_trt = abundance2014$burn_trt
+)
+
+sp_scores <- as.data.frame(scores(sppBC, display='species')) %>% 
+  rownames_to_column(var='species')
+
+nmdsSpecies <- left_join(simper2014Table, sp_scores) %>% 
+  mutate(species=str_to_title(str_replace(species, "_", " "))) %>% 
+  separate(species, into=c('order', 'family'), remove=F)
+
+# function to create ellipse coordinates
+veganCovEllipse <- function(cov, center = c(0,0), scale = 1, npoints = 100) {
+  theta <- seq(0, 2 * pi, length.out = npoints)
+  circle <- cbind(cos(theta), sin(theta))
+  ellipse <- t(center + scale * t(circle %*% chol(cov)))
+  as.data.frame(ellipse)
 }
 
-BC_NMDS = data.frame(MDS1 = sppBC$points[,1], MDS2 = sppBC$points[,2],group= fam_abun_14$burn_trt)
-BC_NMDS_Graph <- cbind(plotData,BC_NMDS)
-BC_Ord_Ellipses<-ordiellipse(sppBC, plotData$burn_trt, display = "sites",
-                             kind = "se", conf = 0.95, label = T)               
+ord_ell <- ordiellipse(sppBC, groups = abundance2014$burn_trt, display = "sites", kind = "se", conf = 0.95, draw = "none")
 
-ord3 <- data.frame(plotData,scores(sppBC,display="sites"))%>%
-  group_by(burn_trt)
+ellipse_df <- bind_rows(lapply(names(ord_ell), 
+                               function(g) {
+                                 df <- veganCovEllipse(ord_ell[[g]]$cov, ord_ell[[g]]$center, ord_ell[[g]]$scale)
+                                 colnames(df) <- c("NMDS1", "NMDS2")
+                                 df$burn_trt <- g
+                                 df
+                                 }))
 
-BC_Ord_Ellipses<-ordiellipse(sppBC, plotData$burn_trt, display = "sites",
-                             kind = "se", conf = 0.95, label = T)
-BC_Ellipses <- data.frame() #Make a new empty data frame called BC_Ellipses  
-for(g in unique(BC_NMDS$group)){
-  BC_Ellipses <- rbind(BC_Ellipses, cbind(as.data.frame(with(BC_NMDS[BC_NMDS$group==g,], 
-                                                             veganCovEllipse(BC_Ord_Ellipses[[g]]$cov,BC_Ord_Ellipses[[g]]$center,BC_Ord_Ellipses[[g]]$scale)))
-                                          ,group=g))
-} #Generate ellipses points
+nmdsFig2014 <- ggplot() +
+  geom_point(data=nmds_df, aes(x = NMDS1, y = NMDS2, color = burn_trt), size = 6) + # plot loadings
+  geom_path(data = ellipse_df, aes(x = NMDS1, y = NMDS2, color = burn_trt), linewidth = 1.5) +
+  scale_color_manual(values = c("#de1a24", "#056517")) +
+  labs(color = "Burn Treatment") +
+  # geom_point(data=nmdsSpecies, aes(x=NMDS1, y=NMDS2, size=average), color='darkgrey') + 
+  geom_text(data=subset(nmdsSpecies, cumsum<0.8), aes(x=NMDS1, y=NMDS2, label=family), color='black', size=5) + # species loadings
+  annotate("text", x=-Inf, y=Inf, label='(e)', hjust=-0.2, vjust=1.2, size=6) +
+  theme(axis.text = element_text(size = 24, color = "black"),
+        legend.text = element_text(size = 18),
+        legend.position='none')
 
-ggplot(subset(BC_NMDS_Graph), aes(x=MDS1, y=MDS2)) +
-  geom_point(size=6, aes(color=burn_trt)) +  # Color points by burn_trt
-  geom_path(data = filter(BC_Ellipses), 
-            aes(x = NMDS1, y = NMDS2, color = group),  # Color ellipses by burn_trt
-            size = 3) +
-  labs(color="Burn Treatment", linetype = "", shape = "") +
-  scale_color_manual(values=c("#de1a24", "#056517")) +  # Custom colors for treatments
-  xlab("NMDS1") + 
-  ylab("NMDS2") + 
-  theme(axis.text.x = element_text(size=24, color = "black"),
-        axis.text.y = element_text(size = 24, color = "black"),
-        legend.text = element_text(size = 22))
+
 
 # Richness
 richness2014 <- lmer(richness ~ burn_trt + (1 | watershed), data = subset(communityStructure, year==2014))
 summary(richness2014)
 anova(richness2014)
 
-richnessFig2014 <- ggplot(communityStructure, aes(x = burn_trt, y = richness)) +
+richnessFig2014 <- ggplot(communityStructure, aes(x = burn_trt, y = richness, color=burn_trt)) +
   geom_boxplot() +
+  scale_color_manual(values = c("#de1a24", "#056517")) +
   xlab("") +
-  ylab("Invertebrate Richness")
+  ylab("Family Richness") +
+  annotate("text", x=-Inf, y=Inf, label='(c)', hjust=-0.2, vjust=1.2, size=6) +
+  theme(legend.position='none',
+        plot.margin = margin(5, 20, 5, 5))
+
 
 # Evenness
 evenness2014 <- lmer(Evar ~ burn_trt + (1 | watershed), data = subset(communityStructure, year==2014))
 summary(evenness2014)
 anova(evenness2014)
 
-evennessFig2014 <- ggplot(communityStructure, aes(x = burn_trt, y = Evar)) +
+evennessFig2014 <- ggplot(communityStructure, aes(x = burn_trt, y = Evar, color=burn_trt)) +
   geom_boxplot() +
+  scale_color_manual(values = c("#de1a24", "#056517")) +
   xlab("") +
-  ylab("Invertebrate Evenness")
+  ylab("Family Evenness") +
+  annotate("text", x=-Inf, y=Inf, label='(d)', hjust=-0.2, vjust=1.2, size=6) +
+  theme(legend.position='none',
+        plot.margin = margin(5, 5, 5, 20))
+
 
 # Abundance
 count2014 <- lmer(total_count ~ burn_trt + (1 | watershed), data = subset(communityStructure, year==2014))
 summary(count2014)
 anova(count2014)
 
-countFig2014 <- ggplot(communityStructure, aes(x = burn_trt, y = total_count)) +
+countFig2014 <- ggplot(communityStructure, aes(x = burn_trt, y = total_count, color=burn_trt)) +
   geom_boxplot() +
+  scale_color_manual(values = c("#de1a24", "#056517")) +
   xlab("") +
-  ylab("Invertebrate Abundance")
+  ylab("Total Abundance") +
+  annotate("text", x=-Inf, y=Inf, label='(a)', hjust=-0.2, vjust=1.2, size=6) +
+  theme(legend.position='none',
+        plot.margin = margin(5, 20, 5, 5))
 
 
 # Biomass
@@ -168,32 +211,241 @@ biomass2014 <- lmer(invertebrate_biomass ~ burn_trt + (1 | watershed), data = su
 summary(biomass2014)
 anova(biomass2014)
 
-biomassFig2014 <- ggplot(subset(biomass, year==2014), aes(x = burn_trt, y = invertebrate_biomass)) +
+biomassFig2014 <- ggplot(subset(biomass, year==2014), aes(x = burn_trt, y = invertebrate_biomass, color=burn_trt)) +
   geom_boxplot() +
+  scale_color_manual(values = c("#de1a24", "#056517")) +
   xlab("") +
-  ylab("Invertebrate Biomass (mg)")
+  ylab("Total Biomass (mg)") +
+  annotate("text", x=-Inf, y=Inf, label='(b)', hjust=-0.2, vjust=1.2, size=6) +
+  theme(legend.position='none',
+        plot.margin = margin(5, 5, 5, 20))
 
 
-# Functional Groups
-functionalGroup2014 <- lmer(funct_count ~ burn_trt + (1|watershed), 
-                            data = subset(functionalStructure, year==2014 & eco_functional_group=='herbivore'))
-summary(functionalGroup2014)
-anova(functionalGroup2014)
+# # Functional Groups
+# functionalGroup2014 <- lmer(funct_count ~ burn_trt + (1|watershed), 
+#                             data = subset(functionalStructure, year==2014 & eco_functional_group=='herbivore'))
+# summary(functionalGroup2014)
+# anova(functionalGroup2014)
+# 
+# functionalGroup2014 <- lmer(funct_count ~ burn_trt + (1|watershed), 
+#                             data = subset(functionalStructure, year==2014 & eco_functional_group=='predator'))
+# summary(functionalGroup2014)
+# anova(functionalGroup2014)
+# 
+# functionalGroup2014 <- lmer(funct_count ~ burn_trt + (1|watershed), 
+#                             data = subset(functionalStructure, year==2014 & eco_functional_group=='parasitoid'))
+# summary(functionalGroup2014)
+# anova(functionalGroup2014)
+# 
+# functionalGroup2014 <- lmer(funct_count ~ burn_trt + (1|watershed), 
+#                             data = subset(functionalStructure, year==2014 & eco_functional_group=='omnivore'))
+# summary(functionalGroup2014)
+# anova(functionalGroup2014)
 
-functionalGroup2014 <- lmer(funct_count ~ burn_trt + (1|watershed), 
-                            data = subset(functionalStructure, year==2014 & eco_functional_group=='predator'))
-summary(functionalGroup2014)
-anova(functionalGroup2014)
 
-functionalGroup2014 <- lmer(funct_count ~ burn_trt + (1|watershed), 
-                            data = subset(functionalStructure, year==2014 & eco_functional_group=='parasitoid'))
-summary(functionalGroup2014)
-anova(functionalGroup2014)
+### Combined pre-treatment figure ###
 
-functionalGroup2014 <- lmer(funct_count ~ burn_trt + (1|watershed), 
-                            data = subset(functionalStructure, year==2014 & eco_functional_group=='omnivore'))
-summary(functionalGroup2014)
-anova(functionalGroup2014)
+top <- plot_grid(
+  countFig2014, biomassFig2014,
+  richnessFig2014, evennessFig2014,
+  ncol = 2,
+  rel_spacing = 0.1
+)
+
+plot_grid(
+  top,
+  nmdsFig2014,
+  ncol = 1,
+  rel_heights = c(10, 5)
+)
+
+ggsave("Fig1_pretrt.png", width = 10, height = 15, dpi = 300)
+
+
+
+
+# Treatment (2019, 2024) Analysis -----------------------------------------------------------
+
+# Composition - PERMANOVA
+
+abundanceTrt <- abundance %>% 
+  mutate(taxa=paste(order, family, sep='_')) %>% 
+  select(year, watershed, block, plot, burn_trt, taxa, count) %>% 
+  filter(year!=2014) %>% 
+  pivot_wider(names_from='taxa', values_from = 'count', values_fill = 0)  
+
+permanova2014 <- adonis2(formula = abundance2014[,6:46] ~ burn_trt, data=abundance2014[,1:5], permutations=999, method='bray')
+print(permanova2014)
+
+
+# SIMPER and bar graph
+
+summary(simper2014 <- simper(abundance2014[, 6:46], abundance2014$burn_trt, permutations = 999))
+
+simper2014Table <- summary(simper2014)$Annual_Unburned %>%
+  as.data.frame() %>%
+  arrange(desc(average)) %>%
+  rownames_to_column(var='species')
+
+ggplot(simper2014Table, aes(x=reorder(species, average), y=average)) +
+  geom_col() +
+  coord_flip() +
+  labs(x='Species', y='Contribution to Dissimilarity')
+
+sppBC <- metaMDS(abundance2014[,6:46])
+
+nmds_df <- data.frame(
+  scores(sppBC, display = "sites"),
+  burn_trt = abundance2014$burn_trt
+)
+
+sp_scores <- as.data.frame(scores(sppBC, display='species')) %>% 
+  rownames_to_column(var='species')
+
+nmdsSpecies <- left_join(simper2014Table, sp_scores) %>% 
+  mutate(species=str_to_title(str_replace(species, "_", " "))) %>% 
+  separate(species, into=c('order', 'family'), remove=F)
+
+# function to create ellipse coordinates
+veganCovEllipse <- function(cov, center = c(0,0), scale = 1, npoints = 100) {
+  theta <- seq(0, 2 * pi, length.out = npoints)
+  circle <- cbind(cos(theta), sin(theta))
+  ellipse <- t(center + scale * t(circle %*% chol(cov)))
+  as.data.frame(ellipse)
+}
+
+ord_ell <- ordiellipse(sppBC, groups = abundance2014$burn_trt, display = "sites", kind = "se", conf = 0.95, draw = "none")
+
+ellipse_df <- bind_rows(lapply(names(ord_ell), 
+                               function(g) {
+                                 df <- veganCovEllipse(ord_ell[[g]]$cov, ord_ell[[g]]$center, ord_ell[[g]]$scale)
+                                 colnames(df) <- c("NMDS1", "NMDS2")
+                                 df$burn_trt <- g
+                                 df
+                               }))
+
+nmdsFig2014 <- ggplot() +
+  geom_point(data=nmds_df, aes(x = NMDS1, y = NMDS2, color = burn_trt), size = 6) + # plot loadings
+  geom_path(data = ellipse_df, aes(x = NMDS1, y = NMDS2, color = burn_trt), linewidth = 1.5) +
+  scale_color_manual(values = c("#de1a24", "#056517")) +
+  labs(color = "Burn Treatment") +
+  # geom_point(data=nmdsSpecies, aes(x=NMDS1, y=NMDS2, size=average), color='darkgrey') + 
+  geom_text(data=subset(nmdsSpecies, cumsum<0.8), aes(x=NMDS1, y=NMDS2, label=family), color='black', size=5) + # species loadings
+  annotate("text", x=-Inf, y=Inf, label='(e)', hjust=-0.2, vjust=1.2, size=6) +
+  theme(axis.text = element_text(size = 24, color = "black"),
+        legend.text = element_text(size = 18),
+        legend.position='none')
+
+
+
+# Richness
+richness2014 <- lmer(richness ~ burn_trt + (1 | watershed), data = subset(communityStructure, year==2014))
+summary(richness2014)
+anova(richness2014)
+
+richnessFig2014 <- ggplot(communityStructure, aes(x = burn_trt, y = richness, color=burn_trt)) +
+  geom_boxplot() +
+  scale_color_manual(values = c("#de1a24", "#056517")) +
+  xlab("") +
+  ylab("Family Richness") +
+  annotate("text", x=-Inf, y=Inf, label='(c)', hjust=-0.2, vjust=1.2, size=6) +
+  theme(legend.position='none',
+        plot.margin = margin(5, 20, 5, 5))
+
+
+# Evenness
+evenness2014 <- lmer(Evar ~ burn_trt + (1 | watershed), data = subset(communityStructure, year==2014))
+summary(evenness2014)
+anova(evenness2014)
+
+evennessFig2014 <- ggplot(communityStructure, aes(x = burn_trt, y = Evar, color=burn_trt)) +
+  geom_boxplot() +
+  scale_color_manual(values = c("#de1a24", "#056517")) +
+  xlab("") +
+  ylab("Family Evenness") +
+  annotate("text", x=-Inf, y=Inf, label='(d)', hjust=-0.2, vjust=1.2, size=6) +
+  theme(legend.position='none',
+        plot.margin = margin(5, 5, 5, 20))
+
+
+# Abundance
+count2014 <- lmer(total_count ~ burn_trt + (1 | watershed), data = subset(communityStructure, year==2014))
+summary(count2014)
+anova(count2014)
+
+countFig2014 <- ggplot(communityStructure, aes(x = burn_trt, y = total_count, color=burn_trt)) +
+  geom_boxplot() +
+  scale_color_manual(values = c("#de1a24", "#056517")) +
+  xlab("") +
+  ylab("Total Abundance") +
+  annotate("text", x=-Inf, y=Inf, label='(a)', hjust=-0.2, vjust=1.2, size=6) +
+  theme(legend.position='none',
+        plot.margin = margin(5, 20, 5, 5))
+
+
+# Biomass
+biomass2014 <- lmer(invertebrate_biomass ~ burn_trt + (1 | watershed), data = subset(biomass, year==2014))
+summary(biomass2014)
+anova(biomass2014)
+
+biomassFig2014 <- ggplot(subset(biomass, year==2014), aes(x = burn_trt, y = invertebrate_biomass, color=burn_trt)) +
+  geom_boxplot() +
+  scale_color_manual(values = c("#de1a24", "#056517")) +
+  xlab("") +
+  ylab("Total Biomass (mg)") +
+  annotate("text", x=-Inf, y=Inf, label='(b)', hjust=-0.2, vjust=1.2, size=6) +
+  theme(legend.position='none',
+        plot.margin = margin(5, 5, 5, 20))
+
+
+# # Functional Groups
+# functionalGroup2014 <- lmer(funct_count ~ burn_trt + (1|watershed), 
+#                             data = subset(functionalStructure, year==2014 & eco_functional_group=='herbivore'))
+# summary(functionalGroup2014)
+# anova(functionalGroup2014)
+# 
+# functionalGroup2014 <- lmer(funct_count ~ burn_trt + (1|watershed), 
+#                             data = subset(functionalStructure, year==2014 & eco_functional_group=='predator'))
+# summary(functionalGroup2014)
+# anova(functionalGroup2014)
+# 
+# functionalGroup2014 <- lmer(funct_count ~ burn_trt + (1|watershed), 
+#                             data = subset(functionalStructure, year==2014 & eco_functional_group=='parasitoid'))
+# summary(functionalGroup2014)
+# anova(functionalGroup2014)
+# 
+# functionalGroup2014 <- lmer(funct_count ~ burn_trt + (1|watershed), 
+#                             data = subset(functionalStructure, year==2014 & eco_functional_group=='omnivore'))
+# summary(functionalGroup2014)
+# anova(functionalGroup2014)
+
+
+### Combined pre-treatment figure ###
+
+top <- plot_grid(
+  countFig2014, biomassFig2014,
+  richnessFig2014, evennessFig2014,
+  ncol = 2,
+  rel_spacing = 0.1
+)
+
+plot_grid(
+  top,
+  nmdsFig2014,
+  ncol = 1,
+  rel_heights = c(10, 5)
+)
+
+ggsave("Fig1_pretrt.png", width = 10, height = 15, dpi = 300)
+
+
+
+
+
+
+
+
+
 
 
 
