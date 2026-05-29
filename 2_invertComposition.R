@@ -10,6 +10,7 @@
 
 library(lme4)
 library(lmerTest)
+library(emmeans)
 library(codyn)
 library(vegan)
 library(cowplot)
@@ -53,13 +54,20 @@ trt <- read.csv('inv_data/GF_PlotList.csv') %>%
          burn_trt=Burn.Trt,
          block=Block,
          litter=Litter,
-         nutrient=Nutrient)
+         nutrient=Nutrient) %>% 
+  mutate(nutrient= recode(nutrient,
+         'C' = 'Control',
+         'S' = 'Carbon',
+         'U' = 'Nitrogen')) %>% 
+  mutate(litter=recode(litter,
+         'P' = 'Present',
+         'A' = 'Absent'))
 
 abundance <- readRDS('abundance.RDS') %>% # invertebrate counts
-  mutate(replicate=paste(burn_trt, watershed, block, plot, sep='::')) %>% 
-  group_by(replicate, year, watershed, block, plot, burn_trt, order, family) %>% 
+  group_by(year, watershed, block, plot, burn_trt, order, family) %>% 
   summarise(count = sum(count), .groups='drop') %>%  # combine collected and observed counts
-  left_join(trt)
+  left_join(trt) %>% 
+  mutate(replicate=paste(burn_trt, watershed, block, plot, litter, nutrient, sep='::'))
 
 biomass <- readRDS('biomassAll.RDS') %>%  # invertebrate biomass
   left_join(trt)
@@ -73,17 +81,17 @@ functionalGroups <- read.csv('inv_data/gf_funct_groups.csv')
 # Community Metrics ---------------------------------------------------------------
 
 totalAbundance <- abundance %>%
-  group_by(year, watershed, block, plot, burn_trt) %>%
+  group_by(year, watershed, block, plot, burn_trt, litter, nutrient) %>%
   summarise(total_count = sum(count), .groups = 'drop')
 
 communityStructure <- community_structure(abundance, time.var='year', abundance.var='count', replicate.var='replicate', metric='Evar') %>%
-  separate(col=replicate, into=c('burn_trt','watershed','block','plot'), sep='::') %>% 
+  separate(col=replicate, into=c('burn_trt','watershed','block','plot', 'litter', 'nutrient'), sep='::') %>% 
   mutate(plot=as.integer(plot)) %>% 
   left_join(totalAbundance)
 
 functionalStructure <- abundance %>% 
   left_join(functionalGroups) %>% 
-  group_by(year, watershed, block, plot, burn_trt, eco_functional_group) %>% 
+  group_by(year, watershed, block, plot, burn_trt, litter, nutrient, eco_functional_group) %>% 
   summarise(funct_count=sum(count), .groups='drop')
 
 
@@ -222,23 +230,13 @@ biomassFig2014 <- ggplot(subset(biomass, year==2014), aes(x = burn_trt, y = inve
 
 
 # # Functional Groups
-# functionalGroup2014 <- lmer(funct_count ~ burn_trt + (1|watershed), 
+# functionalGroup2014 <- lmer(funct_count ~ burn_trt + (1|watershed),
 #                             data = subset(functionalStructure, year==2014 & eco_functional_group=='herbivore'))
 # summary(functionalGroup2014)
 # anova(functionalGroup2014)
 # 
-# functionalGroup2014 <- lmer(funct_count ~ burn_trt + (1|watershed), 
+# functionalGroup2014 <- lmer(funct_count ~ burn_trt + (1|watershed),
 #                             data = subset(functionalStructure, year==2014 & eco_functional_group=='predator'))
-# summary(functionalGroup2014)
-# anova(functionalGroup2014)
-# 
-# functionalGroup2014 <- lmer(funct_count ~ burn_trt + (1|watershed), 
-#                             data = subset(functionalStructure, year==2014 & eco_functional_group=='parasitoid'))
-# summary(functionalGroup2014)
-# anova(functionalGroup2014)
-# 
-# functionalGroup2014 <- lmer(funct_count ~ burn_trt + (1|watershed), 
-#                             data = subset(functionalStructure, year==2014 & eco_functional_group=='omnivore'))
 # summary(functionalGroup2014)
 # anova(functionalGroup2014)
 
@@ -259,138 +257,143 @@ plot_grid(
   rel_heights = c(10, 5)
 )
 
-ggsave("Fig1_pretrt.png", width = 10, height = 15, dpi = 300)
+# ggsave("Fig1_pretrt.png", width = 10, height = 15, dpi = 300)
 
 
 
 
 # Treatment (2019, 2024) Analysis -----------------------------------------------------------
 
-# Composition - PERMANOVA
+# Composition - PERMANOVA (qualitatively same results if running 2019 and 2024 in separate models)
 
 abundanceTrt <- abundance %>% 
   mutate(taxa=paste(order, family, sep='_')) %>% 
-  select(year, watershed, block, plot, burn_trt, taxa, count) %>% 
+  select(year, watershed, block, plot, burn_trt, litter, nutrient, taxa, count) %>% 
   filter(year!=2014) %>% 
   pivot_wider(names_from='taxa', values_from = 'count', values_fill = 0)  
 
-permanova2014 <- adonis2(formula = abundance2014[,6:46] ~ burn_trt, data=abundance2014[,1:5], permutations=999, method='bray')
-print(permanova2014)
+permanovaTrt <- vegan::adonis2(formula = abundanceTrt[,8:156] ~ burn_trt + nutrient + litter, data=abundanceTrt[,1:7], permutations=999, method='bray', by='margin')
+print(permanovaTrt)
 
 
 # SIMPER and bar graph
 
-summary(simper2014 <- simper(abundance2014[, 6:46], abundance2014$burn_trt, permutations = 999))
+summary(simperTrt <- simper(abundanceTrt[, 8:156], abundanceTrt$burn_trt, permutations = 999))
 
-simper2014Table <- summary(simper2014)$Annual_Unburned %>%
+simperTrtTable <- summary(simperTrt)$Annual_Unburned %>%
   as.data.frame() %>%
   arrange(desc(average)) %>%
   rownames_to_column(var='species')
 
-ggplot(simper2014Table, aes(x=reorder(species, average), y=average)) +
-  geom_col() +
-  coord_flip() +
-  labs(x='Species', y='Contribution to Dissimilarity')
-
-sppBC <- metaMDS(abundance2014[,6:46])
-
-nmds_df <- data.frame(
-  scores(sppBC, display = "sites"),
-  burn_trt = abundance2014$burn_trt
-)
-
-sp_scores <- as.data.frame(scores(sppBC, display='species')) %>% 
-  rownames_to_column(var='species')
-
-nmdsSpecies <- left_join(simper2014Table, sp_scores) %>% 
-  mutate(species=str_to_title(str_replace(species, "_", " "))) %>% 
-  separate(species, into=c('order', 'family'), remove=F)
-
-# function to create ellipse coordinates
-veganCovEllipse <- function(cov, center = c(0,0), scale = 1, npoints = 100) {
-  theta <- seq(0, 2 * pi, length.out = npoints)
-  circle <- cbind(cos(theta), sin(theta))
-  ellipse <- t(center + scale * t(circle %*% chol(cov)))
-  as.data.frame(ellipse)
-}
-
-ord_ell <- ordiellipse(sppBC, groups = abundance2014$burn_trt, display = "sites", kind = "se", conf = 0.95, draw = "none")
-
-ellipse_df <- bind_rows(lapply(names(ord_ell), 
-                               function(g) {
-                                 df <- veganCovEllipse(ord_ell[[g]]$cov, ord_ell[[g]]$center, ord_ell[[g]]$scale)
-                                 colnames(df) <- c("NMDS1", "NMDS2")
-                                 df$burn_trt <- g
-                                 df
-                               }))
-
-nmdsFig2014 <- ggplot() +
-  geom_point(data=nmds_df, aes(x = NMDS1, y = NMDS2, color = burn_trt), size = 6) + # plot loadings
-  geom_path(data = ellipse_df, aes(x = NMDS1, y = NMDS2, color = burn_trt), linewidth = 1.5) +
-  scale_color_manual(values = c("#de1a24", "#056517")) +
-  labs(color = "Burn Treatment") +
-  # geom_point(data=nmdsSpecies, aes(x=NMDS1, y=NMDS2, size=average), color='darkgrey') + 
-  geom_text(data=subset(nmdsSpecies, cumsum<0.8), aes(x=NMDS1, y=NMDS2, label=family), color='black', size=5) + # species loadings
-  annotate("text", x=-Inf, y=Inf, label='(e)', hjust=-0.2, vjust=1.2, size=6) +
-  theme(axis.text = element_text(size = 24, color = "black"),
-        legend.text = element_text(size = 18),
-        legend.position='none')
+# ggplot(simperTrtTable, aes(x=reorder(species, average), y=average)) +
+#   geom_col() +
+#   coord_flip() +
+#   labs(x='Species', y='Contribution to Dissimilarity')
+# 
+# sppBC <- metaMDS(abundanceTrt[, 8:156])
+# 
+# nmds_df <- data.frame(
+#   scores(sppBC, display = "sites"),
+#   burn_trt = abundanceTrt$burn_trt
+# )
+# 
+# sp_scores <- as.data.frame(scores(sppBC, display='species')) %>% 
+#   rownames_to_column(var='species')
+# 
+# nmdsSpecies <- left_join(simperTrtTable, sp_scores) %>% 
+#   mutate(species=str_to_title(str_replace(species, "_", " "))) %>% 
+#   separate(species, into=c('order', 'family'), remove=F)
+# 
+# # function to create ellipse coordinates
+# veganCovEllipse <- function(cov, center = c(0,0), scale = 1, npoints = 100) {
+#   theta <- seq(0, 2 * pi, length.out = npoints)
+#   circle <- cbind(cos(theta), sin(theta))
+#   ellipse <- t(center + scale * t(circle %*% chol(cov)))
+#   as.data.frame(ellipse)
+# }
+# 
+# ord_ell <- ordiellipse(sppBC, groups = abundanceTrt$burn_trt, display = "sites", kind = "se", conf = 0.95, draw = "none")
+# 
+# ellipse_df <- bind_rows(lapply(names(ord_ell), 
+#                                function(g) {
+#                                  df <- veganCovEllipse(ord_ell[[g]]$cov, ord_ell[[g]]$center, ord_ell[[g]]$scale)
+#                                  colnames(df) <- c("NMDS1", "NMDS2")
+#                                  df$burn_trt <- g
+#                                  df
+#                                }))
+# 
+# nmdsFigTrt <- ggplot() +
+#   geom_point(data=nmds_df, aes(x = NMDS1, y = NMDS2, color = burn_trt), size = 6) + # plot loadings
+#   geom_path(data = ellipse_df, aes(x = NMDS1, y = NMDS2, color = burn_trt), linewidth = 1.5) +
+#   scale_color_manual(values = c("#de1a24", "#056517")) +
+#   labs(color = "Burn Treatment") +
+#   # geom_point(data=nmdsSpecies, aes(x=NMDS1, y=NMDS2, size=average), color='darkgrey') + 
+#   geom_text(data=subset(nmdsSpecies, cumsum<0.8), aes(x=NMDS1, y=NMDS2, label=family), color='black', size=5) + # species loadings
+#   annotate("text", x=-Inf, y=Inf, label='(e)', hjust=-0.2, vjust=1.2, size=6) +
+#   theme(axis.text = element_text(size = 24, color = "black"),
+#         legend.text = element_text(size = 18),
+#         legend.position='none')
 
 
 
 # Richness
-richness2014 <- lmer(richness ~ burn_trt + (1 | watershed), data = subset(communityStructure, year==2014))
-summary(richness2014)
-anova(richness2014)
+richnessTrt <- lmer(richness ~ burn_trt*nutrient*litter*as.factor(year) + (1 | watershed), data = subset(communityStructure, year!=2014))
+summary(richnessTrt)
+anova(richnessTrt)
+emmeans(richnessTrt, ~ nutrient*litter*as.factor(year))
 
-richnessFig2014 <- ggplot(communityStructure, aes(x = burn_trt, y = richness, color=burn_trt)) +
+richnessFigTrt <- ggplot(subset(communityStructure, year!=2014), aes(x = nutrient, y = richness, color=litter)) +
   geom_boxplot() +
-  scale_color_manual(values = c("#de1a24", "#056517")) +
+  scale_color_manual(values = c("darkgreen", "tan")) +
   xlab("") +
   ylab("Family Richness") +
   annotate("text", x=-Inf, y=Inf, label='(c)', hjust=-0.2, vjust=1.2, size=6) +
-  theme(legend.position='none',
+  facet_wrap(~year) +
+  theme(legend.position=c(0.2,0.9),
         plot.margin = margin(5, 20, 5, 5))
 
 
 # Evenness
-evenness2014 <- lmer(Evar ~ burn_trt + (1 | watershed), data = subset(communityStructure, year==2014))
-summary(evenness2014)
-anova(evenness2014)
+evennessTrt <- lmer(Evar ~ burn_trt*nutrient*litter*as.factor(year) + (1 | watershed), data = subset(communityStructure, year!=2014))
+summary(evennessTrt)
+anova(evennessTrt)
+emmeans(evennessTrt, ~ nutrient*litter*as.factor(year))
 
-evennessFig2014 <- ggplot(communityStructure, aes(x = burn_trt, y = Evar, color=burn_trt)) +
+evennessFig2014 <- ggplot(subset(communityStructure, year!=2014), aes(x = nutrient, y = Evar, color=litter)) +
   geom_boxplot() +
-  scale_color_manual(values = c("#de1a24", "#056517")) +
+  scale_color_manual(values = c("darkgreen", "tan")) +
   xlab("") +
   ylab("Family Evenness") +
   annotate("text", x=-Inf, y=Inf, label='(d)', hjust=-0.2, vjust=1.2, size=6) +
-  theme(legend.position='none',
-        plot.margin = margin(5, 5, 5, 20))
+  facet_wrap(~year) +
+  theme(legend.position=c(0.2,0.9),
+        plot.margin = margin(5, 20, 5, 5))
 
 
 # Abundance
-count2014 <- lmer(total_count ~ burn_trt + (1 | watershed), data = subset(communityStructure, year==2014))
-summary(count2014)
-anova(count2014)
+countTrt <- lmer(total_count ~ burn_trt*nutrient*litter*as.factor(year) + (1 | watershed), data = subset(communityStructure, year!=2014))
+summary(countTrt)
+anova(countTrt)
+emmeans(countTrt, ~ burn_trt*as.factor(year))
 
-countFig2014 <- ggplot(communityStructure, aes(x = burn_trt, y = total_count, color=burn_trt)) +
+countFigTrt <- ggplot(subset(communityStructure, year!=2014), aes(x = burn_trt, y = total_count)) +
   geom_boxplot() +
-  scale_color_manual(values = c("#de1a24", "#056517")) +
   xlab("") +
   ylab("Total Abundance") +
   annotate("text", x=-Inf, y=Inf, label='(a)', hjust=-0.2, vjust=1.2, size=6) +
-  theme(legend.position='none',
+  facet_wrap(~year) +
+  theme(legend.position=c(0.2,0.9),
         plot.margin = margin(5, 20, 5, 5))
 
 
 # Biomass
-biomass2014 <- lmer(invertebrate_biomass ~ burn_trt + (1 | watershed), data = subset(biomass, year==2014))
-summary(biomass2014)
-anova(biomass2014)
+biomassTrt <- lmer(invertebrate_biomass ~ burn_trt*nutrient*litter + (1 | watershed), data = subset(biomass, year==2024))
+summary(biomassTrt)
+anova(biomassTrt)
+emmeans(biomassTrt, ~nutrient)
 
-biomassFig2014 <- ggplot(subset(biomass, year==2014), aes(x = burn_trt, y = invertebrate_biomass, color=burn_trt)) +
+biomassFigTrt <- ggplot(subset(biomass, year==2024), aes(x = nutrient, y = invertebrate_biomass)) +
   geom_boxplot() +
-  scale_color_manual(values = c("#de1a24", "#056517")) +
   xlab("") +
   ylab("Total Biomass (mg)") +
   annotate("text", x=-Inf, y=Inf, label='(b)', hjust=-0.2, vjust=1.2, size=6) +
@@ -399,308 +402,18 @@ biomassFig2014 <- ggplot(subset(biomass, year==2014), aes(x = burn_trt, y = inve
 
 
 # # Functional Groups
-# functionalGroup2014 <- lmer(funct_count ~ burn_trt + (1|watershed), 
-#                             data = subset(functionalStructure, year==2014 & eco_functional_group=='herbivore'))
-# summary(functionalGroup2014)
-# anova(functionalGroup2014)
+# functionalGroupTrt <- lmer(funct_count ~ burn_trt*nutrient*litter*as.factor(year) + (1|watershed),
+#                            data = subset(functionalStructure, year!=2014 & eco_functional_group=='herbivore' & funct_count<300))
+# summary(functionalGroupTrt)
+# anova(functionalGroupTrt)
 # 
-# functionalGroup2014 <- lmer(funct_count ~ burn_trt + (1|watershed), 
-#                             data = subset(functionalStructure, year==2014 & eco_functional_group=='predator'))
-# summary(functionalGroup2014)
-# anova(functionalGroup2014)
-# 
-# functionalGroup2014 <- lmer(funct_count ~ burn_trt + (1|watershed), 
-#                             data = subset(functionalStructure, year==2014 & eco_functional_group=='parasitoid'))
-# summary(functionalGroup2014)
-# anova(functionalGroup2014)
-# 
-# functionalGroup2014 <- lmer(funct_count ~ burn_trt + (1|watershed), 
-#                             data = subset(functionalStructure, year==2014 & eco_functional_group=='omnivore'))
-# summary(functionalGroup2014)
-# anova(functionalGroup2014)
+# functionalGroupTrt <- lmer(funct_count ~ burn_trt*nutrient*litter*as.factor(year) + (1|watershed),
+#                            data = subset(functionalStructure, year!=2014 & eco_functional_group=='predator' & funct_count<40))
+# summary(functionalGroupTrt)
+# anova(functionalGroupTrt)
 
 
-### Combined pre-treatment figure ###
 
-top <- plot_grid(
-  countFig2014, biomassFig2014,
-  richnessFig2014, evennessFig2014,
-  ncol = 2,
-  rel_spacing = 0.1
-)
-
-plot_grid(
-  top,
-  nmdsFig2014,
-  ncol = 1,
-  rel_heights = c(10, 5)
-)
-
-ggsave("Fig1_pretrt.png", width = 10, height = 15, dpi = 300)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 2019 Analysis -----------------------------------------------------------
-
-abun_19 <- comm_19 %>% #figure out why 20C-B-4 have an extra space after nutrient
-  #mutate(plot_trt2 = ifelse(plot_trt == "C ", "C", plot_trt)) %>% 
-  #separate(plot_trt, into = c("plot_trt", "drop"),sep = " ")
-  #select(-plot_trt) %>% 
-  #rename(plot_trt = plot_trt2) %>% 
-  group_by(year, month, burn_trt, watershed, block, plot, plot_trt, litter_trt) %>% 
-  summarise(total_abun = sum(count)) %>% 
-  ungroup()
-
-## abundance mixed model
-abun_mod_19 <- lmer(total_abun ~ burn_trt * plot_trt * litter_trt + (1 | watershed), data = abun_19)
-
-summary(abun_mod_19)
-
-anova(abun_mod_19)
-
-## family richness model
-df_richness_19 <- comm_19 %>%
-  ungroup() %>% 
-  #mutate(block_plot = paste(block, plot, sep = "::")) %>% 
-  group_by(watershed, block, plot, burn_trt, plot_trt, litter_trt, year) %>%
-  summarise(family_richness = n_distinct(family))
-
-richness_mod_19 <- lmer(family_richness ~ burn_trt * plot_trt * litter_trt + (1 | watershed), data = df_richness_19)
-
-summary(richness_mod_19)
-
-anova(richness_mod_19)
-
-## family evenness model
-
-df_evenness_19 <- comm_19 %>%
-  group_by(block, plot, burn_trt, plot_trt, litter_trt, watershed) %>%
-  summarise(family_evenness = diversity(count, index = "shannon") / log(specnumber(count)))
-
-
-# Fit the mixed-effects model
-evenness_mod_19 <- lmer(family_evenness ~ burn_trt * plot_trt * litter_trt + (1 | watershed), data = df_evenness_19)
-
-summary(evenness_mod_19)
-
-anova(evenness_mod_19)
-
-count_19 <- ggplot(abun_19, aes(x = plot_trt, y = total_abun, fill = litter_trt)) +
-  geom_boxplot() +
-  xlab("") +
-  ylab("Total Abundance") +
-  scale_fill_manual(values = c("#337539", "#dccd7d")) +
-  facet_wrap(~burn_trt)
-
-rich_19 <- ggplot(df_richness_19, aes(x = plot_trt, y = family_richness, fill = litter_trt)) +
-  geom_boxplot() +
-  xlab("") +
-  ylab("Family Richness") +
-  scale_fill_manual(values = c("#337539", "#dccd7d")) +
-  facet_wrap(~burn_trt)
-
-even_19 <- ggplot(df_evenness_19, aes(x = plot_trt, y = family_evenness, fill = litter_trt)) +
-  geom_boxplot() +
-  xlab("") +
-  ylab("Family Evenness") +
-  scale_fill_manual(values = c("#337539", "#dccd7d")) +
-  facet_wrap(~burn_trt)
-
-grid.arrange(arrangeGrob(count_19),
-             arrangeGrob(rich_19, even_19, ncol = 1),
-             ncol = 2, widths = c(2,2))
-
-
-
-merged_funct_19 <- merge(comm_19, funct, by.x = c("family", "order"), by.y = c("family", "order"))
-
-merged_fun_19 <- merge(comm_19, funct, by.x = c("family", "order"), by.y = c("family", "order")) %>% 
-  group_by(year, month, watershed, block, plot, burn_trt, plot_trt, litter_trt, functional_group) %>% 
-  summarise(total_count = sum(count)) %>% 
-  ungroup()
-
-herb_mod_19 <- lmer(total_count ~ burn_trt * plot_trt * litter_trt + (1 | watershed),
-                    data = merged_fun_19[merged_fun_19$functional_group == "Herbivore", ])
-
-anova(herb_mod_19)
-
-
-pred_mod_19 <- lmer(total_count ~ burn_trt * plot_trt * litter_trt + (1 | watershed),
-                    data = merged_fun_19[merged_fun_19$functional_group == "Predator", ])
-
-anova(pred_mod_19)
-
-para_mod_19 <- lmer(total_count ~ burn_trt * plot_trt * litter_trt + (1 | watershed),
-                    data = merged_fun_19[merged_fun_19$functional_group == "Parasitoid", ])
-
-anova(para_mod_19)
-
-det_mod_19 <- lmer(total_count ~ burn_trt * plot_trt * litter_trt + (1 | watershed),
-                   data = merged_fun_19[merged_fun_19$functional_group == "Detritivore", ])
-
-anova(det_mod_19)
-
-par_mod_19 <- lmer(total_count ~ burn_trt * plot_trt * litter_trt + (1 | watershed),
-                   data = merged_fun_19[merged_fun_19$functional_group == "Parasite", ])
-
-anova(par_mod_19)
-
-pol_mod_19 <- lmer(total_count ~ burn_trt * plot_trt * litter_trt + (1 | watershed),
-                   data = merged_fun_19[merged_fun_19$functional_group == "Pollinator", ])
-
-anova(pol_mod_19)
-
-
-ggplot(merged_fun_19 %>% filter(functional_group == "Predator"), 
-       aes(x = burn_trt, y = total_count)) +
-  geom_boxplot() +
-  xlab("") +
-  ylab("Predator Abundance")
-#scale_fill_manual(values = c("#337539", "#dccd7d")) +
-#facet_wrap(~burn_trt)
-
-herb_nut <- ggplot(merged_fun_19 %>% filter(functional_group == "Herbivore"), 
-                   aes(x = plot_trt, y = total_count)) +
-  geom_boxplot() +
-  xlab("") +
-  ylab("Herbivore Abundance")
-
-herb_lit <- ggplot(merged_fun_19 %>% filter(functional_group == "Herbivore"), 
-                   aes(x = litter_trt, y = total_count)) +
-  geom_boxplot() +
-  xlab("") +
-  ylab("Herbivore Abundance")
-
-
-grid.arrange(herb_nut, herb_lit, nrow = 1)
-
-# 2024 analysis ------------------------------------------------------
-abun_24 <- comm_24 %>% 
-  group_by(year, month, burn_trt, watershed, block, plot, plot_trt, litter_trt) %>% 
-  summarise(total_abun = sum(count)) %>% 
-  ungroup()
-
-## abundance mixed model
-abun_mod_24 <- lmer(total_abun ~ burn_trt * plot_trt * litter_trt + (1 | watershed), data = abun_24)
-
-summary(abun_mod_24)
-
-anova(abun_mod_24)
-
-## abundance mixed model
-bio_mod_24 <- lmer(total_biomass ~ burn_trt * plot_trt * litter_trt + (1 | watershed), data = biomass_24)
-
-summary(bio_mod_24)
-
-anova(bio_mod_24)
-
-## family richness model
-df_richness_24 <- comm_24 %>%
-  group_by(plot, burn_trt, plot_trt, litter_trt, watershed, block, year) %>%
-  summarise(family_richness = n_distinct(family))
-
-richness_mod_24 <- lmer(family_richness ~ burn_trt * plot_trt * litter_trt + (1 | watershed), data = df_richness_24)
-
-summary(richness_mod_24)
-
-anova(richness_mod_24)
-
-## family evenness model
-
-df_evenness_24 <- comm_24 %>%
-  group_by(plot, burn_trt, plot_trt, litter_trt, watershed, block) %>%
-  summarise(family_evenness = diversity(count, index = "shannon") / log(specnumber(count)))
-
-# Fit the mixed-effects model
-evenness_mod_24 <- lmer(family_evenness ~ burn_trt * plot_trt * litter_trt + (1 | watershed), data = df_evenness_24)
-
-summary(evenness_mod_24)
-
-anova(evenness_mod_24)
-
-count_24 <- ggplot(abun_24, aes(x = plot_trt, y = total_abun, fill = litter_trt)) +
-  geom_boxplot() +
-  xlab("") +
-  ylab("Total Abundance") +
-  scale_fill_manual(values = c("#337539", "#dccd7d")) +
-  facet_wrap(~burn_trt)
-
-bio_24 <- ggplot(biomass_24, aes(x = plot_trt, y = total_biomass, fill = litter_trt)) +
-  geom_boxplot() +
-  xlab("") +
-  ylab("Total Biomass (g)") +
-  coord_cartesian(ylim = c(0, 0.3)) +
-  scale_fill_manual(values = c("#337539", "#dccd7d")) +
-  facet_wrap(~burn_trt)
-
-rich_24 <- ggplot(df_richness_24, aes(x = plot_trt, y = family_richness, fill = litter_trt)) +
-  geom_boxplot() +
-  xlab("") +
-  ylab("Family Richness") +
-  scale_fill_manual(values = c("#337539", "#dccd7d")) +
-  facet_wrap(~burn_trt)
-
-even_24 <- ggplot(df_evenness_24, aes(x = plot_trt, y = family_evenness, fill = litter_trt)) +
-  geom_boxplot() +
-  xlab("") +
-  ylab("Family Evenness") +
-  scale_fill_manual(values = c)("#337539", "#dccd7d") +
-  facet_wrap(~burn_trt)
-
-grid.arrange(count_24, bio_24, rich_24, even_24, nrow = 2)
-
-
-merged_fun_24 <- merge(comm_24, funct, by.x = c("family", "order"), by.y = c("family", "order"))
-
-merged_fun_24 <- merge(comm_24, funct, by.x = c("family", "order"), by.y = c("family", "order")) %>% 
-  group_by(year, month, watershed, block, plot, burn_trt, plot_trt, litter_trt, functional_group) %>% 
-  summarise(total_count = sum(count)) %>% 
-  ungroup()
-
-herb_mod_24 <- lmer(total_count ~ burn_trt * plot_trt * litter_trt + (1 | watershed),
-                    data = merged_fun_24[merged_fun_24$functional_group == "Herbivore", ])
-
-anova(herb_mod_24)
-
-pred_mod_24 <- lmer(total_count ~ burn_trt * plot_trt * litter_trt + (1 | watershed),
-                    data = merged_fun_24[merged_fun_24$functional_group == "Predator", ])
-
-anova(pred_mod_24)
-
-omni_mod_24 <- lmer(total_count ~ burn_trt * plot_trt * litter_trt + (1 | watershed),
-                    data = merged_fun_24[merged_fun_24$functional_group == "Omnivore", ])
-
-anova(omni_mod_24)
-
-para_mod_24 <- lmer(total_count ~ burn_trt * plot_trt * litter_trt + (1 | watershed),
-                    data = merged_fun_24[merged_fun_24$functional_group == "Parasitoid", ])
-
-anova(para_mod_24)
-
-pol_mod_24 <- lmer(total_count ~ burn_trt * plot_trt * litter_trt + (1 | watershed),
-                   data = merged_fun_24[merged_fun_24$functional_group == "Polyphagous", ])
-
-anova(pol_mod_24)
-
-ggplot(merged_fun_24 %>% filter(functional_group == "Omnivore"),
-       aes(x = plot_trt, y = total_count, fill = litter_trt)) +
-  geom_boxplot() +
-  xlab("") +
-  ylab("Omnivore Abundance") +
-  scale_fill_manual(values = c("#337539", "#dccd7d")) +
-  facet_wrap(~burn_trt)
 
 
 # regressions -----------------------------------------------
