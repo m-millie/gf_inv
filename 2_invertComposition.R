@@ -48,7 +48,7 @@ barGraphStats <- function(data, variable, byFactorNames) {
 
 # Read Data ---------------------------------------------------------------
 
-trt <- read.csv('inv_data/GF_PlotList.csv') %>% 
+trt <- read.csv('GF_PlotList.csv') %>% 
   mutate(plot=as.integer(str_extract(Plot, "\\d+"))) %>% 
   select(-plot_id, -Plot, -Burn.Trt2) %>% 
   rename(watershed=Watershed,
@@ -64,24 +64,33 @@ trt <- read.csv('inv_data/GF_PlotList.csv') %>%
          'P' = 'Present',
          'A' = 'Absent'))
 
-abundance <- readRDS('abundance.RDS') %>% # invertebrate counts
+abundance <- read.csv('https://pasta.lternet.edu/package/data/eml/knb-lter-knz/101/4/12f22afc603c70b1174455e8636115bb') %>% # invertebrate counts
+  rename(year=RecYear, watershed=Watershed, block=Block, plot=Plot, burn_trt=BurnTrt, 
+         order=invert_order, family=invert_family, collected=Collected, count=Count) %>% 
+  mutate(block=str_squish(block)) %>% 
   group_by(year, watershed, block, plot, burn_trt, order, family) %>% 
   summarise(count = sum(count), .groups='drop') %>%  # combine collected and observed counts
-  left_join(trt) %>% 
+  left_join(trt) %>%
   mutate(replicate=paste(burn_trt, watershed, block, plot, litter, nutrient, sep='::'))
 
-biomass <- readRDS('biomassAll.RDS') %>%  # invertebrate biomass
-  left_join(trt)
+biomass <- read.csv('https://pasta.lternet.edu/package/data/eml/knb-lter-knz/101/4/c773c9eb9480a03851ff9e818150d91f') %>%  # invertebrate biomass
+  rename(year=RecYear, watershed=Watershed, block=Block, plot=Plot, burn_trt=BurnTrt) %>% 
+  select(-DataCode, -RecType, -RecMonth, -Comments) %>% 
+  left_join(trt) %>% 
+  filter(invertebrate_biomass>0) # drop single missing datapoint
 
-CN <- readRDS('CN.RDS') %>% # plant %C and %N
+CN <- read.csv('https://pasta.lternet.edu/package/data/eml/knb-lter-knz/101/4/4665458445755e751deeac090ddb6fb0') %>% # plant %C and %N
+  select(-DataCode, -RecType, -Comments) %>% 
+  mutate(BurnTrt=str_to_sentence(BurnTrt)) %>% 
+  rename(year=RecYear, watershed=Watershed, block=Block, plot=Plot, burn_trt=BurnTrt) %>% 
   mutate(CN=as.numeric(Total_C)/as.numeric(Total_N)) %>% 
   select(-Total_N, -Total_C) %>% 
-  pivot_wider(names_from=growth_form, values_from=CN) %>% 
+  pivot_wider(names_from=Growth_form, values_from=CN) %>% 
   mutate(avg_CN=rowMeans(across(c(forb, grass)), na.rm=T))
 
-plant <- read.csv('inv_data/ghost_fire_plant_data.csv') # plant biomass and richness
+plant <- readRDS('plantData.RDS') # plant biomass and richness
 
-functionalGroups <- read.csv('inv_data/gf_funct_groups.csv')
+functionalGroups <- read.csv('gf_funct_groups.csv')
 
 # Community Metrics ---------------------------------------------------------------
 
@@ -290,11 +299,11 @@ simperTrtTable <- summary(simperTrt)$Annual_Unburned %>%
   arrange(desc(average)) %>%
   rownames_to_column(var='species')
 
-# ggplot(simperTrtTable, aes(x=reorder(species, average), y=average)) +
-#   geom_col() +
-#   coord_flip() +
-#   labs(x='Species', y='Contribution to Dissimilarity')
-# 
+ggplot(simperTrtTable, aes(x=reorder(species, average), y=average)) +
+  geom_col() +
+  coord_flip() +
+  labs(x='Species', y='Contribution to Dissimilarity')
+
 # sppBC <- metaMDS(abundanceTrt[, 8:156])
 # 
 # nmds_df <- data.frame(
@@ -302,11 +311,11 @@ simperTrtTable <- summary(simperTrt)$Annual_Unburned %>%
 #   burn_trt = abundanceTrt$burn_trt
 # )
 # 
-# sp_scores <- as.data.frame(scores(sppBC, display='species')) %>% 
+# sp_scores <- as.data.frame(scores(sppBC, display='species')) %>%
 #   rownames_to_column(var='species')
 # 
-# nmdsSpecies <- left_join(simperTrtTable, sp_scores) %>% 
-#   mutate(species=str_to_title(str_replace(species, "_", " "))) %>% 
+# nmdsSpecies <- left_join(simperTrtTable, sp_scores) %>%
+#   mutate(species=str_to_title(str_replace(species, "_", " "))) %>%
 #   separate(species, into=c('order', 'family'), remove=F)
 # 
 # # function to create ellipse coordinates
@@ -319,7 +328,7 @@ simperTrtTable <- summary(simperTrt)$Annual_Unburned %>%
 # 
 # ord_ell <- ordiellipse(sppBC, groups = abundanceTrt$burn_trt, display = "sites", kind = "se", conf = 0.95, draw = "none")
 # 
-# ellipse_df <- bind_rows(lapply(names(ord_ell), 
+# ellipse_df <- bind_rows(lapply(names(ord_ell),
 #                                function(g) {
 #                                  df <- veganCovEllipse(ord_ell[[g]]$cov, ord_ell[[g]]$center, ord_ell[[g]]$scale)
 #                                  colnames(df) <- c("NMDS1", "NMDS2")
@@ -332,7 +341,7 @@ simperTrtTable <- summary(simperTrt)$Annual_Unburned %>%
 #   geom_path(data = ellipse_df, aes(x = NMDS1, y = NMDS2, color = burn_trt), linewidth = 1.5) +
 #   scale_color_manual(values = c("#de1a24", "#056517")) +
 #   labs(color = "Burn Treatment") +
-#   # geom_point(data=nmdsSpecies, aes(x=NMDS1, y=NMDS2, size=average), color='darkgrey') + 
+#   # geom_point(data=nmdsSpecies, aes(x=NMDS1, y=NMDS2, size=average), color='darkgrey') +
 #   geom_text(data=subset(nmdsSpecies, cumsum<0.8), aes(x=NMDS1, y=NMDS2, label=family), color='black', size=5) + # species loadings
 #   annotate("text", x=-Inf, y=Inf, label='(e)', hjust=-0.2, vjust=1.2, size=6) +
 #   theme(axis.text = element_text(size = 24, color = "black"),

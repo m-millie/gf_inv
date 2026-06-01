@@ -110,8 +110,5 @@ CN <- rbind(CN2019, CN2024) %>%
 # Write Data for EDI Project ---------------------------------------------------------------
 
 write.csv(abundance, 'inv_data/GF_invertAbundance.csv', row.names=F)
-# saveRDS(abundance, 'abundance.RDS')
 write.csv(biomassAll, 'inv_data/GF_invertBiomass.csv', row.names=F)
-# saveRDS(biomassAll, 'biomassAll.RDS')
 write.csv(CN, 'inv_data/GF_plantCN.csv', row.names=F)
-# saveRDS(CN, 'CN.RDS')
