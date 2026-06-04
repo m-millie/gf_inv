@@ -1,6 +1,8 @@
 ###################################################################
 ###
-### 2_invertComposition.R : Importing and cleaning data for analysis.
+### 2_invertComposition.R : Data analysis and figure generation 
+###                         related to invertebrate responses to 
+###                         burning, soil N, and plant litter.
 ###
 ### Authors: Millie Ortiz, Kimberly Komatsu
 ###
@@ -385,7 +387,7 @@ evennessFig2014 <- ggplot(subset(communityStructure, year!=2014), aes(x = nutrie
 
 
 # Abundance
-countTrt <- lmer(total_count ~ burn_trt*nutrient*litter*as.factor(year) + (1 | watershed), data = subset(communityStructure, year!=2014))
+countTrt <- lmer(total_count ~ as.factor(year)*burn_trt*nutrient*litter + (1 | watershed), data = subset(communityStructure, year!=2014))
 summary(countTrt)
 anova(countTrt)
 emmeans(countTrt, ~ burn_trt*as.factor(year))
