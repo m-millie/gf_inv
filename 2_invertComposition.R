@@ -10,6 +10,7 @@
 
 # Packages and Set-Up ----------------------------------------------------------------
 
+library(EDIutils)
 library(lme4)
 library(lmerTest)
 library(emmeans)
@@ -18,6 +19,8 @@ library(vegan)
 library(cowplot)
 library(piecewiseSEM)
 library(tidyverse)
+
+myEDIAccessKey="PASTE-KEY-HERE"
 
 theme_set(theme_bw())
 theme_update(axis.title.x=element_text(size=20, vjust=-0.35, margin=margin(t=15)), axis.text.x=element_text(size=16),
@@ -66,7 +69,8 @@ trt <- read.csv('GF_PlotList.csv') %>%
          'P' = 'Present',
          'A' = 'Absent'))
 
-abundance <- read.csv('https://pasta.lternet.edu/package/data/eml/knb-lter-knz/101/4/12f22afc603c70b1174455e8636115bb') %>% # invertebrate counts
+abundance <- read.csv(paste0("https://pasta.lternet.edu/package/data/eml/knb-lter-knz/101/4/12f22afc603c70b1174455e8636115bb",
+                             "?key=", myEDIAccessKey)) %>% # invertebrate counts
   rename(year=RecYear, watershed=Watershed, block=Block, plot=Plot, burn_trt=BurnTrt, 
          order=invert_order, family=invert_family, collected=Collected, count=Count) %>% 
   mutate(block=str_squish(block)) %>% 
@@ -75,13 +79,15 @@ abundance <- read.csv('https://pasta.lternet.edu/package/data/eml/knb-lter-knz/1
   left_join(trt) %>%
   mutate(replicate=paste(burn_trt, watershed, block, plot, litter, nutrient, sep='::'))
 
-biomass <- read.csv('https://pasta.lternet.edu/package/data/eml/knb-lter-knz/101/4/c773c9eb9480a03851ff9e818150d91f') %>%  # invertebrate biomass
+biomass <- read.csv(paste0("https://pasta.lternet.edu/package/data/eml/knb-lter-knz/101/4/c773c9eb9480a03851ff9e818150d91f",
+                           "?key=", myEDIAccessKey)) %>%  # invertebrate biomass
   rename(year=RecYear, watershed=Watershed, block=Block, plot=Plot, burn_trt=BurnTrt) %>% 
   select(-DataCode, -RecType, -RecMonth, -Comments) %>% 
   left_join(trt) %>% 
   filter(invertebrate_biomass>0) # drop single missing datapoint
 
-CN <- read.csv('https://pasta.lternet.edu/package/data/eml/knb-lter-knz/101/4/4665458445755e751deeac090ddb6fb0') %>% # plant %C and %N
+CN <- read.csv(paste0("https://pasta.lternet.edu/package/data/eml/knb-lter-knz/101/4/4665458445755e751deeac090ddb6fb0",
+                      "?key=", myEDIAccessKey)) %>% # plant %C and %N
   select(-DataCode, -RecType, -Comments) %>% 
   mutate(BurnTrt=str_to_sentence(BurnTrt)) %>% 
   rename(year=RecYear, watershed=Watershed, block=Block, plot=Plot, burn_trt=BurnTrt) %>% 
@@ -245,16 +251,16 @@ biomassFig2014 <- ggplot(subset(biomass, year==2014), aes(x = burn_trt, y = inve
         plot.margin = margin(5, 5, 5, 20))
 
 
-# # Functional Groups
-# functionalGroup2014 <- lmer(funct_count ~ burn_trt + (1|watershed),
-#                             data = subset(functionalStructure, year==2014 & eco_functional_group=='herbivore'))
-# summary(functionalGroup2014)
-# anova(functionalGroup2014)
-# 
-# functionalGroup2014 <- lmer(funct_count ~ burn_trt + (1|watershed),
-#                             data = subset(functionalStructure, year==2014 & eco_functional_group=='predator'))
-# summary(functionalGroup2014)
-# anova(functionalGroup2014)
+# Functional Groups
+functionalGroup2014 <- lmer(funct_count ~ burn_trt + (1|watershed),
+                            data = subset(functionalStructure, year==2014 & eco_functional_group=='herbivore'))
+summary(functionalGroup2014)
+anova(functionalGroup2014)
+
+functionalGroup2014 <- lmer(funct_count ~ burn_trt + (1|watershed),
+                            data = subset(functionalStructure, year==2014 & eco_functional_group=='predator'))
+summary(functionalGroup2014)
+anova(functionalGroup2014)
 
 
 ### Combined pre-treatment figure ###
@@ -375,7 +381,7 @@ summary(evennessTrt)
 anova(evennessTrt)
 emmeans(evennessTrt, ~ nutrient*litter*as.factor(year))
 
-evennessFig2014 <- ggplot(subset(communityStructure, year!=2014), aes(x = nutrient, y = Evar, color=litter)) +
+evennessFigTrt <- ggplot(subset(communityStructure, year!=2014), aes(x = nutrient, y = Evar, color=litter)) +
   geom_boxplot() +
   scale_color_manual(values = c("darkgreen", "tan")) +
   xlab("") +
@@ -415,6 +421,18 @@ biomassFigTrt <- ggplot(subset(biomass, year==2024), aes(x = nutrient, y = inver
   annotate("text", x=-Inf, y=Inf, label='(b)', hjust=-0.2, vjust=1.2, size=6) +
   theme(legend.position='none',
         plot.margin = margin(5, 5, 5, 20))
+
+
+# Combined figure
+plot_grid(
+  countFigTrt, biomassFigTrt,
+  richnessFigTrt, evennessFigTrt,
+  ncol = 2,
+  rel_spacing = 0.1
+)
+
+# ggsave("Fig2_trt.png", width = 25, height = 25, dpi = 300)
+
 
 
 # # Functional Groups
