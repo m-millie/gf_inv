@@ -1,6 +1,6 @@
 ###################################################################
 ###
-### dataCleaning.R : Importing and cleaning data for upload to EDI.
+### 0_dataCleaning.R : Importing and cleaning data for upload to EDI.
 ###
 ### Authors: Millie Ortiz, Kimberly Komatsu
 ###

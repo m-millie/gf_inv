@@ -1,5 +1,5 @@
 ################################################################################
-##  0_plantData.R: Getting plant community diversity and biomass for each plot.
+##  2_plantData.R: Getting plant community diversity and biomass for each plot.
 ##
 ##  Authors: Kim Komatsu
 ##  Date created: March 26, 2025
@@ -8,10 +8,12 @@
 library(codyn)
 library(tidyverse)
 
+source('1_EDIaccess.R')
 
 ##### import plant community data and calculate plant species richness #####
 
-richnessAll <- read.csv('https://pasta.lternet.edu/package/data/eml/knb-lter-knz/101/4/17ec1f61e5234d4931cd4c395f4bd643') %>% 
+richnessAll <- read.csv(paste0("https://pasta.lternet.edu/package/data/eml/knb-lter-knz/101/4/17ec1f61e5234d4931cd4c395f4bd643",
+                               "?key=", myEDIAccessKey)) %>% 
   filter(RecYear %in% c(2014, 2019, 2024)) %>% 
   mutate(Watershed=ifelse(Watershed=='SPB', 'SpB', Watershed)) %>% 
   group_by(RecYear, BurnTrt, Watershed, Block, Plot) %>% 
@@ -25,7 +27,8 @@ richnessAll <- read.csv('https://pasta.lternet.edu/package/data/eml/knb-lter-knz
 
 
 ##### import plant biomass data and calculate average plot live and litter biomass #####
-bioAll <- read.csv('https://pasta.lternet.edu/package/data/eml/knb-lter-knz/101/4/053e369d68886f36f9f15c175749c59f') %>% 
+bioAll <- read.csv(paste0("https://pasta.lternet.edu/package/data/eml/knb-lter-knz/101/4/053e369d68886f36f9f15c175749c59f",
+                          "?key=", myEDIAccessKey)) %>% 
   filter(RecYear %in% c(2014, 2019, 2024)) %>% 
   mutate(burn_trt=ifelse(BurnFreq==1, 'Annual', 'Unburned')) %>% 
   mutate_at(c('Grass', 'Forb', 'Woody'), ~replace(., is.na(.), 0)) %>% 

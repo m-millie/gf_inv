@@ -1,6 +1,6 @@
 ###################################################################
 ###
-### 2_invertComposition.R : Data analysis and figure generation 
+### 3_invertComposition.R : Data analysis and figure generation 
 ###                         related to invertebrate responses to 
 ###                         burning, soil N, and plant litter.
 ###
