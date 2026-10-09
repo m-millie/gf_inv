@@ -94,7 +94,8 @@ CN <- read.csv(paste0("https://pasta.lternet.edu/package/data/eml/knb-lter-knz/1
   mutate(CN=as.numeric(Total_C)/as.numeric(Total_N)) %>% 
   select(-Total_N, -Total_C) %>% 
   pivot_wider(names_from=Growth_form, values_from=CN) %>% 
-  mutate(avg_CN=rowMeans(across(c(forb, grass)), na.rm=T))
+  mutate(avg_CN=rowMeans(across(c(forb, grass)), na.rm=T)) %>% 
+  select(-grass, -forb, -woody)
 
 plant <- readRDS('plantData.RDS') # plant biomass and richness
 
@@ -447,9 +448,6 @@ plot_grid(
 # anova(functionalGroupTrt)
 
 
-
-
-
 # Path Analysis -----------------------------------------------
 
 allData <- communityStructure %>% 
@@ -460,48 +458,54 @@ allData <- communityStructure %>%
          litter=as.factor(litter),
          nutrient=as.factor(nutrient))
 
-# invertebreate richness
-div_sem <- psem(
-  lm(richness ~ burn_trt + litter_biomass + live_biomass + avg_CN + plant_richness, data = allData),
-  lm(litter_biomass ~ burn_trt + litter + nutrient, data = allData),
-  lm(live_biomass ~ burn_trt + litter + nutrient, data = allData),
-  lm(avg_CN ~ burn_trt + litter + nutrient, data = allData),
-  lm(plant_richness ~ burn_trt + litter + nutrient, data = allData),
-  avg_CN %~~% live_biomass,
-  avg_CN %~~% litter_biomass,
-  avg_CN %~~% plant_richness,
-  live_biomass %~~% litter_biomass,
-  live_biomass %~~% plant_richness,
-  litter_biomass %~~% plant_richness,
-  data = allData 
-)
-summary(div_sem)
+SEMdata <- allData %>% 
+  mutate(across(c(richness, Evar, total_count, litter_biomass, live_biomass, avg_CN, plant_richness), ~ as.numeric(scale(.x))),
+         burn=ifelse(burn_trt=='Annual', 1, 0),
+         litter_trt=ifelse(litter=='Present', 1, 0),
+         nutrient_trt = c(Carbon = -1, Control = 0, Nitrogen = 1)[as.character(nutrient)])
+
+emmeans::emm_options(lmer.df = "satterthwaite",
+                     disable.pbkrtest = TRUE)
+
 
 # invertebrate abundance
 count_sem <- psem(
-  lm(total_count ~ burn_trt + litter_biomass + live_biomass + avg_CN + plant_richness, data = allData),
-  lm(litter_biomass ~ burn_trt + litter + nutrient, data = allData),
-  lm(live_biomass ~ burn_trt + litter + nutrient, data = allData),
-  lm(avg_CN ~ burn_trt + litter + nutrient, data = allData),
-  lm(plant_richness ~ burn_trt + litter + nutrient, data = allData),
+  lmer(total_count ~ burn + litter_biomass + live_biomass + avg_CN + plant_richness + (1|watershed), data = SEMdata),
+  lmer(litter_biomass ~ burn + litter_trt + nutrient_trt + (1|watershed), data = SEMdata),
+  lmer(live_biomass ~ burn + litter_trt + nutrient_trt + (1|watershed), data = SEMdata),
+  lmer(avg_CN ~ burn + litter_trt + nutrient_trt + (1|watershed), data = SEMdata),
+  lmer(plant_richness ~ burn + litter_trt + nutrient_trt + (1|watershed), data = SEMdata),
   avg_CN %~~% live_biomass,
   avg_CN %~~% litter_biomass,
   avg_CN %~~% plant_richness,
   live_biomass %~~% litter_biomass,
   live_biomass %~~% plant_richness,
   litter_biomass %~~% plant_richness,
-  data = allData 
+  data = SEMdata
 )
 summary(count_sem)
 
 
+# invertebrate richness
+div_sem <- psem(
+  lmer(richness ~ burn + litter_biomass + live_biomass + avg_CN + plant_richness + (1|watershed), data = SEMdata),
+  lmer(litter_biomass ~ burn + litter_trt + nutrient_trt + (1|watershed), data = SEMdata),
+  lmer(live_biomass ~ burn + litter_trt + nutrient_trt + (1|watershed), data = SEMdata),
+  lmer(avg_CN ~ burn + litter_trt + nutrient_trt + (1|watershed), data = SEMdata),
+  lmer(plant_richness ~ burn + litter_trt + nutrient_trt + (1|watershed), data = SEMdata),
+  avg_CN %~~% live_biomass,
+  avg_CN %~~% litter_biomass,
+  avg_CN %~~% plant_richness,
+  live_biomass %~~% litter_biomass,
+  live_biomass %~~% plant_richness,
+  litter_biomass %~~% plant_richness,
+  data = SEMdata
+)
+summary(div_sem)
+
 
 ## treatment plant regressions
-abun_trt <- rbind(abun_19, abun_24) %>% 
-  full_join(plant_data) %>% 
-  na.omit()
-
-summary(lm(total_abun ~ plant_richness, data = subset(abun_trt, year %in% c(2019, 2024))))
+summary(lm(total_count ~ plant_richness, data = allData))
 
 
 rich_trt <- ggplot(abun_trt %>% filter(year != 2014),
@@ -513,12 +517,11 @@ rich_trt <- ggplot(abun_trt %>% filter(year != 2014),
   xlab("Plant Richness") +
   ylab("Arthropod Abundance")
 
-summary(lm(total_abun ~ live_biomass, data = subset(abun_trt, year %in% c(2019, 2024))))
+summary(lm(total_count ~ live_biomass, data = allData))
 
 
-live_trt <- ggplot(abun_trt %>% filter(year != 2014),
-                   aes(x = live_biomass, y = total_abun)) +
-  geom_point(aes(shape = plot_trt, color = litter_trt), size = 3) +
+live_trt <- ggplot(allData, aes(x = live_biomass, y = total_count)) +
+  geom_point(aes(shape = nutrient, color = litter), size = 3) +  
   geom_smooth(method = "lm", se = F, color = "black") +
   scale_shape_manual(values = c(15, 19, 17)) +
   scale_color_manual(values = c("#337539", "#dccd7d")) +
@@ -526,12 +529,11 @@ live_trt <- ggplot(abun_trt %>% filter(year != 2014),
   ylab("Arthropod Abundance")
 
 
-summary(lm(total_abun ~ litter_biomass, data = subset(abun_trt, year %in% c(2019, 2024))))
+summary(lm(total_count ~ litter_biomass, data = allData))
 
 
-litter_trt <- ggplot(abun_trt %>% filter(year != 2014), 
-                     aes(x = litter_biomass, y = total_abun)) +
-  geom_point(aes(shape = plot_trt, color = litter_trt), size = 3) +  
+litter_trt <- ggplot(allData, aes(x = litter_biomass, y = total_count)) +
+  geom_point(aes(shape = nutrient, color = litter), size = 3) +  
   geom_smooth(method = "lm",  se = F, color = "black") +
   scale_shape_manual(values = c(15, 19, 17)) +
   scale_color_manual(values = c("#337539", "#dccd7d")) +
