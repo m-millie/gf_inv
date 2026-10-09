@@ -504,38 +504,57 @@ div_sem <- psem(
 summary(div_sem)
 
 
-## treatment plant regressions
-summary(lm(total_count ~ plant_richness, data = allData))
-
-
-rich_trt <- ggplot(abun_trt %>% filter(year != 2014),
-                   aes(x = plant_richness, y = total_abun)) +
-  geom_point(aes(shape = plot_trt, color = litter_trt), size = 3) +
-  geom_smooth(method = "lm", se = F, color = "black") +
-  scale_shape_manual(values = c(15, 19, 17)) +
-  scale_color_manual(values = c("#337539", "#dccd7d")) +
-  xlab("Plant Richness") +
-  ylab("Arthropod Abundance")
+# Regressions ------------------------------------------------------------------
 
 summary(lm(total_count ~ live_biomass, data = allData))
 
-
-live_trt <- ggplot(allData, aes(x = live_biomass, y = total_count)) +
+liveCountFig <- ggplot(allData, aes(x = live_biomass, y = total_count)) +
   geom_point(aes(shape = nutrient, color = litter), size = 3) +  
   geom_smooth(method = "lm", se = F, color = "black") +
   scale_shape_manual(values = c(15, 19, 17)) +
   scale_color_manual(values = c("#337539", "#dccd7d")) +
-  xlab("Live Biomass") +
-  ylab("Arthropod Abundance")
+  xlab("Plant Live Biomass") +
+  ylab("Total Abundance")
 
 
 summary(lm(total_count ~ litter_biomass, data = allData))
 
-
-litter_trt <- ggplot(allData, aes(x = litter_biomass, y = total_count)) +
+litterCountFig <- ggplot(allData, aes(x = litter_biomass, y = total_count)) +
   geom_point(aes(shape = nutrient, color = litter), size = 3) +  
   geom_smooth(method = "lm",  se = F, color = "black") +
   scale_shape_manual(values = c(15, 19, 17)) +
   scale_color_manual(values = c("#337539", "#dccd7d")) +
-  xlab("Litter Biomass") +
-  ylab("Arthropod Abundance")
+  xlab("Plant Litter Biomass") +
+  ylab("Total Abundance")
+
+summary(lm(richness ~ live_biomass, data = allData))
+
+liveRichnessFig <- ggplot(allData, aes(x = live_biomass, y = richness)) +
+  geom_point(aes(shape = nutrient, color = litter), size = 3) +  
+  geom_smooth(method = "lm", se = F, color = "black") +
+  scale_shape_manual(values = c(15, 19, 17)) +
+  scale_color_manual(values = c("#337539", "#dccd7d")) +
+  xlab("Plant Live Biomass") +
+  ylab("Richness")
+
+
+summary(lm(richness ~ litter_biomass, data = allData))
+
+litterRichnessFig <- ggplot(allData, aes(x = litter_biomass, y = richness)) +
+  geom_point(aes(shape = nutrient, color = litter), size = 3) +  
+  geom_smooth(method = "lm",  se = F, color = "black") +
+  scale_shape_manual(values = c(15, 19, 17)) +
+  scale_color_manual(values = c("#337539", "#dccd7d")) +
+  xlab("Plant Litter Biomass") +
+  ylab("Richness")
+
+
+plot_grid(
+  liveCountFig, litterCountFig,
+  liveRichnessFig, litterRichnessFig,
+  ncol = 2,
+  rel_spacing = 0.1
+)
+
+
+# ggsave("FigS1_regressions.png", width = 15, height = 15, dpi = 300)
