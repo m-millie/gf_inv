@@ -193,7 +193,7 @@ nmdsFig2014 <- ggplot() +
 
 
 # Richness
-richness2014 <- lmer(richness ~ burn_trt + (1 | watershed), data = subset(communityStructure, year==2014))
+richness2014 <- lmer(richness ~ burn_trt + (1 | watershed/block), data = subset(communityStructure, year==2014))
 summary(richness2014)
 anova(richness2014)
 
@@ -208,7 +208,7 @@ richnessFig2014 <- ggplot(communityStructure, aes(x = burn_trt, y = richness, co
 
 
 # Evenness
-evenness2014 <- lmer(Evar ~ burn_trt + (1 | watershed), data = subset(communityStructure, year==2014))
+evenness2014 <- lmer(Evar ~ burn_trt + (1 | watershed/block), data = subset(communityStructure, year==2014))
 summary(evenness2014)
 anova(evenness2014)
 
@@ -223,7 +223,7 @@ evennessFig2014 <- ggplot(communityStructure, aes(x = burn_trt, y = Evar, color=
 
 
 # Abundance
-count2014 <- lmer(total_count ~ burn_trt + (1 | watershed), data = subset(communityStructure, year==2014))
+count2014 <- lmer(total_count ~ burn_trt + (1 | watershed/block), data = subset(communityStructure, year==2014))
 summary(count2014)
 anova(count2014)
 
@@ -238,7 +238,7 @@ countFig2014 <- ggplot(communityStructure, aes(x = burn_trt, y = total_count, co
 
 
 # Biomass
-biomass2014 <- lmer(invertebrate_biomass ~ burn_trt + (1 | watershed), data = subset(biomass, year==2014))
+biomass2014 <- lmer(invertebrate_biomass ~ burn_trt + (1 | watershed/block), data = subset(biomass, year==2014))
 summary(biomass2014)
 anova(biomass2014)
 
@@ -253,12 +253,12 @@ biomassFig2014 <- ggplot(subset(biomass, year==2014), aes(x = burn_trt, y = inve
 
 
 # Functional Groups
-functionalGroup2014 <- lmer(funct_count ~ burn_trt + (1|watershed),
+functionalGroup2014 <- lmer(funct_count ~ burn_trt + (1|watershed/block),
                             data = subset(functionalStructure, year==2014 & eco_functional_group=='herbivore'))
 summary(functionalGroup2014)
 anova(functionalGroup2014)
 
-functionalGroup2014 <- lmer(funct_count ~ burn_trt + (1|watershed),
+functionalGroup2014 <- lmer(funct_count ~ burn_trt + (1|watershed/block),
                             data = subset(functionalStructure, year==2014 & eco_functional_group=='predator'))
 summary(functionalGroup2014)
 anova(functionalGroup2014)
@@ -360,7 +360,7 @@ ggplot(simperTrtTable, aes(x=reorder(species, average), y=average)) +
 
 
 # Richness
-richnessTrt <- lmer(richness ~ burn_trt*nutrient*litter*as.factor(year) + (1 | watershed), data = subset(communityStructure, year!=2014))
+richnessTrt <- lmer(richness ~ burn_trt*nutrient*litter*as.factor(year) + (1 | watershed/block), data = subset(communityStructure, year!=2014))
 summary(richnessTrt)
 anova(richnessTrt)
 emmeans(richnessTrt, ~ nutrient*litter*as.factor(year))
@@ -377,7 +377,7 @@ richnessFigTrt <- ggplot(subset(communityStructure, year!=2014), aes(x = nutrien
 
 
 # Evenness
-evennessTrt <- lmer(Evar ~ burn_trt*nutrient*litter*as.factor(year) + (1 | watershed), data = subset(communityStructure, year!=2014))
+evennessTrt <- lmer(Evar ~ burn_trt*nutrient*litter*as.factor(year) + (1 | watershed/block), data = subset(communityStructure, year!=2014))
 summary(evennessTrt)
 anova(evennessTrt)
 emmeans(evennessTrt, ~ nutrient*litter*as.factor(year))
@@ -394,7 +394,7 @@ evennessFigTrt <- ggplot(subset(communityStructure, year!=2014), aes(x = nutrien
 
 
 # Abundance
-countTrt <- lmer(total_count ~ as.factor(year)*burn_trt*nutrient*litter + (1 | watershed), data = subset(communityStructure, year!=2014))
+countTrt <- lmer(total_count ~ as.factor(year)*burn_trt*nutrient*litter + (1 | watershed/block), data = subset(communityStructure, year!=2014))
 summary(countTrt)
 anova(countTrt)
 emmeans(countTrt, ~ burn_trt*as.factor(year))
@@ -410,7 +410,7 @@ countFigTrt <- ggplot(subset(communityStructure, year!=2014), aes(x = burn_trt, 
 
 
 # Biomass
-biomassTrt <- lmer(invertebrate_biomass ~ burn_trt*nutrient*litter + (1 | watershed), data = subset(biomass, year==2024))
+biomassTrt <- lmer(invertebrate_biomass ~ burn_trt*nutrient*litter + (1 | watershed/block), data = subset(biomass, year==2024))
 summary(biomassTrt)
 anova(biomassTrt)
 emmeans(biomassTrt, ~nutrient)
