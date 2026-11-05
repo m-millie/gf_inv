@@ -415,6 +415,11 @@ summary(biomassTrt)
 anova(biomassTrt)
 emmeans(biomassTrt, ~nutrient)
 
+fit <- VCA::anovaMM(invertebrate_biomass ~ burn_trt/(watershed), Data = subset(biomass, year==2024))
+VCA::fixef(fit, type = "complex", ddfm = "contain")
+
+
+
 biomassFigTrt <- ggplot(subset(biomass, year==2024), aes(x = nutrient, y = invertebrate_biomass)) +
   geom_boxplot() +
   xlab("") +
