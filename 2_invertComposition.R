@@ -192,8 +192,14 @@ nmdsFig2014 <- ggplot() +
 
 
 
+
+communityStructure$burn_trt <- factor(communityStructure$burn_trt)
+communityStructure$watershed <- factor(communityStructure$watershed)
+communityStructure$block <- factor(communityStructure$block)
+
+
 # Richness
-richness2014 <- lmer(richness ~ burn_trt + (1 | watershed/block), data = subset(communityStructure, year==2014))
+richness2014 <- lmer(richness ~ burn_trt + (1 | block), data = subset(communityStructure, year==2014))
 summary(richness2014)
 anova(richness2014)
 
@@ -208,7 +214,7 @@ richnessFig2014 <- ggplot(communityStructure, aes(x = burn_trt, y = richness, co
 
 
 # Evenness
-evenness2014 <- lmer(Evar ~ burn_trt + (1 | watershed/block), data = subset(communityStructure, year==2014))
+evenness2014 <- lmer(Evar ~ burn_trt + (1 | block), data = subset(communityStructure, year==2014))
 summary(evenness2014)
 anova(evenness2014)
 
@@ -223,7 +229,7 @@ evennessFig2014 <- ggplot(communityStructure, aes(x = burn_trt, y = Evar, color=
 
 
 # Abundance
-count2014 <- lmer(total_count ~ burn_trt + (1 | watershed/block), data = subset(communityStructure, year==2014))
+count2014 <- lmer(total_count ~ burn_trt + (1 | block), data = subset(communityStructure, year==2014))
 summary(count2014)
 anova(count2014)
 
@@ -238,7 +244,7 @@ countFig2014 <- ggplot(communityStructure, aes(x = burn_trt, y = total_count, co
 
 
 # Biomass
-biomass2014 <- lmer(invertebrate_biomass ~ burn_trt + (1 | watershed/block), data = subset(biomass, year==2014))
+biomass2014 <- lmer(invertebrate_biomass ~ burn_trt + (1 | block), data = subset(biomass, year==2014))
 summary(biomass2014)
 anova(biomass2014)
 
