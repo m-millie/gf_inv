@@ -76,11 +76,11 @@ abundance <- read.csv(paste0("https://pasta.lternet.edu/package/data/eml/knb-lte
   mutate(block=str_squish(block)) %>% 
   group_by(year, watershed, block, plot, burn_trt, order, family) %>% 
   summarise(count = sum(count), .groups='drop') %>%  # combine collected and observed counts
-  left_join(trt) %>%
-  mutate(replicate=paste(burn_trt, watershed, block, plot, litter, nutrient, sep='::')) %>% 
+  left_join(trt) %>% 
   mutate(block2=ifelse(burn_trt=='Unburned',
                        recode(block, A='G', B='H', C='I', D='J', E='K', F='L'),
-                       as.character(block)))
+                       as.character(block))) %>%
+  mutate(replicate=paste(burn_trt, watershed, block2, plot, litter, nutrient, sep='::')) 
 
 biomass <- read.csv(paste0("https://pasta.lternet.edu/package/data/eml/knb-lter-knz/101/4/c773c9eb9480a03851ff9e818150d91f",
                            "?key=", myEDIAccessKey)) %>%  # invertebrate biomass
@@ -211,10 +211,13 @@ communityStructure$block2 <- factor(communityStructure$block2)
 richness2014 <- lmer(richness ~ burn_trt + (1 | block2), data = subset(communityStructure, year==2014))
 summary(richness2014)
 anova(richness2014)
+richness2014means <- as.data.frame(confint(emmeans(richness2014, ~burn_trt), level=0.95))
 
-richnessFig2014 <- ggplot(communityStructure, aes(x = burn_trt, y = richness, color=burn_trt)) +
-  geom_boxplot() +
+richnessFig2014 <- ggplot(subset(communityStructure, year==2014), aes(x=burn_trt, y=richness, color=burn_trt)) +
+  geom_jitter(width=0.3, height=0, alpha=0.3) +
   scale_color_manual(values = c("#de1a24", "#056517")) +
+  geom_errorbar(data=richness2014means, aes(x=burn_trt, ymin=lower.CL, ymax=upper.CL), inherit.aes=F, width=0.1) +
+  geom_point(data=richness2014means, aes(x=burn_trt, y=emmean, color=burn_trt), inherit.aes=F, size=5) +
   xlab("") +
   ylab("Family Richness") +
   annotate("text", x=-Inf, y=Inf, label='(c)', hjust=-0.2, vjust=1.2, size=6) +
@@ -226,10 +229,13 @@ richnessFig2014 <- ggplot(communityStructure, aes(x = burn_trt, y = richness, co
 evenness2014 <- lmer(Evar ~ burn_trt + (1 | block2), data = subset(communityStructure, year==2014))
 summary(evenness2014)
 anova(evenness2014)
+evenness2014means <- as.data.frame(confint(emmeans(evenness2014, ~burn_trt), level=0.95))
 
-evennessFig2014 <- ggplot(communityStructure, aes(x = burn_trt, y = Evar, color=burn_trt)) +
-  geom_boxplot() +
+evennessFig2014 <- ggplot(subset(communityStructure, year==2014), aes(x = burn_trt, y = Evar, color=burn_trt)) +
+  geom_jitter(width=0.3, height=0, alpha=0.3) +
   scale_color_manual(values = c("#de1a24", "#056517")) +
+  geom_errorbar(data=evenness2014means, aes(x=burn_trt, ymin=lower.CL, ymax=upper.CL), inherit.aes=F, width=0.1) +
+  geom_point(data=evenness2014means, aes(x=burn_trt, y=emmean, color=burn_trt), inherit.aes=F, size=5) +
   xlab("") +
   ylab("Family Evenness") +
   annotate("text", x=-Inf, y=Inf, label='(d)', hjust=-0.2, vjust=1.2, size=6) +
@@ -241,10 +247,13 @@ evennessFig2014 <- ggplot(communityStructure, aes(x = burn_trt, y = Evar, color=
 count2014 <- lmer(total_count ~ burn_trt + (1 | block2), data = subset(communityStructure, year==2014))
 summary(count2014)
 anova(count2014)
+count2014means <- as.data.frame(confint(emmeans(count2014, ~burn_trt), level=0.95))
 
-countFig2014 <- ggplot(communityStructure, aes(x = burn_trt, y = total_count, color=burn_trt)) +
-  geom_boxplot() +
+countFig2014 <- ggplot(subset(communityStructure, year==2014), aes(x = burn_trt, y = total_count, color=burn_trt)) +
+  geom_jitter(width=0.3, height=0, alpha=0.3) +
   scale_color_manual(values = c("#de1a24", "#056517")) +
+  geom_errorbar(data=count2014means, aes(x=burn_trt, ymin=lower.CL, ymax=upper.CL), inherit.aes=F, width=0.1) +
+  geom_point(data=count2014means, aes(x=burn_trt, y=emmean, color=burn_trt), inherit.aes=F, size=5) +
   xlab("") +
   ylab("Total Abundance") +
   annotate("text", x=-Inf, y=Inf, label='(a)', hjust=-0.2, vjust=1.2, size=6) +
@@ -256,10 +265,13 @@ countFig2014 <- ggplot(communityStructure, aes(x = burn_trt, y = total_count, co
 biomass2014 <- lmer(invertebrate_biomass ~ burn_trt + (1 | block2), data = subset(biomass, year==2014))
 summary(biomass2014)
 anova(biomass2014)
+biomass2014means <- as.data.frame(confint(emmeans(biomass2014, ~burn_trt), level=0.95))
 
 biomassFig2014 <- ggplot(subset(biomass, year==2014), aes(x = burn_trt, y = invertebrate_biomass, color=burn_trt)) +
-  geom_boxplot() +
+  geom_jitter(width=0.3, height=0, alpha=0.3) +
   scale_color_manual(values = c("#de1a24", "#056517")) +
+  geom_errorbar(data=biomass2014means, aes(x=burn_trt, ymin=lower.CL, ymax=upper.CL), inherit.aes=F, width=0.1) +
+  geom_point(data=biomass2014means, aes(x=burn_trt, y=emmean, color=burn_trt), inherit.aes=F, size=5) +
   xlab("") +
   ylab("Total Biomass (mg)") +
   annotate("text", x=-Inf, y=Inf, label='(b)', hjust=-0.2, vjust=1.2, size=6) +
