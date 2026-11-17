@@ -77,14 +77,20 @@ abundance <- read.csv(paste0("https://pasta.lternet.edu/package/data/eml/knb-lte
   group_by(year, watershed, block, plot, burn_trt, order, family) %>% 
   summarise(count = sum(count), .groups='drop') %>%  # combine collected and observed counts
   left_join(trt) %>%
-  mutate(replicate=paste(burn_trt, watershed, block, plot, litter, nutrient, sep='::'))
+  mutate(replicate=paste(burn_trt, watershed, block, plot, litter, nutrient, sep='::')) %>% 
+  mutate(block2=ifelse(burn_trt=='Unburned',
+                       recode(block, A='G', B='H', C='I', D='J', E='K', F='L'),
+                       as.character(block)))
 
 biomass <- read.csv(paste0("https://pasta.lternet.edu/package/data/eml/knb-lter-knz/101/4/c773c9eb9480a03851ff9e818150d91f",
                            "?key=", myEDIAccessKey)) %>%  # invertebrate biomass
   rename(year=RecYear, watershed=Watershed, block=Block, plot=Plot, burn_trt=BurnTrt) %>% 
   select(-DataCode, -RecType, -RecMonth, -Comments) %>% 
   left_join(trt) %>% 
-  filter(invertebrate_biomass>0) # drop single missing datapoint
+  filter(invertebrate_biomass>0) %>% # drop single missing datapoint 
+  mutate(block2=ifelse(burn_trt=='Unburned',
+                       recode(block, A='G', B='H', C='I', D='J', E='K', F='L'),
+                       as.character(block)))
 
 CN <- read.csv(paste0("https://pasta.lternet.edu/package/data/eml/knb-lter-knz/101/4/4665458445755e751deeac090ddb6fb0",
                       "?key=", myEDIAccessKey)) %>% # plant %C and %N
@@ -95,7 +101,10 @@ CN <- read.csv(paste0("https://pasta.lternet.edu/package/data/eml/knb-lter-knz/1
   select(-Total_N, -Total_C) %>% 
   pivot_wider(names_from=Growth_form, values_from=CN) %>% 
   mutate(avg_CN=rowMeans(across(c(forb, grass)), na.rm=T)) %>% 
-  select(-grass, -forb, -woody)
+  select(-grass, -forb, -woody) %>% 
+  mutate(block2=ifelse(burn_trt=='Unburned',
+                       recode(block, A='G', B='H', C='I', D='J', E='K', F='L'),
+                       as.character(block)))
 
 plant <- readRDS('plantData.RDS') # plant biomass and richness
 
@@ -104,17 +113,17 @@ functionalGroups <- read.csv('gf_funct_groups.csv')
 # Community Metrics ---------------------------------------------------------------
 
 totalAbundance <- abundance %>%
-  group_by(year, watershed, block, plot, burn_trt, litter, nutrient) %>%
+  group_by(year, watershed, block2, plot, burn_trt, litter, nutrient) %>%
   summarise(total_count = sum(count), .groups = 'drop')
 
 communityStructure <- community_structure(abundance, time.var='year', abundance.var='count', replicate.var='replicate', metric='Evar') %>%
-  separate(col=replicate, into=c('burn_trt','watershed','block','plot', 'litter', 'nutrient'), sep='::') %>% 
+  separate(col=replicate, into=c('burn_trt','watershed','block2','plot', 'litter', 'nutrient'), sep='::') %>% 
   mutate(plot=as.integer(plot)) %>% 
   left_join(totalAbundance)
 
 functionalStructure <- abundance %>% 
   left_join(functionalGroups) %>% 
-  group_by(year, watershed, block, plot, burn_trt, litter, nutrient, eco_functional_group) %>% 
+  group_by(year, watershed, block2, plot, burn_trt, litter, nutrient, eco_functional_group) %>% 
   summarise(funct_count=sum(count), .groups='drop')
 
 
@@ -124,7 +133,7 @@ functionalStructure <- abundance %>%
 
 abundance2014 <- abundance %>% 
   mutate(taxa=paste(order, family, sep='_')) %>% 
-  select(year, watershed, block, plot, burn_trt, taxa, count) %>% 
+  select(year, watershed, block2, plot, burn_trt, taxa, count) %>% 
   filter(year==2014) %>% 
   pivot_wider(names_from='taxa', values_from = 'count', values_fill = 0)  
   
@@ -195,11 +204,11 @@ nmdsFig2014 <- ggplot() +
 
 communityStructure$burn_trt <- factor(communityStructure$burn_trt)
 communityStructure$watershed <- factor(communityStructure$watershed)
-communityStructure$block <- factor(communityStructure$block)
+communityStructure$block2 <- factor(communityStructure$block2)
 
 
 # Richness
-richness2014 <- lmer(richness ~ burn_trt + (1 | block), data = subset(communityStructure, year==2014))
+richness2014 <- lmer(richness ~ burn_trt + (1 | block2), data = subset(communityStructure, year==2014))
 summary(richness2014)
 anova(richness2014)
 
@@ -214,7 +223,7 @@ richnessFig2014 <- ggplot(communityStructure, aes(x = burn_trt, y = richness, co
 
 
 # Evenness
-evenness2014 <- lmer(Evar ~ burn_trt + (1 | block), data = subset(communityStructure, year==2014))
+evenness2014 <- lmer(Evar ~ burn_trt + (1 | block2), data = subset(communityStructure, year==2014))
 summary(evenness2014)
 anova(evenness2014)
 
@@ -229,7 +238,7 @@ evennessFig2014 <- ggplot(communityStructure, aes(x = burn_trt, y = Evar, color=
 
 
 # Abundance
-count2014 <- lmer(total_count ~ burn_trt + (1 | block), data = subset(communityStructure, year==2014))
+count2014 <- lmer(total_count ~ burn_trt + (1 | block2), data = subset(communityStructure, year==2014))
 summary(count2014)
 anova(count2014)
 
@@ -244,7 +253,7 @@ countFig2014 <- ggplot(communityStructure, aes(x = burn_trt, y = total_count, co
 
 
 # Biomass
-biomass2014 <- lmer(invertebrate_biomass ~ burn_trt + (1 | block), data = subset(biomass, year==2014))
+biomass2014 <- lmer(invertebrate_biomass ~ burn_trt + (1 | block2), data = subset(biomass, year==2014))
 summary(biomass2014)
 anova(biomass2014)
 
@@ -259,12 +268,12 @@ biomassFig2014 <- ggplot(subset(biomass, year==2014), aes(x = burn_trt, y = inve
 
 
 # Functional Groups
-functionalGroup2014 <- lmer(funct_count ~ burn_trt + (1|watershed/block),
+functionalGroup2014 <- lmer(funct_count ~ burn_trt + (1|block2),
                             data = subset(functionalStructure, year==2014 & eco_functional_group=='herbivore'))
 summary(functionalGroup2014)
 anova(functionalGroup2014)
 
-functionalGroup2014 <- lmer(funct_count ~ burn_trt + (1|watershed/block),
+functionalGroup2014 <- lmer(funct_count ~ burn_trt + (1|block2),
                             data = subset(functionalStructure, year==2014 & eco_functional_group=='predator'))
 summary(functionalGroup2014)
 anova(functionalGroup2014)
