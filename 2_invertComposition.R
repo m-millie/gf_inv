@@ -278,19 +278,6 @@ biomassFig2014 <- ggplot(subset(biomass, year==2014), aes(x = burn_trt, y = inve
   theme(legend.position='none',
         plot.margin = margin(5, 5, 5, 20))
 
-
-# Functional Groups
-functionalGroup2014 <- lmer(funct_count ~ burn_trt + (1|block2),
-                            data = subset(functionalStructure, year==2014 & eco_functional_group=='herbivore'))
-summary(functionalGroup2014)
-anova(functionalGroup2014)
-
-functionalGroup2014 <- lmer(funct_count ~ burn_trt + (1|block2),
-                            data = subset(functionalStructure, year==2014 & eco_functional_group=='predator'))
-summary(functionalGroup2014)
-anova(functionalGroup2014)
-
-
 ### Combined pre-treatment figure ###
 
 top <- plot_grid(
@@ -310,6 +297,54 @@ plot_grid(
 # ggsave("Fig1_pretrt.png", width = 10, height = 15, dpi = 300)
 
 
+### Functional Groups ----------------------------------------------------------
+
+# herbivore
+herbivore2014 <- lmer(funct_count ~ burn_trt + (1|block2),
+                      data = subset(functionalStructure, year==2014 & eco_functional_group=='herbivore'))
+summary(herbivore2014)
+anova(herbivore2014)
+herbivore2014means <- as.data.frame(confint(emmeans(herbivore2014, ~burn_trt), level=0.95))
+
+herbivoreFig2014 <- ggplot(subset(functionalStructure, year==2014 & eco_functional_group=='herbivore'), 
+                           aes(x = burn_trt, y = funct_count, color=burn_trt)) +
+  geom_jitter(width=0.3, height=0, alpha=0.3) +
+  scale_color_manual(values = c("#de1a24", "#056517")) +
+  geom_errorbar(data=herbivore2014means, aes(x=burn_trt, ymin=lower.CL, ymax=upper.CL), inherit.aes=F, width=0.1) +
+  geom_point(data=herbivore2014means, aes(x=burn_trt, y=emmean, color=burn_trt), inherit.aes=F, size=5) +
+  xlab("") +
+  ylab("Herbivore Abundance") +
+  annotate("text", x=-Inf, y=Inf, label='(a)', hjust=-0.2, vjust=1.2, size=6) +
+  theme(legend.position='none',
+        plot.margin = margin(5, 5, 5, 20))
+
+# predator
+predator2014 <- lmer(funct_count ~ burn_trt + (1|block2),
+                     data = subset(functionalStructure, year==2014 & eco_functional_group=='predator'))
+summary(predator2014)
+anova(predator2014)
+predator2014means <- as.data.frame(confint(emmeans(predator2014, ~burn_trt), level=0.95))
+
+predatorFig2014 <- ggplot(subset(functionalStructure, year==2014 & eco_functional_group=='predator'), 
+                           aes(x = burn_trt, y = funct_count, color=burn_trt)) +
+  geom_jitter(width=0.3, height=0, alpha=0.3) +
+  scale_color_manual(values = c("#de1a24", "#056517")) +
+  geom_errorbar(data=predator2014means, aes(x=burn_trt, ymin=lower.CL, ymax=upper.CL), inherit.aes=F, width=0.1) +
+  geom_point(data=predator2014means, aes(x=burn_trt, y=emmean, color=burn_trt), inherit.aes=F, size=5) +
+  xlab("") +
+  ylab("Predator Abundance") +
+  annotate("text", x=-Inf, y=Inf, label='(b)', hjust=-0.2, vjust=1.2, size=6) +
+  theme(legend.position='none',
+        plot.margin = margin(5, 5, 5, 20))
+
+plot_grid(
+  herbivoreFig2014,
+  predatorFig2014,
+  ncol = 2,
+  rel_spacing = 0.1
+)
+
+# ggsave("Fig2_pretrt.png", width = 10, height = 10, dpi = 300)
 
 
 # Treatment (2019, 2024) Analysis -----------------------------------------------------------
